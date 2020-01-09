@@ -15,7 +15,14 @@ const Footer = ({ copyrights }) => (
           © 2019 Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
         </span>
         <span className="footerCopyrights">
-          Starter created by <a href="https://radoslawkoziel.pl">panr</a>
+          <a
+            href="http://www.beian.miit.gov.cn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="beian"
+          >
+            苏ICP备18013443号
+          </a>
         </span>
       </>
     )}
