@@ -28,6 +28,7 @@ const config = {
         path: '/about',
       },
     ],
+    siteUrl: 'https://suyi.xyz',
   },
   plugins: [
     `babel-preset-gatsby`,
@@ -117,6 +118,7 @@ const config = {
         icon: `src/images/favicon.png`,
       },
     },
+    `gatsby-plugin-sitemap`,
   ],
 }
 
