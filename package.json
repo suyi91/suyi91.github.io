@@ -18,7 +18,8 @@
     "build": "gatsby build",
     "dev": "gatsby clean && gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "publish": "gh-pages -d public -b master -r \"https://github.com/suyi91/suyi91.github.io.git\" -m \"Auto-generated commit\""
   },
   "dependencies": {
     "gatsby": "^2.0.76",
@@ -36,6 +37,7 @@
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-transformer-remark": "^2.1.19",
     "gatsby-transformer-sharp": "^2.1.8",
+    "gh-pages": "^2.2.0",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
     "react": "^16.8.0",
