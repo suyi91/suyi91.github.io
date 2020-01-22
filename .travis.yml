@@ -6,14 +6,6 @@ branches:
   only:
     - sources
 script:
-  - git config --global user.name "${GH_NAME}"
-  - git config --global user.email "${GH_EMAIL}"
-  - npm install && npm run build
-deploy:
-  repo: https://github.com/suyi91/suyi91.github.io.git
-  provider: pages:git
-  token: ${GH_TOKEN}
-  commit_message: Update
-  keep_history: true
-  target_branch: master
-
+  - git config user.name "${GH_NAME}"
+  - git config user.email "${GH_EMAIL}"
+  - npm install && npm run build && npm run publish

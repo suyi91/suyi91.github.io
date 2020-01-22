@@ -19,7 +19,7 @@
     "dev": "gatsby clean && gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "publish": "gh-pages -d public -b master -r \"https://github.com/suyi91/suyi91.github.io.git\" -m \"Auto-generated commit\""
+    "publish": "gh-pages -d public -b master -r \"https://${GH_TOKEN}@github.com/suyi91/suyi91.github.io.git\" -m \"Auto-generated commit\""
   },
   "dependencies": {
     "gatsby": "^2.0.76",
