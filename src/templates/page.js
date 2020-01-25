@@ -1,10 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import { Disqus } from 'gatsby-plugin-disqus'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Post from '../components/post'
+import { getDisqusPageConfig } from '../helpers/disqus'
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const {
@@ -14,6 +16,8 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     html,
   } = data.markdownRemark
   const { next, previous } = pageContext
+
+  const disqusConfig = getDisqusPageConfig({ path, title })
 
   return (
     <Layout>
@@ -30,6 +34,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         previousPost={previous}
         nextPost={next}
       />
+      <Disqus config={disqusConfig} style={{width: '100%'}} />
     </Layout>
   )
 }

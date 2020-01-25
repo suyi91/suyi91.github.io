@@ -6,6 +6,7 @@ import Navigation from './navigation'
 import { toKebabCase } from '../helpers'
 
 import style from '../styles/post.module.css'
+import { getDisqusPageConfig } from '../helpers/disqus'
 
 const Post = ({
   title,

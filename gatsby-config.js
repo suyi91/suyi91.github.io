@@ -119,6 +119,12 @@ const config = {
       },
     },
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `suyi91`,
+      },
+    },
   ],
 }
 
