@@ -1,5 +1,5 @@
 ---
-title: 2019
+title: "2019"
 date: "2020-01-24 23:58"
 draft: false
 path: "/post/summary-2019/"
