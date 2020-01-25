@@ -8,7 +8,7 @@ import Layout from '../components/layout'
 import Post from '../components/post'
 import { getDisqusPageConfig } from '../helpers/disqus'
 
-const BlogPostTemplate = ({ data, pageContext }) => {
+const BlogPostTemplate = ({ data, pageContext, location }) => {
   const {
     frontmatter: { title, date, path, author, coverImage, excerpt, tags },
     excerpt: autoExcerpt,
@@ -17,7 +17,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   } = data.markdownRemark
   const { next, previous } = pageContext
 
-  const disqusConfig = getDisqusPageConfig({ path, title })
+  const disqusConfig = getDisqusPageConfig({ location, path, title })
 
   return (
     <Layout>
@@ -47,6 +47,7 @@ BlogPostTemplate.propTypes = {
     next: PropTypes.object,
     previous: PropTypes.object,
   }),
+  location: PropTypes.object.isRequired,
 }
 
 export const pageQuery = graphql`
