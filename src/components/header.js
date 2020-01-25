@@ -37,6 +37,10 @@ const Header = props => {
   return (
     <>
       <Helmet>
+        <meta
+          name="google-site-verification"
+          content="LncEn38b27nTooI_gHYaMRUVOZEKMqtsYlcdpzC2tF8"
+        />
         <body
           className={
             (userTheme || defaultTheme) === 'light'
