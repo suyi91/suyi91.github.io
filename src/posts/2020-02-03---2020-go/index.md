@@ -40,3 +40,9 @@ author: "Suyi"
 Living happy, living healthy。🆙
 
 2020, go!
+
+## 其他
+
+最后附一张肺炎防护图，科学防疫。
+
+![](https://i.loli.net/2020/02/03/TBiVLAHrDoP73I5.jpg)
