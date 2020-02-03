@@ -9,7 +9,7 @@ author: "Suyi"
 
 2020/2/3，节后工作第一天。在家休息了好久终于可以工作了😁。
 
-![](./happy.jpg)
+![happy](https://i.loli.net/2020/02/03/9NfSYZnvhHp8QTg.jpg)
 
 ## 过去的一月
 
@@ -17,7 +17,7 @@ author: "Suyi"
 
 另外，NBA球星[科比布莱恩特](https://zh.wikipedia.org/wiki/%E7%A7%91%E6%AF%94%C2%B7%E5%B8%83%E8%8E%B1%E6%81%A9%E7%89%B9)直升机出事，着实令我们这群一直都喜欢着他的球迷心痛。但是居然出现了利用他的离世炒作的商人，这是何等的市井小人。
 
-![](./220px-Kobe_Bryant_2015.jpg)
+![KobeBryant](https://i.loli.net/2020/02/03/xayT4GC5zbDWNqE.png)
 
 ## 现在
 
@@ -25,9 +25,9 @@ author: "Suyi"
 
 因为我有了她，一只已经8个月的铁憨憨英短:p(从刚接回家的1斤到现在的7斤)。
 
-![](./cat1.jpeg)
+![](https://i.loli.net/2020/02/03/TwJUvb9VhKtH7cu.jpg)
 
-![](./cat2.jpeg)
+![](https://i.loli.net/2020/02/03/J8CalUdq4L2EI7o.jpg)
 
 小猫虽然调皮，但也带来了很多的欢乐，也是繁忙工作生活之余的一种自我释放吧。
 
