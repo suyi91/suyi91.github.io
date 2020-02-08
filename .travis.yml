@@ -12,10 +12,8 @@ before_install:
 - eval "$(ssh-agent -s)"
 - chmod 600 deploy_rsa
 - ssh-add deploy_rsa
-install:
-- echo -e "Host ${ssh_addr}:${ssh_port}\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 script:
 - git config user.name "${GH_NAME}"
 - git config user.email "${GH_EMAIL}"
 - npm install && npm run build && npm run publish
-- tar zcvf blog.tgz public/ && scp -P ${ssh_port} blog.tgz "${ssh_user}@${ssh_addr}:~/" && ssh -p ${ssh_port} "${ssh_user}@${ssh_addr}" ./deploy-blog.sh
+- tar zcvf blog.tgz public/ && scp -o StrictHostKeyChecking=no -P ${ssh_port} blog.tgz "${ssh_user}@${ssh_addr}:~/" && ssh -o StrictHostKeyChecking=no -p ${ssh_port} "${ssh_user}@${ssh_addr}" ./deploy-blog.sh
