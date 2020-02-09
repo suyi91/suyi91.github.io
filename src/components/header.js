@@ -41,6 +41,10 @@ const Header = props => {
           name="google-site-verification"
           content="LncEn38b27nTooI_gHYaMRUVOZEKMqtsYlcdpzC2tF8"
         />
+        <meta
+          name="baidu-site-verification"
+          content="ooYozJsAvd"
+        />
         <body
           className={
             (userTheme || defaultTheme) === 'light'
