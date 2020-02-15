@@ -1,7 +1,6 @@
 ---
 title: "起航2020"
 date: "2020-02-03 15:03"
-draft: false
 path: "/post/2020-go/"
 excerpt: "2020, go!"
 author: "Suyi"

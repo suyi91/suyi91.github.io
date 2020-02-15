@@ -1,7 +1,6 @@
 ---
 title: "2019"
 date: "2020-01-24 23:58"
-draft: false
 path: "/post/summary-2019/"
 coverImage: "./2020.jpg"
 excerpt: "眨眼之间来到了2020的农历春节。时间过得飞快，新的十年已经开始。"
