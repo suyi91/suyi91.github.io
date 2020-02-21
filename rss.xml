@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Suyi的小站]]></title><description><![CDATA[记录自己的成长历程]]></description><link>https://suyi.xyz</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 21 Feb 2020 17:57:49 GMT</lastBuildDate><item><title><![CDATA[Yarn PnP]]></title><description><![CDATA[2020年1月下旬，Node包管理工具Yarn推出了2.0版本。1.12版本开始加入的PnP功能默认包含。]]></description><link>https://suyi.xyz/posts/yarn-pnp</link><guid isPermaLink="false">https://suyi.xyz/posts/yarn-pnp</guid><pubDate>Sat, 15 Feb 2020 15:30:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a364689085220ed90f6f39067fe01d6c/a40a7/yarn.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.13636363636363%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAP/xAAVAQEBAAAAAAAAAAAAAAAAAAABBP/aAAwDAQACEAMQAAABqmojBP/EABYQAQEBAAAAAAAAAAAAAAAAAAECIP/aAAgBAQABBQKAWgHH/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFxAAAwEAAAAAAAAAAAAAAAAAAAIhIP/aAAgBAQAGPwKkbP8A/8QAGhAAAgIDAAAAAAAAAAAAAAAAAREAISBRYf/aAAgBAQABPyEg5oNOFlmqx//aAAwDAQACAAMAAAAQzN//xAAWEQEBAQAAAAAAAAAAAAAAAAARARD/2gAIAQMBAT8QYBn/xAAWEQEBAQAAAAAAAAAAAAAAAAARECH/2gAIAQIBAT8QNZ//xAAcEAEBAAAHAAAAAAAAAAAAAAABEQAgIUFRgZH/2gAIAQEAAT8QPk6UApeX3ATALuXvL//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/a364689085220ed90f6f39067fe01d6c/8ac56/yarn.webp 240w,
+/static/a364689085220ed90f6f39067fe01d6c/d3be9/yarn.webp 480w,
+/static/a364689085220ed90f6f39067fe01d6c/e46b2/yarn.webp 960w,
+/static/a364689085220ed90f6f39067fe01d6c/f992d/yarn.webp 1440w,
+/static/a364689085220ed90f6f39067fe01d6c/882b9/yarn.webp 1920w,
+/static/a364689085220ed90f6f39067fe01d6c/491cb/yarn.webp 2200w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/a364689085220ed90f6f39067fe01d6c/09b79/yarn.jpg 240w,
+/static/a364689085220ed90f6f39067fe01d6c/7cc5e/yarn.jpg 480w,
+/static/a364689085220ed90f6f39067fe01d6c/6a068/yarn.jpg 960w,
+/static/a364689085220ed90f6f39067fe01d6c/644c5/yarn.jpg 1440w,
+/static/a364689085220ed90f6f39067fe01d6c/0f98f/yarn.jpg 1920w,
+/static/a364689085220ed90f6f39067fe01d6c/a40a7/yarn.jpg 2200w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/a364689085220ed90f6f39067fe01d6c/6a068/yarn.jpg&quot;
+          alt=&quot;yarn&quot;
+          title=&quot;yarn&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2020年1月下旬，Node包管理工具Yarn推出了2.0版本。1.12版本开始加入的PnP功能默认包含。&lt;/p&gt;
+&lt;h2 id=&quot;历史&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%8E%86%E5%8F%B2&quot; aria-label=&quot;历史 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;历史&lt;/h2&gt;
+&lt;p&gt;随着前端领域的飞速发展，前端的库越来越多。为了更好地管理各种各样的库，Nodejs推出了官方的包管理工具npm。&lt;/p&gt;
+&lt;p&gt;在npm5之前，npm cli使用体检不佳:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;没有依赖锁定使得不同环境安装可能会出现版本冲突；&lt;/li&gt;
+&lt;li&gt;没有本地离线缓存功能，无网环境下会安装失败；&lt;/li&gt;
+&lt;li&gt;依赖安装比较慢。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;npm5起加入了版本锁定等功能，提高了依赖安装速度。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;因为npm存在的这些问题，Yarn横空出世，给npm依赖的安装管理带来了便利的交互和更快的速度等。&lt;/p&gt;
+&lt;h2 id=&quot;yarn-2&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#yarn-2&quot; aria-label=&quot;yarn 2 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Yarn 2&lt;/h2&gt;
+&lt;p&gt;因为&lt;code class=&quot;language-text&quot;&gt;(感谢)&lt;/code&gt;yarn的存在，npm改进了自身cli的体验，加入了版本锁定等提升安装速度的特性。现在日常使用中npm、yarn两者安装的速度已经相差无几。&lt;/p&gt;
+&lt;p&gt;但是，node项目始终存在问题——依赖目录&lt;code class=&quot;language-text&quot;&gt;node_modules&lt;/code&gt;过重。占用过大、文件过多，安装过程中IO开销过大。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;一个同事的Windows电脑，磁盘速度不快。出现问题时删除项目的&lt;code class=&quot;language-text&quot;&gt;node_modules&lt;/code&gt;花费了10分钟(基本每次都是喝杯茶回来才好)。&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;node_modules&lt;/code&gt;目录太复杂，且文件又多又小，比较吃磁盘。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;来自yarn官方对于node包解析低效的原因说明:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;node_modules&lt;/code&gt;目录通常包含了大量的文件，&lt;code class=&quot;language-text&quot;&gt;yarn install&lt;/code&gt;时可能会花超过70%的时间生成它们。由于包管理工具依然会将已存在的&lt;code class=&quot;language-text&quot;&gt;node_modules&lt;/code&gt;和期待结果进行diff，所以即便之前已经执行过install操作也无法挽救。&lt;/li&gt;
+&lt;li&gt;因为&lt;code class=&quot;language-text&quot;&gt;node_modules&lt;/code&gt;的生成是IO密集操作，包管理工具除了做简单的文件拷贝(甚至在可能时，可以使用硬链接或者&lt;code class=&quot;language-text&quot;&gt;copy-on-write&lt;/code&gt;技术)之外没有其他办法更好的优化方法，仍需在操作磁盘的大量系统调用前diff文件差异。&lt;/li&gt;
+&lt;li&gt;因为Node没有包的概念，它也不知道文件是否&lt;code class=&quot;language-text&quot;&gt;应该&lt;/code&gt;被访问(&lt;code class=&quot;language-text&quot;&gt;与其相对的是被标记表示需要使用&lt;/code&gt;)。完全可能出现这样的场景，因为忘记在&lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;中列举了部分依赖导致开发环境可用的代码在生产环境出现问题。&lt;/li&gt;
+&lt;li&gt;甚至在运行时，Node的解析机制需要大量的&lt;code class=&quot;language-text&quot;&gt;stat&lt;/code&gt;和&lt;code class=&quot;language-text&quot;&gt;readdir&lt;/code&gt;系统调用去计算每个被require的文件的路径位置。这是极其浪费的，也是Node应用启动耗时长的部分原因。&lt;/li&gt;
+&lt;li&gt;最后，&lt;code class=&quot;language-text&quot;&gt;node_modules&lt;/code&gt;目录不支持包管理工具合理扁平处理包文件结构，这一设计是不切实际的。即使有些算法可以拿来优化依赖树的结构，但依旧不能优化一些特定的场景——不仅导致了文件磁盘占用比预期高，也使得一些包在内存中被实例化多次。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Ps&lt;/em&gt; &lt;code class=&quot;language-text&quot;&gt;versus being available by the sheer virtue of hoisting&lt;/code&gt; =&gt; 不理解，就翻译成了&lt;code class=&quot;language-text&quot;&gt;与其相对的是被标记表示需要使用&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例1:
+以&lt;code class=&quot;language-text&quot;&gt;create-react-app&lt;/code&gt;为例，一行代码未写，已经占用了&lt;code class=&quot;language-text&quot;&gt;188MB&lt;/code&gt;。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 770px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b7cc7c92a61a49874930d1cbe749284a/e6e7b/create-react-app.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 19.22077922077922%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAEABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAcuFkB//xAAVEAEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAQABBQKv/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQAGPwJ//8QAFhABAQEAAAAAAAAAAAAAAAAAEQAQ/9oACAEBAAE/IXLn/9oADAMBAAIAAwAAABAP/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAbEAEAAAcAAAAAAAAAAAAAAAABABARMUFRcf/aAAgBAQABPxBXRTIQq5Xsv//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/b7cc7c92a61a49874930d1cbe749284a/8ac56/create-react-app.webp 240w,
+/static/b7cc7c92a61a49874930d1cbe749284a/d3be9/create-react-app.webp 480w,
+/static/b7cc7c92a61a49874930d1cbe749284a/cf403/create-react-app.webp 770w&quot;
+          sizes=&quot;(max-width: 770px) 100vw, 770px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/b7cc7c92a61a49874930d1cbe749284a/09b79/create-react-app.jpg 240w,
+/static/b7cc7c92a61a49874930d1cbe749284a/7cc5e/create-react-app.jpg 480w,
+/static/b7cc7c92a61a49874930d1cbe749284a/e6e7b/create-react-app.jpg 770w&quot;
+          sizes=&quot;(max-width: 770px) 100vw, 770px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/b7cc7c92a61a49874930d1cbe749284a/e6e7b/create-react-app.jpg&quot;
+          alt=&quot;create react app&quot;
+          title=&quot;create react app&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;例2:
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0008f169794a833b9714a5f519325134/a2510/node_modules.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAECBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHdhUlDF//EABoQAAEFAQAAAAAAAAAAAAAAAAEAAgMRMTL/2gAIAQEAAQUCNKgm5LjOBn//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAXEAADAQAAAAAAAAAAAAAAAAAAARAh/9oACAEBAAY/AtiiEf/EAB0QAAICAQUAAAAAAAAAAAAAAAABETGhIUFxgZH/2gAIAQEAAT8hVrR2LS3lGEU8i+RjH//aAAwDAQACAAMAAAAQjw//xAAVEQEBAAAAAAAAAAAAAAAAAAABAP/aAAgBAwEBPxBIv//EABURAQEAAAAAAAAAAAAAAAAAAAEA/9oACAECAQE/EBm//8QAHRABAQEAAQUBAAAAAAAAAAAAAREAITFBUXGhsf/aAAgBAQABPxCIxHoOqHFKo8PTACPDAtCnBwUhe7fM/N//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/0008f169794a833b9714a5f519325134/8ac56/node_modules.webp 240w,
+/static/0008f169794a833b9714a5f519325134/d3be9/node_modules.webp 480w,
+/static/0008f169794a833b9714a5f519325134/e46b2/node_modules.webp 960w,
+/static/0008f169794a833b9714a5f519325134/a5d4d/node_modules.webp 1000w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/0008f169794a833b9714a5f519325134/09b79/node_modules.jpg 240w,
+/static/0008f169794a833b9714a5f519325134/7cc5e/node_modules.jpg 480w,
+/static/0008f169794a833b9714a5f519325134/6a068/node_modules.jpg 960w,
+/static/0008f169794a833b9714a5f519325134/a2510/node_modules.jpg 1000w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/0008f169794a833b9714a5f519325134/6a068/node_modules.jpg&quot;
+          alt=&quot;node modules&quot;
+          title=&quot;node modules&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;为了解决&lt;code class=&quot;language-text&quot;&gt;node_modules&lt;/code&gt;目录存在的问题，Yarn正式推出了Yarn 2，加入了pnp(&lt;code class=&quot;language-text&quot;&gt;Plug&amp;#39;n&amp;#39;Play&lt;/code&gt;)功能。&lt;/p&gt;
+&lt;h3 id=&quot;pnp&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pnp&quot; aria-label=&quot;pnp permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;PnP&lt;/h3&gt;
+&lt;p&gt;PnP，&lt;code class=&quot;language-text&quot;&gt;Plug&amp;#39;n&amp;#39;Play&lt;/code&gt;的缩写，意为即插即用。&lt;/p&gt;
+&lt;p&gt;启用PnP后(Yarn 2默认启用)，&lt;code class=&quot;language-text&quot;&gt;yarn install&lt;/code&gt;不再生成&lt;code class=&quot;language-text&quot;&gt;node_modules&lt;/code&gt;目录，而是生成了&lt;code class=&quot;language-text&quot;&gt;.yarn&lt;/code&gt;目录和&lt;code class=&quot;language-text&quot;&gt;.pnp.js&lt;/code&gt;文件。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;.yarn&lt;/code&gt;目录存放了项目中下载的所有依赖的zip包，&lt;code class=&quot;language-text&quot;&gt;.pnp.js&lt;/code&gt;的内容是项目的npm模块解析规则。&lt;/p&gt;
+&lt;h4 id=&quot;使用&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%BD%BF%E7%94%A8&quot; aria-label=&quot;使用 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;使用🌰&lt;/h4&gt;
+&lt;p&gt;下面以本地安装并console.log&lt;code class=&quot;language-text&quot;&gt;ramda&lt;/code&gt;为例。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;新建项目，加入依赖&lt;code class=&quot;language-text&quot;&gt;ramda&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;dependencies&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;ramda&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;^0.27.0&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;yarn install&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/485bbfaee9f6bddebf84bc020f0ebb67/92987/yarn-install.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 19.215155615696887%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAEABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAcySwD//xAAVEAEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAQABBQJv/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQAGPwJ//8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQABPyF//9oADAMBAAIAAwAAABCMP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABkQAAMAAwAAAAAAAAAAAAAAAAABEUFxkf/aAAgBAQABPxBo5guuFP/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/485bbfaee9f6bddebf84bc020f0ebb67/8ac56/yarn-install.webp 240w,
+/static/485bbfaee9f6bddebf84bc020f0ebb67/d3be9/yarn-install.webp 480w,
+/static/485bbfaee9f6bddebf84bc020f0ebb67/e46b2/yarn-install.webp 960w,
+/static/485bbfaee9f6bddebf84bc020f0ebb67/f992d/yarn-install.webp 1440w,
+/static/485bbfaee9f6bddebf84bc020f0ebb67/9bf70/yarn-install.webp 1478w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/485bbfaee9f6bddebf84bc020f0ebb67/09b79/yarn-install.jpg 240w,
+/static/485bbfaee9f6bddebf84bc020f0ebb67/7cc5e/yarn-install.jpg 480w,
+/static/485bbfaee9f6bddebf84bc020f0ebb67/6a068/yarn-install.jpg 960w,
+/static/485bbfaee9f6bddebf84bc020f0ebb67/644c5/yarn-install.jpg 1440w,
+/static/485bbfaee9f6bddebf84bc020f0ebb67/92987/yarn-install.jpg 1478w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/485bbfaee9f6bddebf84bc020f0ebb67/6a068/yarn-install.jpg&quot;
+          alt=&quot;yarn install&quot;
+          title=&quot;yarn install&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 404px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/979170bd67d246cb1be33141eb0097c8/e75d0/yarn-install-folder.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 112.37623762376236%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAWABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIBBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHsZcpTROFlA//EABgQAAIDAAAAAAAAAAAAAAAAAAABEBEh/9oACAEBAAEFAmIoYtjSnH//xAAVEQEBAAAAAAAAAAAAAAAAAAARIP/aAAgBAwEBPwEj/8QAFREBAQAAAAAAAAAAAAAAAAAAESD/2gAIAQIBAT8BY//EABQQAQAAAAAAAAAAAAAAAAAAADD/2gAIAQEABj8CH//EABwQAAIDAAMBAAAAAAAAAAAAAAABESExEEGBof/aAAgBAQABPyFexljd8MGlvxsiByyBTW/rLP/aAAwDAQACAAMAAAAQ1/j/AP/EABcRAAMBAAAAAAAAAAAAAAAAAAABERD/2gAIAQMBAT8QgiLn/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAECAQE/EJVbWMf/xAAeEAEAAgEEAwAAAAAAAAAAAAABABEhMUFhsYGR8P/aAAgBAQABPxCko0DnNY9S6mo1qr1KTWNk5OoQpu+WYUUL5bhwbDunUFbFxJeE/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/979170bd67d246cb1be33141eb0097c8/8ac56/yarn-install-folder.webp 240w,
+/static/979170bd67d246cb1be33141eb0097c8/3a65f/yarn-install-folder.webp 404w&quot;
+          sizes=&quot;(max-width: 404px) 100vw, 404px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/979170bd67d246cb1be33141eb0097c8/09b79/yarn-install-folder.jpg 240w,
+/static/979170bd67d246cb1be33141eb0097c8/e75d0/yarn-install-folder.jpg 404w&quot;
+          sizes=&quot;(max-width: 404px) 100vw, 404px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/979170bd67d246cb1be33141eb0097c8/e75d0/yarn-install-folder.jpg&quot;
+          alt=&quot;yarn install folder&quot;
+          title=&quot;yarn install folder&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;yarn run test&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在package.json中定义”test”&lt;/p&gt;
+&lt;p&gt;“test” =&gt; “node -e ‘console.log(require(”ramda”))‘”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 764px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7b83d600848e018522848d70484a41fa/72747/yarn-run-script.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.5392670157068%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABzaNVZAB//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQABBQJf/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAFhABAQEAAAAAAAAAAAAAAAAAARAR/9oACAEBAAE/IXa3/9oADAMBAAIAAwAAABDL/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAbEAACAgMBAAAAAAAAAAAAAAABEQAxECFRgf/aAAgBAQABPxAE2d8UNlp+4oYbOP/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/7b83d600848e018522848d70484a41fa/8ac56/yarn-run-script.webp 240w,
+/static/7b83d600848e018522848d70484a41fa/d3be9/yarn-run-script.webp 480w,
+/static/7b83d600848e018522848d70484a41fa/79237/yarn-run-script.webp 764w&quot;
+          sizes=&quot;(max-width: 764px) 100vw, 764px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/7b83d600848e018522848d70484a41fa/09b79/yarn-run-script.jpg 240w,
+/static/7b83d600848e018522848d70484a41fa/7cc5e/yarn-run-script.jpg 480w,
+/static/7b83d600848e018522848d70484a41fa/72747/yarn-run-script.jpg 764w&quot;
+          sizes=&quot;(max-width: 764px) 100vw, 764px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/7b83d600848e018522848d70484a41fa/72747/yarn-run-script.jpg&quot;
+          alt=&quot;yarn run script&quot;
+          title=&quot;yarn run script&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不能直接使用&lt;code class=&quot;language-text&quot;&gt;node xxx.js&lt;/code&gt;，因为node依赖解析的目录&lt;code class=&quot;language-text&quot;&gt;node_modules&lt;/code&gt;没了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f18f87e84dd9c396e36ea97ce9bc8695/bb3bf/node-run-script.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.65371024734982%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAECBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHMm5sQg//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAQUCX//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CX//EABkQAAEFAAAAAAAAAAAAAAAAABAAARFxgf/aAAgBAQABPyGbWlx//9oADAMBAAIAAwAAABDM/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAcEAEAAQQDAAAAAAAAAAAAAAABEQAQITFBUZH/2gAIAQEAAT8QZAz6pnlW0EdU3Gbf/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/f18f87e84dd9c396e36ea97ce9bc8695/8ac56/node-run-script.webp 240w,
+/static/f18f87e84dd9c396e36ea97ce9bc8695/d3be9/node-run-script.webp 480w,
+/static/f18f87e84dd9c396e36ea97ce9bc8695/e46b2/node-run-script.webp 960w,
+/static/f18f87e84dd9c396e36ea97ce9bc8695/cc785/node-run-script.webp 1132w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/f18f87e84dd9c396e36ea97ce9bc8695/09b79/node-run-script.jpg 240w,
+/static/f18f87e84dd9c396e36ea97ce9bc8695/7cc5e/node-run-script.jpg 480w,
+/static/f18f87e84dd9c396e36ea97ce9bc8695/6a068/node-run-script.jpg 960w,
+/static/f18f87e84dd9c396e36ea97ce9bc8695/bb3bf/node-run-script.jpg 1132w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/f18f87e84dd9c396e36ea97ce9bc8695/6a068/node-run-script.jpg&quot;
+          alt=&quot;node run script&quot;
+          title=&quot;node run script&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4 id=&quot;其他说明&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%85%B6%E4%BB%96%E8%AF%B4%E6%98%8E&quot; aria-label=&quot;其他说明 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;其他说明&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;PnP的依赖变成了zip包，可以上传VCS。开发、编译环境的依赖包可以做到完全一致，也可以省去安装的时间。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/yarnpkg/berry&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;yarn官方仓库&lt;/a&gt;就使用了这种方式管理依赖。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 628px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/90735e572640f56d9c6452a3ea8d4fb7/b4e32/yarn-berry-repo.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 95.54140127388536%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAEDBQL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB7nVlMpsCuAsC/wD/xAAaEAACAgMAAAAAAAAAAAAAAAAAAQIUEBEx/9oACAEBAAEFAqbKLKUjhsRLCP/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABgQAAMBAQAAAAAAAAAAAAAAAAABMpEQ/9oACAEBAAY/AqWFrC1gurv/xAAcEAACAgIDAAAAAAAAAAAAAAAAARARITFBUXH/2gAIAQEAAT8hTKXDBlQ3adqLjNrJp4jU/9oADAMBAAIAAwAAABCsOPz/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/EB//xAAWEQADAAAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8QK//EAB4QAAMAAQQDAAAAAAAAAAAAAAABESFBcZHRYbHx/9oACAEBAAE/EFal2rb0PuuxYCbu3YzRYhTyrgoIMtga8nvP/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/90735e572640f56d9c6452a3ea8d4fb7/8ac56/yarn-berry-repo.webp 240w,
+/static/90735e572640f56d9c6452a3ea8d4fb7/d3be9/yarn-berry-repo.webp 480w,
+/static/90735e572640f56d9c6452a3ea8d4fb7/724e7/yarn-berry-repo.webp 628w&quot;
+          sizes=&quot;(max-width: 628px) 100vw, 628px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/90735e572640f56d9c6452a3ea8d4fb7/09b79/yarn-berry-repo.jpg 240w,
+/static/90735e572640f56d9c6452a3ea8d4fb7/7cc5e/yarn-berry-repo.jpg 480w,
+/static/90735e572640f56d9c6452a3ea8d4fb7/b4e32/yarn-berry-repo.jpg 628w&quot;
+          sizes=&quot;(max-width: 628px) 100vw, 628px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/90735e572640f56d9c6452a3ea8d4fb7/b4e32/yarn-berry-repo.jpg&quot;
+          alt=&quot;yarn berry repo&quot;
+          title=&quot;yarn berry repo&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;因为PnP、Yarn才刚推出不久，不推荐项目直接升级。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;前端社区其他工具链支持度还不够，从官方看已有下列的工具有条件支持(某版本起或插件支持)。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;来自&lt;a href=&quot;https://yarnpkg.com/features/pnp#caveats-and-work-in-progress&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;yarn官方站说明&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;Babel&lt;/p&gt;
+&lt;p&gt;Create-React-App&lt;/p&gt;
+&lt;p&gt;ESLint&lt;/p&gt;
+&lt;p&gt;Husky&lt;/p&gt;
+&lt;p&gt;Jest&lt;/p&gt;
+&lt;p&gt;Prettier&lt;/p&gt;
+&lt;p&gt;Rollup&lt;/p&gt;
+&lt;p&gt;TypeScript-ESLint&lt;/p&gt;
+&lt;p&gt;WebStorm&lt;/p&gt;
+&lt;p&gt;TypeScript&lt;/p&gt;
+&lt;p&gt;VSCode-ESLint&lt;/p&gt;
+&lt;p&gt;VSCode&lt;/p&gt;
+&lt;p&gt;Webpack&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;总结&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%80%BB%E7%BB%93&quot; aria-label=&quot;总结 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;总结&lt;/h2&gt;
+&lt;p&gt;yarn pnp的出现给前端工程角度带来了新的方向，值得尝试和探索。&lt;/p&gt;
+&lt;p&gt;对个人开发者来说可能影响不大，但是团队、公司层面的项目需要慎重，可以尝鲜，不建议直接切换。&lt;/p&gt;
+&lt;p&gt;总的来说，前端又有新玩具了😁。&lt;/p&gt;
+&lt;h2 id=&quot;参考&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%8F%82%E8%80%83&quot; aria-label=&quot;参考 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;参考&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://yarnpkg.com/features/pnp&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;yarn pnp介绍&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[起航2020]]></title><description><![CDATA[2020, go!]]></description><link>https://suyi.xyz/posts/2020-go</link><guid isPermaLink="false">https://suyi.xyz/posts/2020-go</guid><pubDate>Mon, 03 Feb 2020 15:03:00 GMT</pubDate><content:encoded>&lt;p&gt;2020/2/3，节后工作第一天。在家休息了好久终于可以工作了😁。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 261px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2c2f9f70c85ce53f10e0aca0fadfd704/677e6/happy-rabbit.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 95.40229885057472%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAMBBAX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHuMzLAhENwH//EABsQAAICAwEAAAAAAAAAAAAAAAARASECAxAx/9oACAEBAAEFAncPkiWJsFUef//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABYQAAMAAAAAAAAAAAAAAAAAAAEQIP/aAAgBAQAGPwKg/wD/xAAcEAEAAgIDAQAAAAAAAAAAAAABABEQMUFxkVH/2gAIAQEAAT8hWUrqIVescIk9tP3At29iEb9mjqf/2gAMAwEAAgADAAAAEDDPAP/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8QH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8QH//EACAQAQABAwMFAAAAAAAAAAAAAAEAESExQVFhEIGhseH/2gAIAQEAAT8QUu7hmICh1OpKkK0Ga57QFS4WRdfuOgqUIOEbRQWsNGbczx3qf//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/2c2f9f70c85ce53f10e0aca0fadfd704/8ac56/happy-rabbit.webp 240w,
+/static/2c2f9f70c85ce53f10e0aca0fadfd704/ad293/happy-rabbit.webp 261w&quot;
+          sizes=&quot;(max-width: 261px) 100vw, 261px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/2c2f9f70c85ce53f10e0aca0fadfd704/09b79/happy-rabbit.jpg 240w,
+/static/2c2f9f70c85ce53f10e0aca0fadfd704/677e6/happy-rabbit.jpg 261w&quot;
+          sizes=&quot;(max-width: 261px) 100vw, 261px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/2c2f9f70c85ce53f10e0aca0fadfd704/677e6/happy-rabbit.jpg&quot;
+          alt=&quot;happy&quot;
+          title=&quot;happy&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;过去的一月&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%BF%87%E5%8E%BB%E7%9A%84%E4%B8%80%E6%9C%88&quot; aria-label=&quot;过去的一月 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;过去的一月&lt;/h2&gt;
+&lt;p&gt;2020开年就是各种事，首先武汉出现了影响较大的疫情，全国范围都受波及，希望可以尽快结束，缩减各方面的影响。&lt;/p&gt;
+&lt;p&gt;另外，NBA球星&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E7%A7%91%E6%AF%94%C2%B7%E5%B8%83%E8%8E%B1%E6%81%A9%E7%89%B9&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;科比布莱恩特&lt;/a&gt;直升机出事，着实令我们这群一直都喜欢着他的球迷心痛。但是居然出现了利用他的离世炒作的商人，这是何等的市井小人。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 220px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4e217e3d7ba890c27c0bc20107c19c49/27dc7/kobe.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 152.72727272727275%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAfABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAgH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQP/2gAMAwEAAhADEAAAAZetnpokhVM+9DTBlf/EABoQAQEAAwEBAAAAAAAAAAAAAAIBABESAyH/2gAIAQEAAQUCRyka5OKgmZdzL9qAlHpybqFevRgln//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABcRAAMBAAAAAAAAAAAAAAAAAAABESH/2gAIAQIBAT8BjIJOYYf/xAAfEAACAQQCAwAAAAAAAAAAAAAAASECESIxEEESkaH/2gAIAQEABj8CyeiINfSFPY30Y64ayQij2Vq1vIR//8QAHBABAAMAAgMAAAAAAAAAAAAAAQARIUFRMWFx/9oACAEBAAE/IUMoppXcZQMdKhSLbkx0fEQoXbF+Y6NxdYlM9cwgCdlRq8t72OBRTOqjEvE//9oADAMBAAIAAwAAABCE4Qz/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/ECjaumn/xAAZEQEBAQADAAAAAAAAAAAAAAABABEhcfD/2gAIAQIBAT8Q2xOrUscvMidb/8QAHhABAAMBAQACAwAAAAAAAAAAAQARITFBUYFhkcH/2gAIAQEAAT8Q4nYD6r2ZX3Fur9ZViKxVF/RGY2y9r+ZahetNt/suAgs9L7ETfL02ES5LLBwfYHykvgwGHZC8Tx+ia1VA39nxnPIjMSmE/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/4e217e3d7ba890c27c0bc20107c19c49/b5458/kobe.webp 220w&quot;
+          sizes=&quot;(max-width: 220px) 100vw, 220px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/4e217e3d7ba890c27c0bc20107c19c49/27dc7/kobe.jpg 220w&quot;
+          sizes=&quot;(max-width: 220px) 100vw, 220px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/4e217e3d7ba890c27c0bc20107c19c49/27dc7/kobe.jpg&quot;
+          alt=&quot;KobeBryant&quot;
+          title=&quot;KobeBryant&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;现在&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E7%8E%B0%E5%9C%A8&quot; aria-label=&quot;现在 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;现在&lt;/h2&gt;
+&lt;p&gt;虽然一月有很多不开心，但是生活还在继续，小小的困难都不算什么。&lt;/p&gt;
+&lt;p&gt;因为我有了她，一只已经8个月的铁憨憨英短:p(从刚接回家的1斤到现在的7斤)。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/16cfea8978cfcebf52e594e3fac59c6f/9568a/cat1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 133.33333333333331%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMCBAUB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAD/9oADAMBAAIQAxAAAAFF2m6tIgBYTuSYuijPT//EAB4QAAIBAwUAAAAAAAAAAAAAAAACAwERMQQQEiJC/9oACAEBAAEFAsiyqsZa1NNRHORIQddq59H/xAAWEQEBAQAAAAAAAAAAAAAAAAABEDH/2gAIAQMBAT8BIbP/xAAWEQEBAQAAAAAAAAAAAAAAAAABEDH/2gAIAQIBAT8BY5P/xAAaEAEAAQUAAAAAAAAAAAAAAAABEAACESAh/9oACAEBAAY/AqtFlU6OuZ//xAAZEAEBAQEBAQAAAAAAAAAAAAABABExIWH/2gAIAQEAAT8hXHwvTBwCLGC5AG8GydmrnNkpObbEQux4bb//2gAMAwEAAgADAAAAEPAlTf/EABgRAAIDAAAAAAAAAAAAAAAAAAAhARAR/9oACAEDAQE/EERhKn//xAAWEQEBAQAAAAAAAAAAAAAAAAAQIQH/2gAIAQIBAT8QumB//8QAHBABAAIDAAMAAAAAAAAAAAAAAQARITFRQYHh/9oACAEBAAE/EGQKwW3r1Mqo7hC9vCBCjUc6QWsSoobMVY1C0gsKAFeWUjQbp7KQzBLtmDMHyW7P/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/16cfea8978cfcebf52e594e3fac59c6f/8ac56/cat1.webp 240w,
+/static/16cfea8978cfcebf52e594e3fac59c6f/d3be9/cat1.webp 480w,
+/static/16cfea8978cfcebf52e594e3fac59c6f/e46b2/cat1.webp 960w,
+/static/16cfea8978cfcebf52e594e3fac59c6f/f992d/cat1.webp 1440w,
+/static/16cfea8978cfcebf52e594e3fac59c6f/882b9/cat1.webp 1920w,
+/static/16cfea8978cfcebf52e594e3fac59c6f/e51ec/cat1.webp 3024w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/16cfea8978cfcebf52e594e3fac59c6f/09b79/cat1.jpg 240w,
+/static/16cfea8978cfcebf52e594e3fac59c6f/7cc5e/cat1.jpg 480w,
+/static/16cfea8978cfcebf52e594e3fac59c6f/6a068/cat1.jpg 960w,
+/static/16cfea8978cfcebf52e594e3fac59c6f/644c5/cat1.jpg 1440w,
+/static/16cfea8978cfcebf52e594e3fac59c6f/0f98f/cat1.jpg 1920w,
+/static/16cfea8978cfcebf52e594e3fac59c6f/9568a/cat1.jpg 3024w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/16cfea8978cfcebf52e594e3fac59c6f/6a068/cat1.jpg&quot;
+          alt=&quot;cat1&quot;
+          title=&quot;cat1&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5d5e56e4929fd427fbd47de04283221f/d2602/cat2.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMBAv/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABjdxm4oP/xAAaEAACAwEBAAAAAAAAAAAAAAABAgADERIT/9oACAEBAAEFAluXe1aEgSyrCEq3zE//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAcEAABAwUAAAAAAAAAAAAAAAABABIhEBEiQZH/2gAIAQEABj8CsQa5ATsJrzxTK//EABoQAQADAQEBAAAAAAAAAAAAAAEAESFBUXH/2gAIAQEAAT8hHQWcTX2M1cayssxZ0cQjiPLP/9oADAMBAAIAAwAAABCoL//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/EIf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAIf/aAAgBAgEBPxBH/8QAHRABAQACAgMBAAAAAAAAAAAAAREAITFhQVGBof/aAAgBAQABPxAvKKoCH7kjaPSZQp1cWtkNE6jz9x+ytsRZ4dY3oHKIzvP/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/5d5e56e4929fd427fbd47de04283221f/8ac56/cat2.webp 240w,
+/static/5d5e56e4929fd427fbd47de04283221f/d3be9/cat2.webp 480w,
+/static/5d5e56e4929fd427fbd47de04283221f/e46b2/cat2.webp 960w,
+/static/5d5e56e4929fd427fbd47de04283221f/f992d/cat2.webp 1440w,
+/static/5d5e56e4929fd427fbd47de04283221f/882b9/cat2.webp 1920w,
+/static/5d5e56e4929fd427fbd47de04283221f/b33a3/cat2.webp 4032w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/5d5e56e4929fd427fbd47de04283221f/09b79/cat2.jpg 240w,
+/static/5d5e56e4929fd427fbd47de04283221f/7cc5e/cat2.jpg 480w,
+/static/5d5e56e4929fd427fbd47de04283221f/6a068/cat2.jpg 960w,
+/static/5d5e56e4929fd427fbd47de04283221f/644c5/cat2.jpg 1440w,
+/static/5d5e56e4929fd427fbd47de04283221f/0f98f/cat2.jpg 1920w,
+/static/5d5e56e4929fd427fbd47de04283221f/d2602/cat2.jpg 4032w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/5d5e56e4929fd427fbd47de04283221f/6a068/cat2.jpg&quot;
+          alt=&quot;cat2&quot;
+          title=&quot;cat2&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;小猫虽然调皮，但也带来了很多的欢乐，也是繁忙工作生活之余的一种自我释放吧。&lt;/p&gt;
+&lt;h2 id=&quot;未来&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%9C%AA%E6%9D%A5&quot; aria-label=&quot;未来 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;未来&lt;/h2&gt;
+&lt;p&gt;2020的2月才刚刚开始，前途无限。&lt;/p&gt;
+&lt;p&gt;多思考，多行动，多运动。&lt;/p&gt;
+&lt;p&gt;Living happy, living healthy。🆙&lt;/p&gt;
+&lt;p&gt;2020, go!&lt;/p&gt;
+&lt;h2 id=&quot;其他&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%85%B6%E4%BB%96&quot; aria-label=&quot;其他 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;其他&lt;/h2&gt;
+&lt;p&gt;最后附一张肺炎防护图，科学防疫。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 450px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/549c96edbf04b026b2b37f8a5ff16736/20e5d/2019-nCoV.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 177.77777777777777%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGQABAQEAAwAAAAAAAAAAAAAAAAIDAQQF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIQAxAAAAH1b5yrdiG5qUNg31xzoJ//xAAbEAEAAgMBAQAAAAAAAAAAAAABAAIREiFBMf/aAAgBAQABBQJEa/K25DELM9mO+mZXhNTcqE//xAAWEQEBAQAAAAAAAAAAAAAAAAAQEQD/2gAIAQMBAT8B0K//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AV//xAAdEAACAgIDAQAAAAAAAAAAAAAAARARITIxQVFh/9oACAEBAAY/At3ybMyWzCpdGVf2PXNShn//xAAfEAEAAwEAAgIDAAAAAAAAAAABABEhMUGBEGFxkcH/2gAIAQEAAT8hRbXgDkCpVqI+FjQ4vamV2G0gjX8nZvf3WclNfoirVv8AJx998hWE3VPDKUWevhCsqZw63P/aAAwDAQACAAMAAAAQEzQ+hA//xAAYEQEBAQEBAAAAAAAAAAAAAAABEQAQIf/aAAgBAwEBPxBSzXk9xGS8/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAEREDH/2gAIAQIBAT8QV6VCZN//xAAdEAEBAAIDAQEBAAAAAAAAAAABEQAhMUFRYRDR/9oACAEBAAE/EGlqmhPnPGOdVxZ/csxs4kzTZHCbDdxh81CsvYeZCeKiR0zEBparwb1hEqUGkNXQ94yFAyBr4x0BS13p51MXgA2L8DrAGlOX1+IMhWHGe4Fb7z//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/549c96edbf04b026b2b37f8a5ff16736/8ac56/2019-nCoV.webp 240w,
+/static/549c96edbf04b026b2b37f8a5ff16736/8626f/2019-nCoV.webp 450w&quot;
+          sizes=&quot;(max-width: 450px) 100vw, 450px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/549c96edbf04b026b2b37f8a5ff16736/09b79/2019-nCoV.jpg 240w,
+/static/549c96edbf04b026b2b37f8a5ff16736/20e5d/2019-nCoV.jpg 450w&quot;
+          sizes=&quot;(max-width: 450px) 100vw, 450px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/549c96edbf04b026b2b37f8a5ff16736/20e5d/2019-nCoV.jpg&quot;
+          alt=&quot;2019-nCoV&quot;
+          title=&quot;2019-nCoV&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[我的2019]]></title><description><![CDATA[眨眼之间来到了2020的农历春节。时间过得飞快，新的十年已经开始。]]></description><link>https://suyi.xyz/posts/summary-2019</link><guid isPermaLink="false">https://suyi.xyz/posts/summary-2019</guid><pubDate>Fri, 24 Jan 2020 23:58:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a0cb2ff0aacd5b8515b2005a559be1d3/eea4a/2020.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIBBP/EABYBAQEBAAAAAAAAAAAAAAAAAAQAAf/aAAwDAQACEAMQAAAB5lUd5qz/xAAaEAEAAgMBAAAAAAAAAAAAAAABAAIDESFC/9oACAEBAAEFArcgm61U8oGQWf/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPwFdf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABoQAQABBQAAAAAAAAAAAAAAAAABEBExMlH/2gAIAQEABj8Cy41StT//xAAbEAEBAQEAAwEAAAAAAAAAAAABEQAhMVFxof/aAAgBAQABPyGinX5hyUo2dvrVSn46Fp2miRyYx5d//9oADAMBAAIAAwAAABDj/wD/xAAXEQEAAwAAAAAAAAAAAAAAAAAAASFh/9oACAEDAQE/EJ1Y/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERIf/aAAgBAgEBPxB4Sn//xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMVFh/9oACAEBAAE/EKpNEW9eIewBV4V9uoBuHGiOSYb+OMZHKsdrIwDtfZ//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/a0cb2ff0aacd5b8515b2005a559be1d3/8ac56/2020.webp 240w,
+/static/a0cb2ff0aacd5b8515b2005a559be1d3/d3be9/2020.webp 480w,
+/static/a0cb2ff0aacd5b8515b2005a559be1d3/e46b2/2020.webp 960w,
+/static/a0cb2ff0aacd5b8515b2005a559be1d3/af3f0/2020.webp 1280w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/a0cb2ff0aacd5b8515b2005a559be1d3/09b79/2020.jpg 240w,
+/static/a0cb2ff0aacd5b8515b2005a559be1d3/7cc5e/2020.jpg 480w,
+/static/a0cb2ff0aacd5b8515b2005a559be1d3/6a068/2020.jpg 960w,
+/static/a0cb2ff0aacd5b8515b2005a559be1d3/eea4a/2020.jpg 1280w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/a0cb2ff0aacd5b8515b2005a559be1d3/6a068/2020.jpg&quot;
+          alt=&quot;2020&quot;
+          title=&quot;2020&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;眨眼之间来到了2020的农历春节。时间过得飞快，新的十年已经开始。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是最好的时代，也是最坏的时代。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在过去的十年中，我从一个才步入大学的青涩少年，成为了一个忙着工作挣钱养家的人，岁月不饶人。为了可以过上更好的生活，每天两点一线的奔波、加班。。。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3b701017c75fcd42a7cf716dd647aaab/72e01/bitter.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 105.37109375%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAVABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAMEBQEC/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAME/9oADAMBAAIQAxAAAAHV5YgPaUUa5TPriej/xAAcEAACAgIDAAAAAAAAAAAAAAABAgADEjEEE0L/2gAIAQEAAQUCKMT1tBWZ4VVyXXIc1my58Rr/xAAWEQEBAQAAAAAAAAAAAAAAAAABAhD/2gAIAQMBAT8By6Rc/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAC/9oACAECAQE/AZkJ/8QAHRAAAQQCAwAAAAAAAAAAAAAAAQACECEDMxJBYf/aAAgBAQAGPwKsjlsctjjAo17DePaEf//EAB4QAAICAgIDAAAAAAAAAAAAAAEhABExUUFxYZGx/9oACAEBAAE/ITmtKQ+8QQfVA9lErVddz0Wofjpr8zMA80I48Kf/2gAMAwEAAgADAAAAEIAIwP/EABYRAQEBAAAAAAAAAAAAAAAAAAEQUf/aAAgBAwEBPxCBQ5P/xAAWEQEBAQAAAAAAAAAAAAAAAAABEFH/2gAIAQIBAT8QigU2f//EAB8QAQEAAgEEAwAAAAAAAAAAAAERACExQVFx0WGBof/aAAgBAQABPxCKldlIbsNfOJ2ucoP5Mh3tFHbxhNQ2qDFepfOc1l0ptzC+8Q6TZ9LhYm1rSJ0waB8xC8e8QkAIYdNZ/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/3b701017c75fcd42a7cf716dd647aaab/8ac56/bitter.webp 240w,
+/static/3b701017c75fcd42a7cf716dd647aaab/d3be9/bitter.webp 480w,
+/static/3b701017c75fcd42a7cf716dd647aaab/e46b2/bitter.webp 960w,
+/static/3b701017c75fcd42a7cf716dd647aaab/a9a89/bitter.webp 1024w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/3b701017c75fcd42a7cf716dd647aaab/09b79/bitter.jpg 240w,
+/static/3b701017c75fcd42a7cf716dd647aaab/7cc5e/bitter.jpg 480w,
+/static/3b701017c75fcd42a7cf716dd647aaab/6a068/bitter.jpg 960w,
+/static/3b701017c75fcd42a7cf716dd647aaab/72e01/bitter.jpg 1024w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/3b701017c75fcd42a7cf716dd647aaab/6a068/bitter.jpg&quot;
+          alt=&quot;bitter.jpg&quot;
+          title=&quot;bitter.jpg&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2020年初，互联网寒冬又到来了。各大公司都在裁员，所幸未被波及。互联网、软件开发近几年涌入的人太多，出现大裁员再所难免。所以还是应该依靠提升自己的深度和广度，躲避裁员的大潮。&lt;/p&gt;
+&lt;h2 id=&quot;回顾&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%9B%9E%E9%A1%BE&quot; aria-label=&quot;回顾 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;回顾&lt;/h2&gt;
+&lt;p&gt;扯了好多，该回顾2019了。2019年初立了好多flag，例如技术方面的react、flutter等，生活方面的出国游等等，基本都没实现😔。&lt;/p&gt;
+&lt;p&gt;但是，做家务、登高的小目标算是达成了(还好)。&lt;/p&gt;
+&lt;h2 id=&quot;2020目标&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2020%E7%9B%AE%E6%A0%87&quot; aria-label=&quot;2020目标 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2020目标&lt;/h2&gt;
+&lt;p&gt;首先，必须继续实现2019的目标。&lt;/p&gt;
+&lt;p&gt;然后，放松身心。工作不是生活的全部，还有诗和远方。&lt;/p&gt;
+&lt;p&gt;最后，解决工作问题并争取解决个人问题，新的10年新气象。&lt;/p&gt;
+&lt;h2 id=&quot;其他&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%85%B6%E4%BB%96&quot; aria-label=&quot;其他 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;其他&lt;/h2&gt;
+&lt;p&gt;2020年1月出现的武汉肺炎疫情把我(以及很多人都)吓了一跳。最近加班干活多了之后也有点体虚。新的一年工作之外更加要注意个人的健康，毕竟还没结婚生子、身体是万事的本钱。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/25/TkjUC98FrtWp21b.gif&quot; alt=&quot;cheerup.gif&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[在网页中显示注音]]></title><description><![CDATA[平时浏览网页时，可以看到一些冷门、复杂单词的上方有拼音。在开发中，如何实现注音呢？]]></description><link>https://suyi.xyz/posts/html-pinyin-notation</link><guid isPermaLink="false">https://suyi.xyz/posts/html-pinyin-notation</guid><pubDate>Fri, 18 Oct 2019 16:51:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 562px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/de20edd589317d7404974bd82201cb62/9f2bf/pinyin-notation.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.19217081850533%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAECAwX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHbsUhDD//EABcQAAMBAAAAAAAAAAAAAAAAAAEQETH/2gAIAQEAAQUChqGL/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFRABAQAAAAAAAAAAAAAAAAAAIGH/2gAIAQEABj8Ci//EABsQAAICAwEAAAAAAAAAAAAAAAERADEQIVFx/9oACAEBAAE/IQoWNKUQ5EOSjzP/2gAMAwEAAgADAAAAECAP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGhAAAgIDAAAAAAAAAAAAAAAAAJEBYRAxof/aAAgBAQABPxCZpogqIqI52f/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/de20edd589317d7404974bd82201cb62/8ac56/pinyin-notation.webp 240w,
+/static/de20edd589317d7404974bd82201cb62/d3be9/pinyin-notation.webp 480w,
+/static/de20edd589317d7404974bd82201cb62/49232/pinyin-notation.webp 562w&quot;
+          sizes=&quot;(max-width: 562px) 100vw, 562px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/de20edd589317d7404974bd82201cb62/09b79/pinyin-notation.jpg 240w,
+/static/de20edd589317d7404974bd82201cb62/7cc5e/pinyin-notation.jpg 480w,
+/static/de20edd589317d7404974bd82201cb62/9f2bf/pinyin-notation.jpg 562w&quot;
+          sizes=&quot;(max-width: 562px) 100vw, 562px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/de20edd589317d7404974bd82201cb62/9f2bf/pinyin-notation.jpg&quot;
+          alt=&quot;pinyin notation&quot;
+          title=&quot;pinyin notation&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;平时浏览网页时，可以看到一些冷门、复杂单词的上方有拼音。在开发中，如何实现注音呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;ruby-和rt-&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ruby-%E5%92%8Crt-&quot; aria-label=&quot;ruby 和rt  permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;ruby /&amp;gt;&lt;/code&gt;和&lt;code class=&quot;language-text&quot;&gt;&amp;lt;rt /&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;MDN &lt;code class=&quot;language-text&quot;&gt;&amp;lt;ruby /&amp;gt;&lt;/code&gt;说明标签&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;例如下面的html代码，就可以实现注音:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ruby&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;这是&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;rt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;zhèshì&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;rt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ruby&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ruby&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;拼音&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;rt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;pīnyīn&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;rt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ruby&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;运行结果: &lt;ruby&gt;这是&lt;rt&gt;zhèshì&lt;/rt&gt;&lt;/ruby&gt;&lt;ruby&gt;拼音&lt;rt&gt;pīnyīn&lt;/rt&gt;&lt;/ruby&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ruby-不兼容性的回退方案rp-&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ruby-%E4%B8%8D%E5%85%BC%E5%AE%B9%E6%80%A7%E7%9A%84%E5%9B%9E%E9%80%80%E6%96%B9%E6%A1%88rp-&quot; aria-label=&quot;ruby 不兼容性的回退方案rp  permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;ruby /&amp;gt;&lt;/code&gt;不兼容性的回退方案&lt;code class=&quot;language-text&quot;&gt;&amp;lt;rp /&amp;gt;&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;因为web标准的兼容性，&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rp&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;rp /&amp;gt;&lt;/code&gt;&lt;/a&gt;被用来作为&lt;code class=&quot;language-text&quot;&gt;&amp;lt;ruby /&amp;gt;&lt;/code&gt;注音不支持的回退方案。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;rp /&amp;gt;&lt;/code&gt;的使用方法如下(需要围绕&lt;code class=&quot;language-text&quot;&gt;rt&lt;/code&gt;的开、闭标签):&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ruby&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+这是 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;rp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;(&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;rp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;rt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;zhèshì&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;rt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;rp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;)&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;rp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+拼音 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;rp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;(&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;rp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;rt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;pīnyīn&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;rt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;rp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;)&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;rp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ruby&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;运行结果: &lt;ruby&gt;这是 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;zhèshì&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;拼音 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;pīnyīn&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[我的2018]]></title><description><![CDATA[时间如白驹过隙，眨眼之间2018即将结束。2019新的一年已经到来...]]></description><link>https://suyi.xyz/posts/summary-2018</link><guid isPermaLink="false">https://suyi.xyz/posts/summary-2018</guid><pubDate>Mon, 31 Dec 2018 18:00:00 GMT</pubDate><content:encoded>&lt;p&gt;时间如白驹过隙，眨眼之间2018即将结束。2019新的一年已经到来…&lt;/p&gt;
+&lt;h2 id=&quot;回顾&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%9B%9E%E9%A1%BE&quot; aria-label=&quot;回顾 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;回顾&lt;/h2&gt;
+&lt;p&gt;18年初之际，定下了一些目标，现在看看完成情况吧。&lt;/p&gt;
+&lt;h3 id=&quot;读书&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%AF%BB%E4%B9%A6&quot; aria-label=&quot;读书 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;读书&lt;/h3&gt;
+&lt;p&gt;看完了&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[✓] 深入浅出node.js&lt;/li&gt;
+&lt;li&gt;[✓] 你不知道的JS&lt;/li&gt;
+&lt;li&gt;[✓] 岛上书店&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;技术方面，虽然完整看完的没几本，但是零散也看了好多，比如&lt;code class=&quot;language-text&quot;&gt;代码整洁之道&lt;/code&gt;、&lt;code class=&quot;language-text&quot;&gt;敏捷软件开发&lt;/code&gt;、&lt;code class=&quot;language-text&quot;&gt;CSS世界&lt;/code&gt;等。等有空了会完整看一遍，并写点简单的分享。&lt;/p&gt;
+&lt;p&gt;技术之外，完整看完的只有&lt;code class=&quot;language-text&quot;&gt;岛上书店&lt;/code&gt;(书中引用太多，很多时候基本都处于懵逼状态)。&lt;/p&gt;
+&lt;p&gt;个人认为，这点的阅读量显然不够，19年还需要看更多的书籍，技术或非技术都需要。&lt;/p&gt;
+&lt;h3 id=&quot;工作&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%B7%A5%E4%BD%9C&quot; aria-label=&quot;工作 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;工作&lt;/h3&gt;
+&lt;p&gt;经历了年中的一波骚动，现在也正经历着年末的互联网寒潮。总体上说，2018实现了公司内自我的提升。&lt;/p&gt;
+&lt;p&gt;公司的规模也慢慢地变大着，从什么都需要自己做到现在带着新人做东西了。&lt;/p&gt;
+&lt;p&gt;虽然如此，外面的形式依旧严峻，现在不是可以掉以轻心的时候。&lt;/p&gt;
+&lt;p&gt;2019要更好地拉起新人，让他们逐渐可以掌握项目(这样我也可以轻松一点😁)。&lt;/p&gt;
+&lt;h3 id=&quot;生活&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E7%94%9F%E6%B4%BB&quot; aria-label=&quot;生活 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;生活&lt;/h3&gt;
+&lt;p&gt;因为自己的问题，成功单身/(ㄒoㄒ)/~~。我也老大不小了，需要努努力了。&lt;/p&gt;
+&lt;p&gt;虽然感情失意，但是生活还算ok。&lt;/p&gt;
+&lt;p&gt;2018年9月终于拥有了自己的房子并且住了进去，终于不需要再和不可控的舍友合租了✌️。&lt;/p&gt;
+&lt;h3 id=&quot;技术&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%8A%80%E6%9C%AF&quot; aria-label=&quot;技术 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;技术&lt;/h3&gt;
+&lt;p&gt;反省了自己的2018，技术上感觉没什么提升：╥﹏╥…。年末会的东西和年初一样。&lt;/p&gt;
+&lt;h2 id=&quot;2019目标&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2019%E7%9B%AE%E6%A0%87&quot; aria-label=&quot;2019目标 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2019目标&lt;/h2&gt;
+&lt;p&gt;2018执行不好，2019需要更加努力。定几个小目标，过几个月看看完成情况(暂列几个，后续再补充)。&lt;/p&gt;
+&lt;h3 id=&quot;工作方面&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%B7%A5%E4%BD%9C%E6%96%B9%E9%9D%A2&quot; aria-label=&quot;工作方面 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;工作方面&lt;/h3&gt;
+&lt;p&gt;努力工作，提升自己，不错过更好的平台。&lt;/p&gt;
+&lt;h3 id=&quot;技术方面&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%8A%80%E6%9C%AF%E6%96%B9%E9%9D%A2&quot; aria-label=&quot;技术方面 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;技术方面&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;学习React&lt;/li&gt;
+&lt;li&gt;深入Android&lt;/li&gt;
+&lt;li&gt;学习Flutter&lt;/li&gt;
+&lt;li&gt;深入Nodejs应用&lt;/li&gt;
+&lt;li&gt;用上面的内容重写Blog&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;生活方面&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E7%94%9F%E6%B4%BB%E6%96%B9%E9%9D%A2&quot; aria-label=&quot;生活方面 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;生活方面&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;定期锻炼身体&lt;/li&gt;
+&lt;li&gt;定期登山远足&lt;/li&gt;
+&lt;li&gt;多在家做饭&lt;/li&gt;
+&lt;li&gt;出国旅游一次&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;读书方面&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%AF%BB%E4%B9%A6%E6%96%B9%E9%9D%A2&quot; aria-label=&quot;读书方面 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;读书方面&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;重读《岛上书店》&lt;/li&gt;
+&lt;li&gt;其他技术书籍&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;终&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E7%BB%88&quot; aria-label=&quot;终 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;终&lt;/h2&gt;
+&lt;p&gt;计划不是空划，安排不是胡排，我会定期检查自己的完成情况，让所有的计划安排有意义。&lt;/p&gt;
+&lt;p&gt;2019新年快乐。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[经历了9316天的等待，属于我的blog终于开张啦。]]></description><link>https://suyi.xyz/posts/hello-world</link><guid isPermaLink="false">https://suyi.xyz/posts/hello-world</guid><pubDate>Sat, 06 May 2017 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;经历了9316天的等待，属于我的blog终于开张啦。&lt;/p&gt;
+&lt;p&gt;欢迎并感谢看到这一篇的各位。&lt;/p&gt;
+&lt;p&gt;日后会更新下去，不断强化自己的能力ﾍ|･∀･|ﾉ*~●&lt;/p&gt;</content:encoded></item></channel></rss>

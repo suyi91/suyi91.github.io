@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{"76aL":function(t,e,n){"use strict";n.r(e);var a=n("q1tI"),l=n.n(a),c=n("/d1K"),r=n("Zttt"),i=n("RXmK"),o=n("gGy4");e.default=function(){var t=Object(o.b)(),e=t.title,n=t.subtitle;return l.a.createElement(r.a,{title:"404 Not Found - "+e,description:n},l.a.createElement(c.a,null),l.a.createElement(i.a,{title:"404 Not Found"},l.a.createElement("p",null,"页面建设中..."),l.a.createElement("img",{src:"/404.jpg"})))}}}]);
+//# sourceMappingURL=component---src-templates-not-found-template-js-2bd150a218019824f65a.js.map
