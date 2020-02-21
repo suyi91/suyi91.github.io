@@ -1,3 +1,1 @@
-# suyi's blog
-
-gatsby-starter-hello-friend@0.2.0
+[https://suyi.xyz](https://suyi.xyz)

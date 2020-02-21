@@ -1,140 +1,209 @@
-const postCssPresetEnv = require(`postcss-preset-env`)
-const postCSSNested = require('postcss-nested')
-const postCSSUrl = require('postcss-url')
-const postCSSImports = require('postcss-import')
-const cssnano = require('cssnano')
-const postCSSMixins = require('postcss-mixins')
+'use strict';
 
-const dev = process.env.NODE_ENV === 'development'
+const siteConfig = require('./config.js');
+const postCssPlugins = require('./postcss-config.js');
 
-const config = {
+module.exports = {
+  pathPrefix: siteConfig.pathPrefix,
   siteMetadata: {
-    title: 'Suyi的小站',
-    description: `记录自己的成长历程`,
-    copyrights: '',
-    author: `Suyi`,
-    logo: {
-      src: '',
-      alt: '',
-    },
-    logoText: '欢迎来到Suyi的小站',
-    defaultTheme: 'dark',
-    postsPerPage: 5,
-    showMenuItems: 2,
-    menuMoreText: 'More',
-    mainMenu: [
-      {
-        title: 'About',
-        path: '/about',
-      },
-    ],
-    siteUrl: 'https://suyi.xyz',
+    year: siteConfig.year, // 获取编译时的年份
+    url: siteConfig.url,
+    title: siteConfig.title,
+    subtitle: siteConfig.subtitle,
+    copyright: siteConfig.copyright,
+    disqusShortname: siteConfig.disqusShortname,
+    menu: siteConfig.menu,
+    author: siteConfig.author
   },
   plugins: [
-    `babel-preset-gatsby`,
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/content`,
+        name: 'pages'
+      }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts`,
-      },
+        path: `${__dirname}/static/media`,
+        name: 'media'
+      }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
-      },
+        name: 'css',
+        path: `${__dirname}/static/css`
+      }
     },
     {
-      resolve: `gatsby-plugin-postcss`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        postCssPlugins: [
-          postCSSUrl(),
-          postCSSImports(),
-          postCSSMixins(),
-          postCSSNested(),
-          postCssPresetEnv({
-            importFrom: 'src/styles/variables.css',
-            stage: 1,
-            preserve: false,
-          }),
-          cssnano({
-            preset: 'default',
-          }),
-        ],
-      },
+        name: 'assets',
+        path: `${__dirname}/static`
+      }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                site_url: url
+                title
+                description: subtitle
+              }
+            }
+          }
+        `,
+        feeds: [{
+          serialize: ({ query: { site, allMarkdownRemark } }) => (
+            allMarkdownRemark.edges.map((edge) => ({
+              ...edge.node.frontmatter,
+              description: edge.node.frontmatter.description,
+              date: edge.node.frontmatter.date,
+              url: site.siteMetadata.site_url + edge.node.fields.slug,
+              guid: site.siteMetadata.site_url + edge.node.fields.slug,
+              custom_elements: [{ 'content:encoded': edge.node.html }]
+            }))
+          ),
+          query: `
+              {
+                allMarkdownRemark(
+                  limit: 1000,
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+                ) {
+                  edges {
+                    node {
+                      html
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        date
+                        template
+                        draft
+                        description
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+          output: '/rss.xml',
+          title: siteConfig.title
+        }]
+      }
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          'gatsby-remark-relative-images',
           {
-            resolve: 'gatsby-remark-embed-video',
+            resolve: 'gatsby-remark-katex',
             options: {
-              related: false,
-              noIframeBorder: true,
-            },
+              strict: 'ignore'
+            }
           },
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 800,
-              quality: 100,
-            },
+              maxWidth: 960,
+              withWebp: true,
+              ignoreFileExtensions: [],
+            }
           },
           {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: false,
-            },
+            resolve: 'gatsby-remark-responsive-iframe',
+            options: { wrapperStyle: 'margin-bottom: 1.0725rem' }
           },
-        ],
+          'gatsby-remark-autolink-headers',
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
+          'gatsby-remark-external-links'
+        ]
+      }
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/index.js`,
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: [siteConfig.googleAnalyticsId],
+        pluginConfig: {
+          head: true,
+        },
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-sitemap',
       options: {
-        name: `Suyi\'s blog`,
-        short_name: `Suyi\'s blog`,
-        start_url: `/`,
-        background_color: `#292a2d`,
-        theme_color: `#292a2d`,
-        display: `minimal-ui`,
-        icon: `src/images/favicon.png`,
-      },
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl: url
+              }
+            }
+            allSitePage(
+              filter: {
+                path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
+              }
+            ) {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+          }
+        `,
+        output: '/sitemap.xml',
+        serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => ({
+          url: site.siteMetadata.siteUrl + edge.node.path,
+          changefreq: 'daily',
+          priority: 0.7
+        }))
+      }
     },
-    `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-disqus`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        shortname: `suyi91`,
+        name: siteConfig.title,
+        short_name: siteConfig.title,
+        start_url: '/',
+        background_color: '#FFF',
+        theme_color: '#F7A046',
+        display: 'standalone',
+        icon: 'static/photo.jpg'
       },
     },
-  ],
-}
-
-if (!dev) {
-  config.plugins.push({
-    resolve: `gatsby-plugin-google-analytics`,
-    options: {
-      trackingId: 'UA-98612723-2',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        postCssPlugins: [...postCssPlugins],
+        cssLoaderOptions: {
+          camelCase: false,
+        }
+      }
     },
-  })
-}
-
-module.exports = config
+    'gatsby-plugin-flow',
+    'gatsby-plugin-optimize-svgs',
+  ]
+};
