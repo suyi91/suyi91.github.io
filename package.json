@@ -1,5 +1,5 @@
 {
-  "version": "3.0.3",
+  "version": "1.0.0",
   "name": "suyi91.github.io",
   "description": "A minimal, lightweight and mobile-first starter for creating blazing-fast static blogs",
   "main": "n/a",
@@ -18,7 +18,7 @@
     "test:watch": "jest --watch --config ./jest/jest-config.js"
   },
   "repository": "https://github.com/alxshelepenok/gatsby-starter-lumen",
-  "author": "Alexander Shelepenok <alxshelepenok@gmail.com>",
+  "author": "Suyi",
   "license": "MIT",
   "keywords": [
     "gatsby",
