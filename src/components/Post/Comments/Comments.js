@@ -47,7 +47,7 @@ const Comments = ({ postTitle, postSlug }: Props) => {
       id: postSlug,
       labels: ['suyi.xyz', 'blog'],
       title: postTitle,
-      distractionFreeMode: true
+      distractionFreeMode: false
     });
 
     gitalk.render('gitalk-container');
