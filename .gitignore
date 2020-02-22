@@ -1,6 +1,7 @@
 node_modules/
 .cache/
 public/
+suyi91.github.io/
 npm-debug.log
 .eslintcache
 .gatsby-context.js

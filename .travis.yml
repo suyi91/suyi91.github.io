@@ -16,4 +16,4 @@ script:
   - git config user.name "${GH_NAME}"
   - git config user.email "${GH_EMAIL}"
   - yarn install && yarn run build && yarn run publish
-  - tar zcvf blog.tgz public/ && scp -o StrictHostKeyChecking=no -P ${ssh_port} blog.tgz "${ssh_user}@${ssh_addr}:~/" && ssh -o StrictHostKeyChecking=no -p ${ssh_port} "${ssh_user}@${ssh_addr}" ./deploy-blog.sh
+  - tar zcvf blog.tgz suyi91.github.io/ && scp -o StrictHostKeyChecking=no -P ${ssh_port} blog.tgz "${ssh_user}@${ssh_addr}:~/" && ssh -o StrictHostKeyChecking=no -p ${ssh_port} "${ssh_user}@${ssh_addr}" ./deploy-blog.sh
