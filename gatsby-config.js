@@ -172,11 +172,18 @@ module.exports = {
           }
         `,
         output: '/sitemap.xml',
-        serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => ({
-          url: site.siteMetadata.siteUrl + edge.node.path,
-          changefreq: 'daily',
-          priority: 0.7
-        }))
+        serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => {
+          // 某些页面如果最后没有"/"会重定向404，nginx可能有问题。
+          let url = site.siteMetadata.siteUrl + edge.node.path;
+          if (!url.endsWith('/')) {
+            url = `${url}/`;
+          }
+          return {
+            url,
+            changefreq: 'daily',
+            priority: 0.7
+          };
+        })
       }
     },
     {
