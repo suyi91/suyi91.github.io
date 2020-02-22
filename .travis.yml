@@ -17,3 +17,5 @@ script:
   - git config user.email "${GH_EMAIL}"
   - yarn install && yarn run build && yarn run publish
   - tar zcvf blog.tgz suyi91.github.io/ && scp -o StrictHostKeyChecking=no -P ${ssh_port} blog.tgz "${ssh_user}@${ssh_addr}:~/" && ssh -o StrictHostKeyChecking=no -p ${ssh_port} "${ssh_user}@${ssh_addr}" ./deploy-blog.sh
+  - cd suyi91.github.io/
+  - curl -H 'Content-Type:text/plain' --data-binary @sitemap.xml "http://data.zz.baidu.com/urls?site=https://suyi.xyz&token=${baidu_sitemap_token}"
