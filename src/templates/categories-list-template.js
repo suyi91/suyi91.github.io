@@ -12,9 +12,9 @@ const CategoriesListTemplate = () => {
   const categories = useCategoriesList();
 
   return (
-    <Layout title={`Categories - ${title}`} description={subtitle}>
+    <Layout title={`分类 - ${title}`} description={subtitle}>
       <Sidebar />
-      <Page title="Categories">
+      <Page title="分类">
         <ul>
           {categories.map((category) => (
             <li key={category.fieldValue}>

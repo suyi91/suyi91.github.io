@@ -22,8 +22,16 @@ module.exports = {
       path: '/'
     },
     {
-      label: '关于我',
+      label: '关于',
       path: '/pages/about'
+    },
+    {
+      label: '分类',
+      path: '/categories'
+    },
+    {
+      label: '标签',
+      path: '/tags'
     }
   ],
   author: {

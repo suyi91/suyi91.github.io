@@ -12,9 +12,9 @@ const TagsListTemplate = () => {
   const tags = useTagsList();
 
   return (
-    <Layout title={`Tags - ${title}`} description={subtitle}>
+    <Layout title={`标签 - ${title}`} description={subtitle}>
       <Sidebar />
-      <Page title="Tags">
+      <Page title="标签">
         <ul>
           {tags.map((tag) => (
             <li key={tag.fieldValue}>

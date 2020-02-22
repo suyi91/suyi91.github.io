@@ -27,7 +27,7 @@ const TagTemplate = ({ data, pageContext }: Props) => {
   } = pageContext;
 
   const { edges } = data.allMarkdownRemark;
-  const pageTitle = currentPage > 0 ? `All Posts tagged as "${tag}" - Page ${currentPage} - ${siteTitle}` : `All Posts tagged as "${tag}" - ${siteTitle}`;
+  const pageTitle = currentPage > 0 ? `标签为"${tag}"的帖子 - Page ${currentPage} - ${siteTitle}` : `标签为"${tag}"的帖子 - ${siteTitle}`;
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>

@@ -8,7 +8,7 @@
     "build": "yarn run clean && gatsby build",
     "postbuild": "mv public/ suyi91.github.io/",
     "publish": "gh-pages -d suyi91.github.io -b master -r \"https://${GH_TOKEN}@github.com/suyi91/suyi91.github.io.git\" -m \"Auto-generated commit\"",
-    "clean": "rimraf .cache suyi91.github.io",
+    "clean": "rimraf .cache public suyi91.github.io",
     "flow": "flow",
     "lint:js": "eslint --cache --ext .js,.jsx .",
     "lint:scss": "stylelint \"src/**/*.scss\"",
