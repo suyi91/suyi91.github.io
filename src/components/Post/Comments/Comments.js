@@ -33,13 +33,18 @@ type Props = {
 
 const Comments = ({ postTitle }: Props) => {
   useEffect(() => {
+    /**
+     * gitalk
+     * @see https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+     */
     const gitalk = new Gitalk({
       clientID: '17f31ff09b4f57a72479',
       clientSecret: 'a9a76b6b4e21452413ea830535fa9304f50ba11a',
       repo: 'suyi.xyz.comments',
       owner: 'suyi91',
       admin: ['suyi91'],
-      id: postTitle,
+      labels: ['suyi.xyz', 'blog'],
+      title: postTitle,
       distractionFreeMode: true
     });
 
