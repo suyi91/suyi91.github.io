@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://suyi.xyz/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/categories</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/tags/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/categories/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/posts/hello-world</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/posts/summary-2018</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/posts/html-pinyin-notation</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/posts/summary-2019</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/posts/2020-go</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/posts/yarn-pnp</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/tag/html</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/tag/yarn</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/tag/前端</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/tag/年度</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/tag/总结</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/category/开发</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/category/生活</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/posts/hello-world/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/posts/summary-2018/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/posts/html-pinyin-notation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/posts/summary-2019/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/posts/2020-go/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/posts/yarn-pnp/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/tag/html/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/tag/yarn/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/tag/前端/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/tag/年度/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/tag/总结/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/category/开发/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/category/生活/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/page/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
