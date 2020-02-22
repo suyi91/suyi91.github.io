@@ -29,9 +29,10 @@ import Gitalk from 'gitalk';
 
 type Props = {
   postTitle: String,
+  postSlug: String,
 };
 
-const Comments = ({ postTitle }: Props) => {
+const Comments = ({ postTitle, postSlug }: Props) => {
   useEffect(() => {
     /**
      * gitalk
@@ -43,6 +44,7 @@ const Comments = ({ postTitle }: Props) => {
       repo: 'suyi.xyz.comments',
       owner: 'suyi91',
       admin: ['suyi91'],
+      id: postSlug,
       labels: ['suyi.xyz', 'blog'],
       title: postTitle,
       distractionFreeMode: true
