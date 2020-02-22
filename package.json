@@ -69,6 +69,7 @@
     "gatsby-source-filesystem": "^2.1.48",
     "gatsby-transformer-remark": "^2.6.52",
     "gatsby-transformer-sharp": "^2.3.14",
+    "gitalk": "^1.6.0",
     "invariant": "^2.2.4",
     "katex": "^0.11.1",
     "lodash": "^4.17.15",
