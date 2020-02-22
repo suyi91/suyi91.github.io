@@ -1,7 +1,8 @@
 // @flow strict
-import React from 'react';
+import React, { useEffect } from 'react';
 // import ReactDisqusComments from 'react-disqus-comments';
-import GitalkComponent from 'gitalk/dist/gitalk-component';
+import 'gitalk/dist/gitalk.css';
+import Gitalk from 'gitalk';
 // import { useSiteMetadata } from '../../../hooks';
 
 // type Props = {
@@ -26,19 +27,27 @@ import GitalkComponent from 'gitalk/dist/gitalk-component';
 //   );
 // };
 
-const Comments = () => {
-  const options = {
-    clientID: '17f31ff09b4f57a72479',
-    clientSecret: 'a9a76b6b4e21452413ea830535fa9304f50ba11a',
-    repo: 'suyi.xyz.comments',
-    owner: 'suyi91',
-    admin: ['suyi91'],
-    id: window.location.pathname,
-    distractionFreeMode: true
-  };
+type Props = {
+  postTitle: String,
+};
+
+const Comments = ({ postTitle }: Props) => {
+  useEffect(() => {
+    const gitalk = new Gitalk({
+      clientID: '17f31ff09b4f57a72479',
+      clientSecret: 'a9a76b6b4e21452413ea830535fa9304f50ba11a',
+      repo: 'suyi.xyz.comments',
+      owner: 'suyi91',
+      admin: ['suyi91'],
+      id: postTitle,
+      distractionFreeMode: true
+    });
+
+    gitalk.render('gitalk-container');
+  });
 
   return (
-    <GitalkComponent options={options} />
+    <div id="gitalk-container"></div>
   );
 };
 
