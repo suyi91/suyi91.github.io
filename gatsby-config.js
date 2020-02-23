@@ -3,7 +3,7 @@
 const siteConfig = require('./config.js');
 const postCssPlugins = require('./postcss-config.js');
 
-module.exports = {
+const config = {
   pathPrefix: siteConfig.pathPrefix,
   siteMetadata: {
     year: siteConfig.year, // 获取编译时的年份
@@ -140,15 +140,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-google-gtag',
-      options: {
-        trackingIds: [siteConfig.googleAnalyticsId],
-        pluginConfig: {
-          head: true,
-        },
-      },
-    },
-    {
       resolve: 'gatsby-plugin-sitemap',
       options: {
         query: `
@@ -214,3 +205,19 @@ module.exports = {
     'gatsby-plugin-optimize-svgs',
   ]
 };
+
+if (process.env.NODE_ENV === 'production') {
+  config.plugins.push(
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: [siteConfig.googleAnalyticsId],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    }
+  );
+}
+
+module.exports = config;
