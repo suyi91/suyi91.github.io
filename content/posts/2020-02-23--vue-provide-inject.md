@@ -1,6 +1,6 @@
 ---
 title: "Vuejs中的provide/inject"
-date: "2020-02-23 23:0"
+date: "2020-02-23 23:00"
 template: "post"
 slug: "vue-provide-inject"
 description: "最近在工作中，被一个同事问到了provide/inject的用法。这不简单嘛，当即给出答案..."
