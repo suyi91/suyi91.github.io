@@ -33,7 +33,9 @@ const Post = ({ post }: Props) => {
       </div>
 
       <div className={styles['post__comments']}>
-        <Comments postSlug={slug} postTitle={post.frontmatter.title} />
+        {process.env.NODE_ENV === 'production' && (
+          <Comments postSlug={slug} postTitle={post.frontmatter.title} />
+        )}
       </div>
     </div>
   );
