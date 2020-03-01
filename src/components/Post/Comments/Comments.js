@@ -1,60 +1,27 @@
 // @flow strict
-import React, { useEffect } from 'react';
-// import ReactDisqusComments from 'react-disqus-comments';
-import 'gitalk/dist/gitalk.css';
-import Gitalk from 'gitalk';
-// import { useSiteMetadata } from '../../../hooks';
-
-// type Props = {
-//   postTitle: string,
-//   postSlug: string
-// };
-
-// const Comments = ({ postTitle, postSlug }: Props) => {
-//   const { url, disqusShortname } = useSiteMetadata();
-
-//   if (!disqusShortname) {
-//     return null;
-//   }
-
-//   return (
-//     <ReactDisqusComments
-//       shortname={disqusShortname}
-//       identifier={postTitle}
-//       title={postTitle}
-//       url={url + postSlug}
-//     />
-//   );
-// };
+import React from 'react';
+import ReactDisqusComments from 'react-disqus-comments';
+import { useSiteMetadata } from '../../../hooks';
 
 type Props = {
-  postTitle: String,
-  postSlug: String,
+  postTitle: string,
+  postSlug: string
 };
 
 const Comments = ({ postTitle, postSlug }: Props) => {
-  useEffect(() => {
-    /**
-     * gitalk
-     * @see https://github.com/gitalk/gitalk/blob/master/readme-cn.md
-     */
-    const gitalk = new Gitalk({
-      clientID: '17f31ff09b4f57a72479',
-      clientSecret: 'a9a76b6b4e21452413ea830535fa9304f50ba11a',
-      repo: 'suyi.xyz.comments',
-      owner: 'suyi91',
-      admin: ['suyi91'],
-      id: postSlug,
-      labels: ['suyi.xyz', 'blog'],
-      title: postTitle,
-      distractionFreeMode: false
-    });
+  const { url, disqusShortname } = useSiteMetadata();
 
-    gitalk.render('gitalk-container');
-  });
+  if (!disqusShortname) {
+    return null;
+  }
 
   return (
-    <div id="gitalk-container"></div>
+    <ReactDisqusComments
+      shortname={disqusShortname}
+      identifier={postTitle}
+      title={postTitle}
+      url={url + postSlug}
+    />
   );
 };
 
