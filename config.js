@@ -12,7 +12,7 @@ module.exports = {
     `2017 - ${getYear()}`,
     '© 版权所有.'
   ].join(' '),
-  disqusShortname: 'suyi91',
+  disqusShortname: 'suyi-site',
   postsPerPage: 4,
   googleAnalyticsId: 'UA-98612723-2',
   useKatex: false,
