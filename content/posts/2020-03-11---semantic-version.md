@@ -49,4 +49,4 @@ socialImage: "semver.jpg"
 
 ## semver的应用
 
-semver的一个常见场景是npm包管理。具体会在后面介绍。TODO:
+semver的一个常见场景是npm包管理。具体会在后面介绍。
