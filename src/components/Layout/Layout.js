@@ -23,7 +23,12 @@ const Layout = ({
   const { author, url } = useSiteMetadata();
   const metaImage = socialImage != null ? socialImage : author.photo;
   const metaImageUrl = url + withPrefix(metaImage);
-
+  const is20200404 = ((d) => {
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const date = String(d.getDate()).padStart(2, '0');
+    return `${year}${month}${date}` === '20200404';
+  })(new Date());
   return (
     <div className={styles.layout}>
       <Helmet>
@@ -41,6 +46,13 @@ const Layout = ({
           content="LncEn38b27nTooI_gHYaMRUVOZEKMqtsYlcdpzC2tF8"
         />
       </Helmet>
+      {is20200404 && <Helmet style={[{
+        cssText: `
+          html {
+            filter: grayscale(100%);
+          }
+        `
+      }]} />}
       <div>
         <div>{children}</div>
         <Footer />
