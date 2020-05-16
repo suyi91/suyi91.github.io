@@ -13,7 +13,7 @@ module.exports = {
     '© 版权所有.'
   ].join(' '),
   disqusShortname: 'suyi-site',
-  postsPerPage: 4,
+  postsPerPage: 5,
   googleAnalyticsId: 'UA-98612723-2',
   useKatex: false,
   menu: [
