@@ -18,10 +18,13 @@
 <url> <loc>https://suyi.xyz/posts/js-clipboard/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/posts/semantic-version/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/posts/npm-semver/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/posts/git-stash/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/posts/git-worktree/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/tag/html/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/tag/java-script/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/tag/vuejs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/tag/yarn/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/tag/git/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/tag/hexo/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/tag/hexo-generator-searchdb/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/tag/hexo-leancloud-counter-security/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -42,8 +45,10 @@
 <url> <loc>https://suyi.xyz/category/博客搭建/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/category/开发/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/category/开发/page/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/category/开发/page/2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/category/生活/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/page/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/page/2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/page/3/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
