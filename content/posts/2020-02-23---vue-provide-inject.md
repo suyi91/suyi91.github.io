@@ -6,7 +6,7 @@ slug: "vue-provide-inject"
 description: "最近在工作中，被一个同事问到了provide/inject的用法。这不简单嘛，当即给出答案..."
 tags:
   - "前端"
-  - "Vuejs"
+  - "vue"
 draft: false
 category: "开发"
 socialImage: "vue.jpg"

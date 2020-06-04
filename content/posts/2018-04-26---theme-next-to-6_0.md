@@ -6,10 +6,6 @@ slug: "hexo-next-upgrade-6_0"
 description: ""
 tags:
   - "hexo"
-  - "hexo-theme-next"
-  - "hexo-leancloud-counter-security"
-  - "leancloud"
-  - "hexo-generator-searchdb"
 draft: false
 category: "博客搭建"
 socialImage: ""
