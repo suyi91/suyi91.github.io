@@ -13778,6 +13778,11 @@ pretty-format@^25.1.0:
     ansi-styles "^4.0.0"
     react-is "^16.12.0"
 
+prism-themes@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.npm.taobao.org/prism-themes/download/prism-themes-1.4.0.tgz#2f93a33450532577c7962928655d7b4305fa843d"
+  integrity sha1-L5OjNFBTJXfHlikoZV17QwX6hD0=
+
 prismjs@^1.19.0:
   version "1.19.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.19.0.tgz#713afbd45c3baca4b321569f2df39e17e729d4dc"

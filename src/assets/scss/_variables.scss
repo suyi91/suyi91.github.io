@@ -1,11 +1,11 @@
-/** 
+/**
  * Variables
  */
 
 // Colors
 $color-base: #222;
-$color-primary: #5D93FF;
-$color-secondary: #F7A046;
+$color-primary: #1565c0;
+$color-secondary: #ab47bc;
 
 $color-white: #FFF;
 $color-gray: lighten($color-base, 40%);
@@ -29,11 +29,11 @@ $typographic-leading: round(16 * ($typographic-root-font-size / 100) * $typograp
 
 // Buttons
 $button-height: 35px;
-$button-border-radius: 20px;
+$button-border-radius: 8px;
 
 // Layout
 $layout-post-single-width: 945px;
-$layout-post-width: $layout-post-single-width - 305px;
+$layout-post-width: $layout-post-single-width - 105px;
 
 $layout-width: 1070px;
 $layout-breakpoint-sm: 685px;
