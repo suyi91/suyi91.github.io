@@ -1,15 +1,65 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Suyi的小站]]></title><description><![CDATA[记录自己的成长历程]]></description><link>https://suyi.xyz</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 25 Jun 2020 16:18:39 GMT</lastBuildDate><item><title><![CDATA[History API]]></title><description><![CDATA[History Api在HTML5时代，增加了一些特性，值得了解学习。]]></description><link>https://suyi.xyz/posts/h5-history</link><guid isPermaLink="false">https://suyi.xyz/posts/h5-history</guid><pubDate>Thu, 25 Jun 2020 22:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;history&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#history&quot; aria-label=&quot;history permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;history&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Suyi的小站]]></title><description><![CDATA[记录自己的成长历程]]></description><link>https://suyi.xyz</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 26 Jun 2020 04:57:13 GMT</lastBuildDate><item><title><![CDATA[HTML5 History & Location & Vue-router简单实现]]></title><description><![CDATA[History Api在HTML5时代，增加了一些特性，值得了解学习。]]></description><link>https://suyi.xyz/posts/h5-history</link><guid isPermaLink="false">https://suyi.xyz/posts/h5-history</guid><pubDate>Thu, 25 Jun 2020 22:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;history&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#history&quot; aria-label=&quot;history permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;history&lt;/h2&gt;
 &lt;p&gt;为了可以方便地操作、访问浏览器的历史，浏览器提供了&lt;code class=&quot;language-text&quot;&gt;window.history&lt;/code&gt;对象，通过调用&lt;code class=&quot;language-text&quot;&gt;go&lt;/code&gt;、&lt;code class=&quot;language-text&quot;&gt;back&lt;/code&gt;、&lt;code class=&quot;language-text&quot;&gt;forward&lt;/code&gt;等方法实现浏览器的前进后退。&lt;/p&gt;
 &lt;h2 id=&quot;html5新增内容&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#html5%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9&quot; aria-label=&quot;html5新增内容 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTML5新增内容&lt;/h2&gt;
 &lt;p&gt;在最新的HTML5标准中，可以操作history栈中的内容。&lt;/p&gt;
 &lt;h3 id=&quot;pushstate&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pushstate&quot; aria-label=&quot;pushstate permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;pushState&lt;/h3&gt;
 &lt;p&gt;在传统的web访问体验中，点击一个新链接会表现为页面的全量加载。但是在HTML5的加持下，可以利用&lt;code class=&quot;language-text&quot;&gt;pushState&lt;/code&gt;实现只修改URL而不全量加载(例如各种各样的单页应用SPA—Single Page Application)，局部更新页面dom加快了访问速度、改善了web体验。&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;pushState&lt;/code&gt;使用如下，&lt;code class=&quot;language-text&quot;&gt;data&lt;/code&gt;为存放到history栈的数据，&lt;code class=&quot;language-text&quot;&gt;title&lt;/code&gt;是网页的标题，&lt;code class=&quot;language-text&quot;&gt;url&lt;/code&gt;是浏览器地址栏需要展示的地址。使用&lt;code class=&quot;language-text&quot;&gt;pushState&lt;/code&gt;跳转的页面会添加历史。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;history&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;pushState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; url&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;token comment&quot;&gt;// 经测试chrome/ff下title参数设置无效，需要使用document.title = xxx进行修改&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;history&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;pushState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; url&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;注意:&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;经测试chrome/ff下title参数设置无效，需要使用&lt;code class=&quot;language-text&quot;&gt;document.title = xxx&lt;/code&gt;进行修改。&lt;/li&gt;
+&lt;li&gt;pushState传入的url需同域，否则浏览器会抛出错误。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b536176d23656987635882da5d879c93/66632/pushState-error.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 11.702127659574469%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAe0lEQVQI1y2KWw6CMBQF2f/iBHkmVoI2FSJSaIFYIh/jNfhxMucVrcbg6xqvFGNV4bQmtA/eV8Um3a4u7LcG+idYe3AYDv274BxD1/FZF6Kg7/gkZo5PrOmZRfyUpeg8oy1ynNBJdmmCLwus7KPISp5+lE8ju6lKtlfPF9zTkrynsXg5AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/b536176d23656987635882da5d879c93/8ac56/pushState-error.webp 240w,
+/static/b536176d23656987635882da5d879c93/d3be9/pushState-error.webp 480w,
+/static/b536176d23656987635882da5d879c93/e46b2/pushState-error.webp 960w,
+/static/b536176d23656987635882da5d879c93/f992d/pushState-error.webp 1440w,
+/static/b536176d23656987635882da5d879c93/ca108/pushState-error.webp 1504w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/b536176d23656987635882da5d879c93/8ff5a/pushState-error.png 240w,
+/static/b536176d23656987635882da5d879c93/e85cb/pushState-error.png 480w,
+/static/b536176d23656987635882da5d879c93/d9199/pushState-error.png 960w,
+/static/b536176d23656987635882da5d879c93/07a9c/pushState-error.png 1440w,
+/static/b536176d23656987635882da5d879c93/66632/pushState-error.png 1504w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/b536176d23656987635882da5d879c93/d9199/pushState-error.png&quot;
+          alt=&quot;pushState error&quot;
+          title=&quot;pushState error&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&quot;replacestate&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#replacestate&quot; aria-label=&quot;replacestate permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;replaceState&lt;/h3&gt;
-&lt;p&gt;使用同&lt;code class=&quot;language-text&quot;&gt;pushState&lt;/code&gt;，修改当前历史，不添加新历史。&lt;/p&gt;
+&lt;p&gt;修改当前历史，不添加新历史。使用同&lt;code class=&quot;language-text&quot;&gt;pushState&lt;/code&gt;。&lt;/p&gt;
 &lt;h3 id=&quot;popstate&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#popstate&quot; aria-label=&quot;popstate permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;popstate&lt;/h3&gt;
 &lt;p&gt;当浏览历史发生改变时，会触发&lt;code class=&quot;language-text&quot;&gt;popstate&lt;/code&gt;事件。如果是&lt;code class=&quot;language-text&quot;&gt;pushState&lt;/code&gt;/&lt;code class=&quot;language-text&quot;&gt;replaceState&lt;/code&gt;创建的历史，&lt;code class=&quot;language-text&quot;&gt;popstate&lt;/code&gt;触发时可以获取到&lt;code class=&quot;language-text&quot;&gt;pushState&lt;/code&gt;/&lt;code class=&quot;language-text&quot;&gt;replaceState&lt;/code&gt;调用时的第一个参数&lt;code class=&quot;language-text&quot;&gt;data&lt;/code&gt;的数据拷贝。下面是一个简单的例子，模拟了&lt;code class=&quot;language-text&quot;&gt;pushState&lt;/code&gt;和&lt;code class=&quot;language-text&quot;&gt;popstate&lt;/code&gt;的使用。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token doctype&quot;&gt;&amp;lt;!DOCTYPE html&gt;&lt;/span&gt;
@@ -40,7 +90,190 @@
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;html&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;popstate&lt;/code&gt;的数据可以直接从回调的事件中获取&lt;code class=&quot;language-text&quot;&gt;event.state&lt;/code&gt;。当然，也可以直接调用&lt;code class=&quot;language-text&quot;&gt;history.state&lt;/code&gt;获取当前历史中存放的数据。&lt;/p&gt;
-&lt;p&gt;TODO:&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Vue2 & CompositionApi]]></title><description><![CDATA[Vue3版本推出在即，为了让广大用户提前感受新版特性，Vue官方推出了兼容Vue2的@vue/composition-api库。这里简单记录下近半年的使用收获。]]></description><link>https://suyi.xyz/posts/vue-composition-api</link><guid isPermaLink="false">https://suyi.xyz/posts/vue-composition-api</guid><pubDate>Thu, 04 Jun 2020 22:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2019年下半年，Vuejs官方推出了&lt;a href=&quot;https://composition-api.vuejs.org/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CompositionApi RFC&lt;/code&gt;&lt;/a&gt;，敲定了Vue3的函数式Api设计。为了让广大Vuejs使用者可以提前尝鲜，官方推出了Vue2的兼容库&lt;a href=&quot;https://www.npmjs.com/package/@vue/composition-api&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@vue/composition-api&lt;/code&gt;&lt;/a&gt;(原名&lt;a href=&quot;https://www.npmjs.com/package/vue-function-api&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;vue-function-api&lt;/code&gt;&lt;/a&gt;)。&lt;/p&gt;
+&lt;h2 id=&quot;location&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#location&quot; aria-label=&quot;location permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;location&lt;/h2&gt;
+&lt;p&gt;谈到&lt;code class=&quot;language-text&quot;&gt;history&lt;/code&gt;必然离不开&lt;code class=&quot;language-text&quot;&gt;location&lt;/code&gt;，这边简单介绍一下location。&lt;/p&gt;
+&lt;h3 id=&quot;类型说明&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E&quot; aria-label=&quot;类型说明 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;类型说明&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// location的TS定义&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Location&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Returns a DOMStringList object listing the origins of the ancestor browsing contexts, from the parent browsing context to the top-level browsing context.
+   */&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;readonly&lt;/span&gt; ancestorOrigins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; DOMStringList&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Returns the Location object&apos;s URL&apos;s fragment (includes leading &quot;#&quot; if non-empty).
+   *
+   * Can be set, to navigate to the same URL with a changed fragment (ignores leading &quot;#&quot;).
+   */&lt;/span&gt;
+  hash&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Returns the Location object&apos;s URL&apos;s host and port (if different from the default port for the scheme).
+   *
+   * Can be set, to navigate to the same URL with a changed host and port.
+   */&lt;/span&gt;
+  host&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Returns the Location object&apos;s URL&apos;s host.
+   *
+   * Can be set, to navigate to the same URL with a changed host.
+   */&lt;/span&gt;
+  hostname&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Returns the Location object&apos;s URL.
+   *
+   * Can be set, to navigate to the given URL.
+   */&lt;/span&gt;
+  href&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Returns the Location object&apos;s URL&apos;s origin.
+   */&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;readonly&lt;/span&gt; origin&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Returns the Location object&apos;s URL&apos;s path.
+   *
+   * Can be set, to navigate to the same URL with a changed path.
+   */&lt;/span&gt;
+  pathname&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Returns the Location object&apos;s URL&apos;s port.
+   *
+   * Can be set, to navigate to the same URL with a changed port.
+   */&lt;/span&gt;
+  port&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Returns the Location object&apos;s URL&apos;s scheme.
+   *
+   * Can be set, to navigate to the same URL with a changed scheme.
+   */&lt;/span&gt;
+  protocol&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Returns the Location object&apos;s URL&apos;s query (includes leading &quot;?&quot; if non-empty).
+   *
+   * Can be set, to navigate to the same URL with a changed query (ignores leading &quot;?&quot;).
+   */&lt;/span&gt;
+  search&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Navigates to the given URL.
+   */&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;url&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Reloads the current page.
+   */&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;reload&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/** @deprecated */&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;reload&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;forcedReload&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;boolean&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Removes the current page from the session history and navigates to the given URL.
+   */&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;url&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;location中属性说明&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#location%E4%B8%AD%E5%B1%9E%E6%80%A7%E8%AF%B4%E6%98%8E&quot; aria-label=&quot;location中属性说明 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;location中属性说明&lt;/h3&gt;
+&lt;p&gt;下面举MDN上面的例子介绍&lt;code class=&quot;language-text&quot;&gt;location&lt;/code&gt;的属性。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;http://example.com:8888/foo/bar?q=baz#bang&lt;/code&gt;对应location中的各个部分。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;内容&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;href&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http://example.com:8888/foo/bar?q=baz#bang&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;origin&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http://example.com:8888&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;protocal&lt;/code&gt; + &lt;code class=&quot;language-text&quot;&gt;hostname&lt;/code&gt; + &lt;code class=&quot;language-text&quot;&gt;port&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;protocal&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http:&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;host&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;example.com:8888&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;hostname&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;example.com&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;port&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;8888&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;pathname&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/foo/bar&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;search&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;?q=baz&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;hash&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;#bang&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;location&lt;/code&gt;中还有一个只读属性&lt;code class=&quot;language-text&quot;&gt;ancestorOrigins&lt;/code&gt;，在iframe中可获取外部父页面的域名信息(可用来判断当前文档在iframe中)。&lt;/p&gt;
+&lt;h3 id=&quot;location中方法使用&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#location%E4%B8%AD%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8&quot; aria-label=&quot;location中方法使用 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;location中方法使用&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果不需要HTML5 History存储对象，直接使用&lt;code class=&quot;language-text&quot;&gt;location&lt;/code&gt;的API也可实现页面历史操作。&lt;/p&gt;
+&lt;p&gt;并且，&lt;code class=&quot;language-text&quot;&gt;location&lt;/code&gt;使用时没有同域的限制。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;assign&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;location.assign(url)&lt;/code&gt;作用等同于&lt;code class=&quot;language-text&quot;&gt;location = url&lt;/code&gt;(也可以&lt;code class=&quot;language-text&quot;&gt;location.href = url&lt;/code&gt;、&lt;code class=&quot;language-text&quot;&gt;location.hash = xxx&lt;/code&gt;等直接赋值)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;reload&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;页面刷新。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;replace&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;当前页面地址重定向访问。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;vue-router&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vue-router&quot; aria-label=&quot;vue router permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Vue-router&lt;/h2&gt;
+&lt;p&gt;最近在看&lt;code class=&quot;language-text&quot;&gt;Vue-router&lt;/code&gt;的实现代码，文章最后就简单介绍一下路由导航的实现。&lt;/p&gt;
+&lt;h3 id=&quot;初始化&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%88%9D%E5%A7%8B%E5%8C%96&quot; aria-label=&quot;初始化 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;初始化&lt;/h3&gt;
+&lt;p&gt;vue项目使用&lt;code class=&quot;language-text&quot;&gt;Vue-router&lt;/code&gt;时，都会使用&lt;code class=&quot;language-text&quot;&gt;new VueRouter({ routes })&lt;/code&gt;的形式构建出可供Vue实例读取的Router对象。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;new&lt;/code&gt;操作相应的源码就是&lt;a href=&quot;https://sourcegraph.com/github.com/vuejs/vue-router@f0d9c2d93cf06b5b2202bd77df6281cf47970b20/-/blob/src/index.js#L36&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Link&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id=&quot;路由模式&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F&quot; aria-label=&quot;路由模式 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;路由模式&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Vue-router&lt;/code&gt;有三种路由模式: &lt;code class=&quot;language-text&quot;&gt;history&lt;/code&gt;、&lt;code class=&quot;language-text&quot;&gt;hash&lt;/code&gt;、&lt;code class=&quot;language-text&quot;&gt;abstract&lt;/code&gt;。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;history&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这个模式使用&lt;code class=&quot;language-text&quot;&gt;history.pushState&lt;/code&gt;作为历史切换的方式，URL比较正常例如&lt;code class=&quot;language-text&quot;&gt;http://example.com/dir/subdir&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;对应源码是&lt;a href=&quot;https://sourcegraph.com/github.com/vuejs/vue-router@f0d9c2d93cf06b5b2202bd77df6281cf47970b20/-/blob/src/history/html5.js#L10:1&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;HTML5History类&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;但是使用时需要注意的是，因为浏览器url访问的规则，例如&lt;code class=&quot;language-text&quot;&gt;http://example.com/dir/subdir&lt;/code&gt;会访问服务器路径&lt;code class=&quot;language-text&quot;&gt;/dir/subdir&lt;/code&gt;的文件(&lt;code class=&quot;language-text&quot;&gt;subdir.html&lt;/code&gt;、&lt;code class=&quot;language-text&quot;&gt;subdir/index.html&lt;/code&gt;或同路径服务等等)，对于单页应用来说这个路径并没有相应的文件。所以需要在服务端配置路径访问404时返回单页应用的&lt;code class=&quot;language-text&quot;&gt;index.html&lt;/code&gt;文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;hash&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这个模式使用&lt;code class=&quot;language-text&quot;&gt;location&lt;/code&gt;的&lt;code class=&quot;language-text&quot;&gt;hash&lt;/code&gt;作为单页应用各个路由的访问路径(例如&lt;code class=&quot;language-text&quot;&gt;http://example.com/dir/#/spaRoute&lt;/code&gt;)。比较简单，不需要服务端额外的404配置。&lt;/p&gt;
+&lt;p&gt;对应的源码是&lt;a href=&quot;https://sourcegraph.com/github.com/vuejs/vue-router@f0d9c2d93cf06b5b2202bd77df6281cf47970b20/-/blob/src/history/hash.js#L10&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;HashHistory类&lt;/a&gt;。浏览器路由事件的监听使用了&lt;code class=&quot;language-text&quot;&gt;popstate&lt;/code&gt;或&lt;code class=&quot;language-text&quot;&gt;hashchange&lt;/code&gt;(支持HTML5 History就用&lt;code class=&quot;language-text&quot;&gt;popstate&lt;/code&gt;，否则使用&lt;code class=&quot;language-text&quot;&gt;hashchange&lt;/code&gt;)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;abstract&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这个模式通常给&lt;code class=&quot;language-text&quot;&gt;nodejs&lt;/code&gt;服务端使用(比如服务端渲染&lt;code class=&quot;language-text&quot;&gt;SSR&lt;/code&gt;)，可以模拟浏览器端的历史切换。如果&lt;code class=&quot;language-text&quot;&gt;Vue-router&lt;/code&gt;运行时的环境不支持浏览器的API，会直接设置成&lt;code class=&quot;language-text&quot;&gt;abstract&lt;/code&gt;模式。&lt;/p&gt;
+&lt;p&gt;对应的源码是&lt;a href=&quot;https://sourcegraph.com/github.com/vuejs/vue-router@f0d9c2d93cf06b5b2202bd77df6281cf47970b20/-/blob/src/history/abstract.js#L8:14&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;AbstractHistory类&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;路由动作&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%B7%AF%E7%94%B1%E5%8A%A8%E4%BD%9C&quot; aria-label=&quot;路由动作 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;路由动作&lt;/h3&gt;
+&lt;p&gt;在上面的三种模式中，路由对象都继承了基类&lt;a href=&quot;https://sourcegraph.com/github.com/vuejs/vue-router@f0d9c2d93cf06b5b2202bd77df6281cf47970b20/-/blob/src/history/base.js#L22:1&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;History&lt;/a&gt;并模拟实现了类似浏览器location API的&lt;code class=&quot;language-text&quot;&gt;go&lt;/code&gt;、&lt;code class=&quot;language-text&quot;&gt;push&lt;/code&gt;、&lt;code class=&quot;language-text&quot;&gt;replace&lt;/code&gt;方法。&lt;/p&gt;
+&lt;p&gt;同时，&lt;code class=&quot;language-text&quot;&gt;history&lt;/code&gt;和&lt;code class=&quot;language-text&quot;&gt;hash&lt;/code&gt;模式下监听了浏览器的&lt;code class=&quot;language-text&quot;&gt;popstate&lt;/code&gt;、&lt;code class=&quot;language-text&quot;&gt;hashchange&lt;/code&gt;等事件，在浏览器前进/后退操作时更新SPA。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Vue2 & CompositionApi]]></title><description><![CDATA[Vue3版本推出在即，为了让广大用户提前感受新版特性，Vue官方推出了兼容Vue2的@vue/composition-api库。这里简单记录下近半年的使用收获。]]></description><link>https://suyi.xyz/posts/vue-composition-api</link><guid isPermaLink="false">https://suyi.xyz/posts/vue-composition-api</guid><pubDate>Thu, 04 Jun 2020 22:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2019年下半年，Vuejs官方推出了&lt;a href=&quot;https://composition-api.vuejs.org/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CompositionApi RFC&lt;/code&gt;&lt;/a&gt;，敲定了Vue3的函数式Api设计。为了让广大Vuejs使用者可以提前尝鲜，官方推出了Vue2的兼容库&lt;a href=&quot;https://www.npmjs.com/package/@vue/composition-api&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;@vue/composition-api&lt;/code&gt;&lt;/a&gt;(原名&lt;a href=&quot;https://www.npmjs.com/package/vue-function-api&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;vue-function-api&lt;/code&gt;&lt;/a&gt;)。&lt;/p&gt;
 &lt;p&gt;作为一个对新事物充满了好奇的人，&lt;code class=&quot;language-text&quot;&gt;CompositionApi&lt;/code&gt;刚推出时就开始在业务中尝试使用。对比之前的Vue组件书写方式，&lt;code class=&quot;language-text&quot;&gt;CompositionApi&lt;/code&gt;的函数式一直用一直爽。&lt;/p&gt;
 &lt;h2 id=&quot;vue组件的写法&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vue%E7%BB%84%E4%BB%B6%E7%9A%84%E5%86%99%E6%B3%95&quot; aria-label=&quot;vue组件的写法 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Vue组件的写法&lt;/h2&gt;
 &lt;h3 id=&quot;options定义&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#options%E5%AE%9A%E4%B9%89&quot; aria-label=&quot;options定义 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;options定义&lt;/h3&gt;
