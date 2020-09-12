@@ -9,10 +9,7 @@
 <url> <loc>https://suyi.xyz/posts/webpack-dev-server-multi-pages/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/posts/sass-directive/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/posts/vue-cli3/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/posts/summary-2018/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/posts/html-pinyin-notation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/posts/summary-2019/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/posts/2020-go/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/posts/yarn-pnp/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/posts/vue-provide-inject/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/posts/js-clipboard/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -41,8 +38,6 @@
 <url> <loc>https://suyi.xyz/tag/webpack-dev-server/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/tag/前端/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/tag/前端/page/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/tag/年度/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://suyi.xyz/tag/总结/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/category/博客搭建/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/category/开发/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/category/开发/page/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
