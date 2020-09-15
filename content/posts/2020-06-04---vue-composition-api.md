@@ -173,4 +173,8 @@ export default {
 }
 ```
 
-> TODO: 其他内容持续补充中。
+## 其他
+
+因为CompositionApi的函数式设计，给Vue项目的开发编写带来了新的活力。利用JS函数式稍加设计即可实现逻辑的封装、拆分，改善原来options方式的大组件容易越写越乱的问题。
+
+后续会慢慢扩展CompositionApi的使用并记录，探索`函数式` + `Vuejs`的新应用场景。
