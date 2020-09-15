@@ -18,6 +18,7 @@
 <url> <loc>https://suyi.xyz/posts/git-stash/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/posts/git-worktree/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/posts/vue-composition-api/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/posts/vue-jsx-memo/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/posts/h5-history/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/posts/vue-composition-api-and-jsx/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/tag/html/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -45,6 +46,7 @@
 <url> <loc>https://suyi.xyz/category/开发/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/category/开发/page/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/category/开发/page/2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://suyi.xyz/category/开发/page/3/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/category/生活/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://suyi.xyz/page/1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
