@@ -1,6 +1,6 @@
 'use strict';
 
-const getYear = () => new Date().getFullYear();
+const getYear = () => new Date().getFullYear()
 
 module.exports = {
   year: getYear(), // 生成编译时的年份
