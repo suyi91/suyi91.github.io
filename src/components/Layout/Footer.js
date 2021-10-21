@@ -10,7 +10,7 @@ const Footer = () => {
     </span>
   );
   const footerRight = (
-    <a className={styles['footer__right']} href="http://www.beian.miit.gov.cn/" target="_blank">
+    <a className={styles['footer__right']} href="https://beian.miit.gov.cn/" target="_blank">
       苏ICP备18013443号
     </a>
   );
