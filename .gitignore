@@ -1,9 +1,23 @@
-node_modules/
-.cache/
-public/
-suyi91.github.io/
-npm-debug.log
-.eslintcache
-.gatsby-context.js
+# build output
+dist/
+# generated types
+.astro/
+.vscode
 .idea
-gatsby-starter-lumen.iml
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
