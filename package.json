@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "publish": "gh-pages -d suyi91.github.io -b master -r \"https://${GH_TOKEN}@github.com/suyi91/suyi91.github.io.git\" -m \"Auto-generated commit\""
+    "preupload": "bun run build",
+    "upload": "bun run deploy.js"
   },
   "dependencies": {
     "@astrojs/mdx": "^3.1.5",
@@ -39,6 +40,7 @@
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
+    "dotenv": "^16.4.5",
     "sass": "^1.72.0"
   }
 }
