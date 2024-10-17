@@ -30,6 +30,7 @@ function customRehypeLazyLoadImage() {
 
 export default defineConfig({
   site: 'https://suyi.xyz',
+  output: 'static',
   integrations: [sitemap(), tailwind(), solid(), expressiveCode({
     plugins: [pluginLineNumbers(), pluginCollapsibleSections()],
     themes: ["github-dark", "github-light"],
@@ -42,5 +43,20 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkModifiedTime, resetRemark, remarkDirective, remarkAsides({}),remarkCollapse({})],
     rehypePlugins: [customRehypeLazyLoadImage],
+  },
+  build: {
+    assets: 'dist'
+  },
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          // github page因为jeklly的原因（`.nojekyll`也没用），不能使用下划线开头的命名，只能加一个前缀
+          assetFileNames: 'dist/assets/sean-[name]-[extname]', // 自定义静态资源文件命名
+          chunkFileNames: 'dist/chunks/sean-[name]-[hash].js', // 自定义代码分块文件命名
+          entryFileNames: 'dist/entry/sean-[name]-[hash].js', // 自定义入口文件命名
+        }
+      }
+    }
   }
 });
