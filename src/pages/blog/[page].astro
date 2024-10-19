@@ -16,7 +16,7 @@ const {page} = Astro.props;
 ---
 
 
-<IndexPage frontmatter={{comment:false}}>
+<IndexPage frontmatter={{comment:false, title: 'Blog'}}>
   {
     page.data.map((blog, index) =>
       <PostView blog={blog}></PostView>)

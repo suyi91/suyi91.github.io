@@ -1,4 +1,5 @@
 ---
+title: About me
 donate: false
 comment: false
 ---
