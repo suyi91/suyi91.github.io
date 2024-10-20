@@ -11,22 +11,22 @@ import {remarkCollapse} from "./src/remarkPlugin/remark-collapse.js";
 
 import expressiveCode from "astro-expressive-code";
 import {pluginLineNumbers} from '@expressive-code/plugin-line-numbers'
-
-import {visit} from 'unist-util-visit'
 import {pluginCollapsibleSections} from '@expressive-code/plugin-collapsible-sections'
 
-function customRehypeLazyLoadImage() {
-  return function (tree) {
-    visit(tree, function (node) {
-      if (node.tagName === 'img') {
-        node.properties['data-src'] = node.properties.src
-        node.properties.src = '/spinner.gif'
-        node.properties['data-alt'] = node.properties.alt
-        node.properties.alt = 'default'
-      }
-    })
-  }
-}
+// TODO: lazy load image有问题，需要研究
+// import {visit} from 'unist-util-visit'
+// function customRehypeLazyLoadImage() {
+//   return function (tree) {
+//     visit(tree, function (node) {
+//       if (node.tagName === 'img') {
+//         node.properties['data-src'] = node.properties.src
+//         node.properties.src = '/spinner.gif'
+//         node.properties['data-alt'] = node.properties.alt
+//         node.properties.alt = 'default'
+//       }
+//     })
+//   }
+// }
 
 export default defineConfig({
   site: 'https://suyi.xyz',
@@ -42,7 +42,10 @@ export default defineConfig({
   }), mdx()],
   markdown: {
     remarkPlugins: [remarkModifiedTime, resetRemark, remarkDirective, remarkAsides({}),remarkCollapse({})],
-    rehypePlugins: [customRehypeLazyLoadImage],
+    rehypePlugins: [
+      // TODO: lazy load image有问题，需要研究
+      // customRehypeLazyLoadImage
+    ],
   },
   build: {
     assets: 'dist'

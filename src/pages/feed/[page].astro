@@ -16,7 +16,7 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 ---
 
-<IndexPage>
+<IndexPage frontmatter={{title: 'Feed'}}>
     {page.data.map((post, index) => <FeedPreview post={post} index={index} />)}
   <Pagination
     currentPage={page.currentPage}
