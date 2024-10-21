@@ -13,20 +13,21 @@ import expressiveCode from "astro-expressive-code";
 import {pluginLineNumbers} from '@expressive-code/plugin-line-numbers'
 import {pluginCollapsibleSections} from '@expressive-code/plugin-collapsible-sections'
 
-// TODO: lazy load image有问题，需要研究
-// import {visit} from 'unist-util-visit'
-// function customRehypeLazyLoadImage() {
-//   return function (tree) {
-//     visit(tree, function (node) {
-//       if (node.tagName === 'img') {
-//         node.properties['data-src'] = node.properties.src
-//         node.properties.src = '/spinner.gif'
-//         node.properties['data-alt'] = node.properties.alt
-//         node.properties.alt = 'default'
-//       }
-//     })
-//   }
-// }
+import {visit} from 'unist-util-visit'
+
+// img懒加载处理
+function customRehypeLazyLoadImage() {
+  return function (tree) {
+    visit(tree, function (node) {
+      if (node.tagName === 'img') {
+        node.properties['data-src'] = node.properties.src
+        node.properties.src = '/spinner.gif'
+        node.properties['data-alt'] = node.properties.alt
+        node.properties.alt = 'default'
+      }
+    })
+  }
+}
 
 export default defineConfig({
   site: 'https://suyi.xyz',
@@ -43,8 +44,7 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkModifiedTime, resetRemark, remarkDirective, remarkAsides({}),remarkCollapse({})],
     rehypePlugins: [
-      // TODO: lazy load image有问题，需要研究
-      // customRehypeLazyLoadImage
+      customRehypeLazyLoadImage
     ],
   },
   build: {
