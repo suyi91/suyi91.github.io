@@ -1,9 +1,12 @@
 ---
-date: 2024-03-24
+draft: false
+date: 2024-10-02
 title: New features test
 description: More new features specific to this theme.
 mermaid: true
 mathjax: true
+tags: []
+category: []
 ---
 
 ### Support collapse

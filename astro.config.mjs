@@ -32,15 +32,24 @@ function customRehypeLazyLoadImage() {
 export default defineConfig({
   site: 'https://suyi.xyz',
   output: 'static',
-  integrations: [sitemap(), tailwind(), solid(), expressiveCode({
-    plugins: [pluginLineNumbers(), pluginCollapsibleSections()],
-    themes: ["github-dark", "github-light"],
-    styleOverrides: {
-      codeFontFamily: "jetbrains-mono",
-      uiFontFamily: "jetbrains-mono",
-    },
-    themeCssSelector: (theme) => `[data-theme="${theme.type}"]`
-  }), mdx()],
+  integrations: [
+    sitemap({
+      filter: (page) => page !== 'https://suyi.xyz/friends/' &&
+        page !== 'https://suyi.xyz/message/',
+    }),
+    tailwind(),
+    solid(),
+    expressiveCode({
+      plugins: [pluginLineNumbers(), pluginCollapsibleSections()],
+      themes: ["github-dark", "github-light"],
+      styleOverrides: {
+        codeFontFamily: "jetbrains-mono",
+        uiFontFamily: "jetbrains-mono",
+      },
+      themeCssSelector: (theme) => `[data-theme="${theme.type}"]`
+    }),
+    mdx(),
+  ],
   markdown: {
     remarkPlugins: [remarkModifiedTime, resetRemark, remarkDirective, remarkAsides({}),remarkCollapse({})],
     rehypePlugins: [
