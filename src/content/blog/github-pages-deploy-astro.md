@@ -1,6 +1,6 @@
 ---
 draft: false
-date: 2024-10-21
+date: 2024-10-22
 title: Astro github pages快速部署
 description: 如何用astro & github快速、免费搭一个blog呢？
 mermaid: true

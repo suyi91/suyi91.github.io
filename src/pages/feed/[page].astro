@@ -17,7 +17,7 @@ const { page } = Astro.props;
 ---
 
 <IndexPage frontmatter={{title: 'Feed'}}>
-    {page.data.map((post, index) => <FeedPreview post={post} index={index} />)}
+  {page.data.map((post, index) => <FeedPreview post={post} index={index} />)}
   <Pagination
     currentPage={page.currentPage}
     totalPage={page.lastPage}
