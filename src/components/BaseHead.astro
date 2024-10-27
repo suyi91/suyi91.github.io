@@ -71,4 +71,13 @@ const {mathjax = false, mermaid = false, title = site.title} = Astro.props
       </script>
     </>
   }
+  <!-- Google Adsense -->
+  {!import.meta.env.DEV &&
+    <>
+      <meta name="google-adsense-account" content="ca-pub-9516394402935661">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9516394402935661"
+        crossorigin="anonymous"></script>
+    </>
+  }
+
 </head>
