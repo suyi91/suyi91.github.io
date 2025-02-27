@@ -2,7 +2,7 @@
 draft: false
 date: 2024-11-02
 title: dayjs使用分享
-description: 如何使用dayjs便捷地操作日期呢
+description: 如何使用dayjs便捷地操作日期呢？
 mermaid: true
 mathjax: true
 tags: []
