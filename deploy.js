@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { execSync, exec } = require('child_process');
+const { execSync } = require('node:child_process');
 
 const GH_TOKEN = process.env.GH_TOKEN;
 
