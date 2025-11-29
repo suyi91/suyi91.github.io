@@ -7,7 +7,7 @@ import {getCollectionByName} from "../../utils/getCollectionByName";
 import {sortPostsByDate} from "../../utils/sortPostsByDate";
 import Donate from '../../components/Donate.astro'
 import {donate} from "../../consts";
-import Adsense from 'src/components/Adsense.astro';
+// import Adsense from 'src/components/Adsense.astro';
 
 export async function getStaticPaths() {
   const blogEntries = (await getCollection('blog')).filter(({data}) => {
@@ -74,9 +74,9 @@ if (sortPosts[currentPostIndex + 1]) {
         )
       }
     </div>
-    <div class="my-4">
+    <!-- <div class="my-4">
       <Adsense />
-    </div>
+    </div> -->
     <BlogFooter title={entry.data.title} url={entry.collection + '/' + entry.slug} date={entry.data.date}></BlogFooter>
     {
       donate.enable && entry.data.donate &&
