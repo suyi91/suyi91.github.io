@@ -7,28 +7,49 @@
   <i class="ri-close-fill"></i>
 </button>
 
-
 <script>
+  function showPanel(el) {
+    el.classList.remove('panel-hidden', 'panel-entering');
+    el.classList.add('panel-entering');
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        el.classList.remove('panel-entering');
+        el.classList.add('panel-visible');
+      });
+    });
+  }
+
+  function hidePanel(el) {
+    el.classList.remove('panel-visible', 'panel-entering');
+    el.classList.add('panel-hidden');
+  }
+
   let menuIcon = document.getElementById("menu-icon");
   let menuCloseIcon = document.getElementById("menu-icon-close");
   let menu = document.getElementById("mobile-menu");
   let showAsideBtn = document.getElementById("aside-btn");
   let closeAsideBtn = document.getElementById("aside-close-btn");
   let personalInfo = document.getElementById("personal-info");
+
   menuIcon.addEventListener("click", () => {
-    if(showAsideBtn && showAsideBtn.classList.contains('hidden')){
+    // 关闭 personal-info 面板（如果打开）
+    if (showAsideBtn && showAsideBtn.classList.contains('hidden')) {
       showAsideBtn.classList.toggle("hidden");
       closeAsideBtn.classList.toggle("hidden");
-      personalInfo.classList.toggle("hidden");
+      hidePanel(personalInfo);
     }
     menuIcon.classList.toggle("hidden");
     menuCloseIcon.classList.toggle("hidden");
-    menu.classList.toggle("hidden");
-    // 给背景添加蒙版
+    if (menu.classList.contains('panel-visible')) {
+      hidePanel(menu);
+    } else {
+      showPanel(menu);
+    }
   });
+
   menuCloseIcon.addEventListener("click", () => {
     menuCloseIcon.classList.toggle("hidden");
-    menu.classList.toggle("hidden");
     menuIcon.classList.toggle("hidden");
+    hidePanel(menu);
   });
 </script>

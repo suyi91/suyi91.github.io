@@ -9,61 +9,55 @@ const {title, date, category, tags, lastModified = '', draft = false, readingTim
   <!-- title -->
   <h1 class="break-all text-xl font-bold">{title}</h1>
 
-  <div class="flex flex-wrap items-center my-2 space-x-2">
-    <!-- date -->
+  <!-- date + reading time row -->
+  <div class="flex flex-wrap items-center gap-3 mt-2 mb-2 text-sm opacity-60">
     {
       date && (
-        <i class="ri-calendar-2-fill"/>
-        <div class="tag">{formatDate(date)}</div>
+        <span class="flex items-center gap-1">
+          <i class="ri-calendar-2-fill"/>
+          {formatDate(date)}
+        </span>
       )
     }
-
-    <!-- draft -->
-    {
-      draft &&
-      <>
-        <div class="divider-vertical"/>
-        <i class="ri-git-pr-draft-line"/>
-        <div>{t('title.draft')}</div>
-      </>
-    }
-
-    <!-- category -->
-    {
-      category && dealLabel(category).filter(item => item !== 'uncategorized').map((categoryName) => (
-        <div class="divider-vertical"/>
-        <i class="ri-folder-3-line"/>
-        <a href={"/category/" + categoryName} class="text-wrap break-all  hover:text-skin-active cursor-pointer">{categoryName}</a>
-      ))
-    }
-
-    <!-- tag -->
-    {
-      tags && dealLabel(tags).map((tagName) => (
-        <div class="divider-vertical"/>
-        <i class="ri-price-tag-3-line"/>
-        <a href={"/tags/" + tagName} class="text-wrap break-all hover:text-skin-active cursor-pointer">{tagName}</a>
-      ))
-    }
-
-    <!-- update -->
     {
       lastModified && (
-        <div class="divider-vertical"/>
-        <i class="ri-calendar-check-fill"></i>
-        <div class="tag">{t('post.lastUpdated')}：{lastModified}</div>
+        <span class="flex items-center gap-1">
+          <i class="ri-calendar-check-fill"/>
+          {t('post.lastUpdated')}：{lastModified}
+        </span>
       )
     }
-
-    <!-- minutes -->
     {
       readingTime.minutes && (
-        <div class="divider-vertical"/>
-        <i class="ri-hourglass-fill"/>
-        <div class="tag">{Math.ceil(readingTime.minutes)}{t('title.minutes')}</div>
-        <div class="divider-vertical"/>
-        <div class="tag">{readingTime.words}{t('title.words')}</div>
+        <span class="flex items-center gap-1">
+          <i class="ri-hourglass-fill"/>
+          {Math.ceil(readingTime.minutes)}{t('title.minutes')} · {readingTime.words}{t('title.words')}
+        </span>
       )
+    }
+    {
+      draft &&
+      <span class="meta-pill bg-yellow-100 text-yellow-700">
+        <i class="ri-git-pr-draft-line mr-1"/>{t('title.draft')}
+      </span>
+    }
+  </div>
+
+  <!-- category + tag pills -->
+  <div class="flex flex-wrap gap-1 mb-3">
+    {
+      category && dealLabel(category).filter(item => item !== 'uncategorized').map((categoryName) => (
+        <a href={"/category/" + categoryName} class="meta-pill hover:text-skin-active">
+          <i class="ri-folder-3-line mr-1"/>{categoryName}
+        </a>
+      ))
+    }
+    {
+      tags && dealLabel(tags).map((tagName) => (
+        <a href={"/tags/" + tagName} class="meta-pill hover:text-skin-active">
+          <i class="ri-price-tag-3-line mr-1"/>{tagName}
+        </a>
+      ))
     }
   </div>
 </div>

@@ -39,11 +39,11 @@ menu {
   html[data-theme="light"] {
     --color-fill: 241, 241, 241;
     --color-fill-secondary: 251, 251, 251;
-    --color-card: 241, 241, 241;
+    --color-card: 255, 255, 255;
     --color-text: 80, 73, 69;
     --color-text-active: 181, 118, 20;
-    --color-border: 104, 157, 106;
-    --color-border-active: 14, 192, 124;
+    --color-border: 168, 126, 72;
+    --color-border-active: 181, 118, 20;
     --color-modal: 52, 58, 64;
   }
 
@@ -79,6 +79,37 @@ menu {
 
   .header-link-hover {
     @apply underline underline-offset-4 decoration-wavy decoration-skin-base;
+  }
+
+  .nav-link:hover {
+    background-color: rgba(var(--color-text), 0.08);
+    color: rgb(var(--color-text-active));
+  }
+
+  /* 文章元信息 pill 标签样式 */
+  .meta-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 8px;
+    height: 22px;
+    font-size: 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(var(--color-border), 0.5);
+    background-color: rgba(var(--color-card), 1);
+    color: rgba(var(--color-text), 0.75);
+    transition: color 0.15s;
+    white-space: nowrap;
+  }
+
+  /* 阅读更多按钮 */
+  .read-more-btn {
+    transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+  }
+
+  .read-more-btn:hover {
+    background-color: rgb(var(--color-text-active));
+    color: rgb(var(--color-fill));
+    border-color: transparent;
   }
 
   .header-btn {
@@ -203,6 +234,28 @@ menu {
 .markdown-body img {
   /* 修改图片居中 */
   /* margin: 0 auto; */
+}
+
+/* 移动端菜单滑入/滑出动画 */
+.mobile-panel {
+  overflow-y: auto;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.mobile-panel.panel-hidden {
+  display: none;
+}
+
+.mobile-panel.panel-entering {
+  display: block;
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.mobile-panel.panel-visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* 修改滚动条样式 */

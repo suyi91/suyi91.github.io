@@ -13,26 +13,48 @@
 </div>
 
 <script>
+  function showPanel(el) {
+    el.classList.remove('panel-hidden', 'panel-entering');
+    el.classList.add('panel-entering');
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        el.classList.remove('panel-entering');
+        el.classList.add('panel-visible');
+      });
+    });
+  }
+
+  function hidePanel(el) {
+    el.classList.remove('panel-visible', 'panel-entering');
+    el.classList.add('panel-hidden');
+  }
+
   let showAsideBtn = document.getElementById("aside-btn");
   let closeAsideBtn = document.getElementById("aside-close-btn");
   let menuIcon = document.getElementById("menu-icon");
   let menuCloseIcon = document.getElementById("menu-icon-close");
   let menu = document.getElementById("mobile-menu");
-
   let personalInfo = document.getElementById("personal-info");
+
   showAsideBtn.addEventListener("click", () => {
-    if(menuIcon && menuIcon.classList.contains('hidden')){
-      menuIcon.classList.toggle('hidden')
+    // 关闭 mobile-menu 面板（如果打开）
+    if (menuIcon && menuIcon.classList.contains('hidden')) {
+      menuIcon.classList.toggle('hidden');
       menuCloseIcon.classList.toggle("hidden");
-      menu.classList.toggle("hidden");
+      hidePanel(menu);
     }
     showAsideBtn.classList.toggle("hidden");
     closeAsideBtn.classList.toggle("hidden");
-    personalInfo.classList.toggle("hidden");
+    if (personalInfo.classList.contains('panel-visible')) {
+      hidePanel(personalInfo);
+    } else {
+      showPanel(personalInfo);
+    }
   });
+
   closeAsideBtn.addEventListener("click", () => {
     closeAsideBtn.classList.toggle("hidden");
-    personalInfo.classList.toggle("hidden");
     showAsideBtn.classList.toggle("hidden");
+    hidePanel(personalInfo);
   });
 </script>

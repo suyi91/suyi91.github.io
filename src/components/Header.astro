@@ -15,7 +15,7 @@ let categoryCount = getCountByCategory(blogs);
 let tagCount = getCountByTagName(blogs);
 ---
 
-<header class="fixed top-0 w-full bg-skin-fill text-skin-base z-10">
+<header class="fixed top-0 w-full bg-skin-fill text-skin-base z-10 border-b border-black/10 shadow-sm dark:border-white/10">
   <div class="flex items-center justify-between container">
     <div class="block xl:hidden">
       <MenuIcon></MenuIcon>
@@ -37,7 +37,7 @@ let tagCount = getCountByTagName(blogs);
       </div>
     </div>
   </div>
-  <div id="mobile-menu" class="hidden text-center overflow-y-auto pb-8" style="height: calc(100vh - 64px)">
+  <div id="mobile-menu" class="mobile-panel panel-hidden text-center pb-8" style="height: calc(100vh - 64px)">
     {
       categories.map((category) => (
         <div class="py-2">
@@ -65,7 +65,7 @@ let tagCount = getCountByTagName(blogs);
       ))
     }
   </div>
-  <div id="personal-info" class="hidden break-all overflow-y-auto pb-8" style="height: calc(100vh - 64px)">
+  <div id="personal-info" class="mobile-panel panel-hidden break-all pb-8" style="height: calc(100vh - 64px)">
     <img class="avatar my-4 mx-auto" src={site.avatar} alt="avatar"/>
     <div class="mb-2 text-center">{site.motto}</div>
     <div class="flex items-center justify-center flex-wrap">

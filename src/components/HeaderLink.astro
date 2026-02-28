@@ -7,7 +7,7 @@ let pathnameMatch = pathname.split('/')
 const isActive = hrefMath[1] === pathnameMatch[1]
 ---
 <div class="box relative h-10 w-auto flex items-center">
-  <a href={href} target={target} class:list={[isActive ? 'header-link-active' : '', 'hover:header-link-hover']} {...props}>
+  <a href={href} target={target} class:list={[isActive ? 'header-link-active' : 'nav-link', 'px-3 py-1 rounded-md transition-colors']} {...props}>
     <i class={iconClass}/>
     <slot/>
     {

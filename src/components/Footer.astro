@@ -1,8 +1,6 @@
 ---
 import {site, config} from "../consts";
 import {t} from '../i18n/utils'
-
-const year = new Date().getFullYear();
 ---
 
 <div class="footer container p-4">
@@ -23,7 +21,7 @@ const year = new Date().getFullYear();
     <div>
       <span class="cursor-default">Copyright</span>
       <i class="ri-copyright-line align-middle"></i>
-      <span class="align-middle">2024-{year}</span>
+      <span class="align-middle">2024-<span id="copyright-year"></span></span>
     </div>
     {
       site.beian && (
@@ -47,3 +45,7 @@ const year = new Date().getFullYear();
     left: 0;
   }
 </style>
+
+<script>
+  document.getElementById('copyright-year').textContent = String(new Date().getFullYear());
+</script>
