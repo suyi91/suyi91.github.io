@@ -5,7 +5,7 @@ title: node-sass安装报错备忘
 description: 2025年再次遇到node-sass的安装报错，如何快速解决？
 mermaid: true
 mathjax: true
-tags: []
+tags: ['css', 'sass', 'node-sass']
 category: ['前端']
 ---
 
