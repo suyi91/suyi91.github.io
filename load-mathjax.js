@@ -9,7 +9,7 @@ window.MathJax = {
 
 (function () {
   var script = document.createElement('script');
-  script.src = 'https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-svg.js';
+  script.src = '/libs/mathjax_3.2.2_es5_tex-svg.js';
   script.async = true;
   document.head.appendChild(script);
 })();
