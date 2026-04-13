@@ -7,26 +7,25 @@ import {formatDate} from "../../utils/formatDate";
 import {sortPostsByDate} from "src/utils/sortPostsByDate";
 import {getCollectionByName} from "../../utils/getCollectionByName";
 export async function getStaticPaths() {
-  const posts = await getCollectionByName("blog");
-  //   过滤没有分类的文章，todo 后期可能会强制需要文章分类
+  const posts = await getCollectionByName("blog", 'en');
   const tags = getUniqueTags(posts).filter((tag) => tag);
   return tags.map((tag) => {
     return {params: {tag,}, props: {tag,},};
   });
 }
 const {tag} = Astro.props;
-let posts = await getCollectionByName("blog");
+let posts = await getCollectionByName("blog", 'en');
 const tagPosts = getPostsByTag(posts, tag);
 const resultPosts = sortPostsByDate(tagPosts);
 ---
 
-<IndexPage>
+<IndexPage lang="en">
   <SearchTitle label={tag}/>
   <ul class="text-skin-base">
     {
       resultPosts.map((post) => (
         <li style="list-style-type: disc;" class="ml-4 my-2">
-          <a href={'/' + post.collection + '/' + post.slug}>
+          <a href={'/blog/' + post.slug.replace(/^(en|zh)\//, '')}>
             <span class="mr-4">
               {formatDate(post.data.date)}
             </span>

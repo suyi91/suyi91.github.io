@@ -7,15 +7,25 @@ import {getCollectionByName} from "../../utils/getCollectionByName";
 import {sortPostsByDate} from "../../utils/sortPostsByDate";
 import Donate from '../../components/Donate.astro'
 import {donate} from "../../consts";
-// import Adsense from 'src/components/Adsense.astro';
 
 export async function getStaticPaths() {
-  const blogEntries = (await getCollection('blog')).filter(({data}) => {
-    return import.meta.env.PROD ? !data.draft : true
-  });
-  return blogEntries.map(entry => ({
-    params: {slug: entry.slug}, props: {entry,},
-  }));
+  // Load en content; falls back to zh if no en content exists
+  const blogEntries = (await getCollection('blog')).filter(({ slug, data }) => {
+    const isEn = slug.startsWith('en/')
+    return isEn && (import.meta.env.PROD ? !data.draft : true)
+  })
+  // If no en entries exist, fall back to zh entries
+  const sourceEntries = blogEntries.length > 0
+    ? blogEntries
+    : (await getCollection('blog')).filter(({ slug, data }) => {
+        const isZh = slug.startsWith('zh/')
+        return isZh && (import.meta.env.PROD ? !data.draft : true)
+      })
+  return sourceEntries.map(entry => ({
+    // Strip lang prefix from URL slug
+    params: { slug: entry.slug.replace(/^(en|zh)\//, '') },
+    props: { entry },
+  }))
 }
 
 const {entry} = Astro.props;
@@ -24,7 +34,7 @@ const {Content, remarkPluginFrontmatter} = await entry.render();
 const lastModified = remarkPluginFrontmatter.lastModified
 const readingTime = remarkPluginFrontmatter.readingTime
 
-const posts = await getCollectionByName("blog");
+const posts = await getCollectionByName("blog", 'en')
 const sortPosts = sortPostsByDate(posts);
 
 const currentPostIndex = sortPosts.findIndex(
@@ -37,10 +47,11 @@ if (sortPosts[currentPostIndex - 1]) {
 if (sortPosts[currentPostIndex + 1]) {
   nextPost = sortPosts[currentPostIndex + 1];
 }
+const cleanSlug = entry.slug.replace(/^(en|zh)\//, '')
 ---
-<BlogPost frontmatter={entry.data}>
+<BlogPost frontmatter={entry.data} lang="en">
   <div>
-    <PostTitle slug={`/blog/${entry.slug}`} {...entry.data} lastModified={lastModified} readingTime={readingTime}></PostTitle>
+    <PostTitle slug={`/blog/${cleanSlug}`} {...entry.data} lastModified={lastModified} readingTime={readingTime}></PostTitle>
     <div class="divider-horizontal"></div>
     <article class="markdown-body">
       <Content/>
@@ -51,7 +62,7 @@ if (sortPosts[currentPostIndex + 1]) {
         prevPost ? (
           <a
             class="truncate  w-auto max-w-[40%] float-left"
-            href={'/' + prevPost.collection + '/' + prevPost.slug}
+            href={'/blog/' + prevPost.slug.replace(/^(en|zh)\//, '')}
             title={prevPost.data.title}
           >
             <i class="ri-arrow-left-s-fill"/>
@@ -64,7 +75,7 @@ if (sortPosts[currentPostIndex + 1]) {
       {
         nextPost ? (
           <div class="flex item-center float-right w-auto max-w-[40%] text-right">
-            <a class="truncate " href={'/' + nextPost.collection + '/' + nextPost.slug} title={nextPost.data.title}>
+            <a class="truncate " href={'/blog/' + nextPost.slug.replace(/^(en|zh)\//, '')} title={nextPost.data.title}>
               {nextPost.data.title}
             </a>
             <i class="ri-arrow-right-s-fill float-right"/>
@@ -74,10 +85,7 @@ if (sortPosts[currentPostIndex + 1]) {
         )
       }
     </div>
-    <!-- <div class="my-4">
-      <Adsense />
-    </div> -->
-    <BlogFooter title={entry.data.title} url={entry.collection + '/' + entry.slug} date={entry.data.date}></BlogFooter>
+    <BlogFooter title={entry.data.title} url={'blog/' + cleanSlug} date={entry.data.date}></BlogFooter>
     {
       donate.enable && entry.data.donate &&
       <Donate></Donate>

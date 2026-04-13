@@ -1,8 +1,11 @@
 ---
 import FeedPostDate from "./FeedPostDate.astro";
-const {data, body, slug} = Astro.props.post;
-const {index} = Astro.props;
-import {t} from '../i18n/utils'
+const {post, index, lang = 'en'} = Astro.props;
+const {data, body, slug} = post;
+import {useTranslations, type Lang} from '../i18n/utils'
+const t = useTranslations(lang as Lang)
+const cleanSlug = slug.replace(/^(en|zh)\//, '')
+const prefix = lang === 'zh' ? '/zh/feed/' : '/feed/'
 ---
 
 <div>
@@ -20,6 +23,6 @@ import {t} from '../i18n/utils'
   </p>
   <div class="flex items-center justify-between mt-2 text-sm">
     <FeedPostDate date={data.date} index={index}/>
-    <a class="hover:text-skin-active text-sm border rounded py-1 px-2" href={`/feed/${slug}`}>{t('home.readMore')}</a>
+    <a class="hover:text-skin-active text-sm border rounded py-1 px-2" href={`${prefix}${cleanSlug}`}>{t('home.readMore')}</a>
   </div>
 </div>

@@ -8,7 +8,7 @@ import Pagination from "../components/Pagination.astro";
 import _ from 'lodash'
 
 let currentPage = 1
-let blogs = await getCollectionByName("blog");
+let blogs = await getCollectionByName("blog", 'en');
 let totalPage = _.ceil(_.divide(blogs.length, site.postPageSize))
 
 let sortedPosts = await orderBySticky(blogs);
@@ -17,10 +17,10 @@ if (sortedPosts.length > site.postPageSize) {
 }
 ---
 
-<IndexPage>
+<IndexPage lang="en">
   {
     sortedPosts.map(blog =>
-      <PostView blog={blog}></PostView>)
+      <PostView blog={blog} lang="en"></PostView>)
   }
   {
     totalPage > 1 ?
@@ -31,4 +31,3 @@ if (sortedPosts.length > site.postPageSize) {
       /> : ''
   }
 </IndexPage>
-

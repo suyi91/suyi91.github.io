@@ -7,19 +7,18 @@ import {getCollectionByName} from "../../utils/getCollectionByName";
 import {orderBySticky} from "../../utils/orderBySticky";
 
 export async function getStaticPaths({paginate}) {
-  let posts = await getCollectionByName("blog");
+  let posts = await getCollectionByName("blog", 'en');
   let sortedPosts = await orderBySticky(posts);
   return paginate(sortedPosts, {pageSize: site.postPageSize});
 }
-// 所有分页数据都将传递给 "page" 参数
 const {page} = Astro.props;
 ---
 
 
-<IndexPage frontmatter={{comment:false, title: 'Blog'}}>
+<IndexPage frontmatter={{comment:false, title: 'Blog'}} lang="en">
   {
-    page.data.map((blog, index) =>
-      <PostView blog={blog}></PostView>)
+    page.data.map((blog) =>
+      <PostView blog={blog} lang="en"></PostView>)
   }
   <Pagination
     currentPage={page.currentPage}
@@ -27,4 +26,3 @@ const {page} = Astro.props;
     url={page.url}
   />
 </IndexPage>
-

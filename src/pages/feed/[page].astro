@@ -6,18 +6,16 @@ import { sortPostsByDate } from "src/utils/sortPostsByDate";
 import { getCollectionByName } from "../../utils/getCollectionByName";
 import FeedPreview from "../../components/FeedPreview.astro";
 export async function getStaticPaths({ paginate }) {
-  let posts = await getCollectionByName("feed");
+  let posts = await getCollectionByName("feed", 'en');
   posts = sortPostsByDate(posts);
-  // 将根据宇航员数组生成两个页面
   return paginate(posts, { pageSize: site.feedPageSize });
 }
-// 所有分页数据都将传递给 "page" 参数
 
 const { page } = Astro.props;
 ---
 
-<IndexPage frontmatter={{title: 'Feed'}}>
-  {page.data.map((post, index) => <FeedPreview post={post} index={index} />)}
+<IndexPage frontmatter={{title: 'Feed'}} lang="en">
+  {page.data.map((post, index) => <FeedPreview post={post} index={index} lang="en" />)}
   <Pagination
     currentPage={page.currentPage}
     totalPage={page.lastPage}
