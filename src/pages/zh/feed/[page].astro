@@ -1,0 +1,26 @@
+---
+import {site} from '../../../consts'
+import IndexPage from '../../../layouts/IndexPage.astro'
+import Pagination from "../../../components/Pagination.astro";
+import { sortPostsByDate } from "../../../utils/sortPostsByDate";
+import { getCollectionByName } from "../../../utils/getCollectionByName";
+import FeedPreview from "../../../components/FeedPreview.astro";
+
+export async function getStaticPaths({ paginate }) {
+  let posts = await getCollectionByName("feed", 'zh');
+  posts = sortPostsByDate(posts);
+  return paginate(posts, { pageSize: site.feedPageSize });
+}
+
+const { page } = Astro.props;
+---
+
+<IndexPage frontmatter={{title: 'Feed'}} lang="zh">
+  {page.data.map((post, index) => <FeedPreview post={post} index={index} lang="zh" />)}
+  <Pagination
+    currentPage={page.currentPage}
+    totalPage={page.lastPage}
+    url={page.slug}
+    prefixUrl="/zh/feed/"
+  />
+</IndexPage>

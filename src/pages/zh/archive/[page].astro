@@ -1,0 +1,49 @@
+---
+import IndexPage from "../../../layouts/IndexPage.astro";
+import Pagination from "../../../components/Pagination.astro";
+import { sortPostsByDate } from "../../../utils/sortPostsByDate";
+import getPostsByYear from "../../../utils/getPostsByYear";
+import {site} from "../../../consts";
+import dayjs from "dayjs";
+import { getCollectionByName } from "../../../utils/getCollectionByName";
+
+export async function getStaticPaths({ paginate }) {
+  let posts = await getCollectionByName("blog", 'zh');
+  posts = sortPostsByDate(posts);
+  return paginate(posts, { pageSize: site.archivePageSize });
+}
+const { page } = Astro.props;
+let resultPosts = getPostsByYear(page.data);
+---
+
+<IndexPage frontmatter={{title: 'Archive'}} lang="zh">
+  {
+    Object.keys(resultPosts)
+      .sort((a, b) => Number(b) - Number(a))
+      .map((year) => (
+        <div>
+          <div class="text-2xl font-extrabold my-4">{year}</div>
+          <ul>
+            {resultPosts[year].map((post) => (
+              <li style="list-style-type: disc;" class="ml-4 my-2">
+                <a href={'/zh/blog/' + post.slug.replace(/^zh\//, '')}>
+                  <span class="mr-4">
+                    {dayjs(post.data.date).format("YYYY-MM-DD")}
+                  </span>
+                  <span class="hover:text-skin-active">
+                  {post.data.title}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+  }
+  <Pagination
+    currentPage={page.currentPage}
+    totalPage={page.lastPage}
+    prefixUrl="/zh/archive/"
+    url={page.slug}
+  />
+</IndexPage>
