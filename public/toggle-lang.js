@@ -6,7 +6,8 @@
   const isZhPath = currentPath.startsWith('/zh')
   const currentLang = isZhPath ? 'zh' : 'en'
 
-  if (savedLang && savedLang !== currentLang) {
+  const VALID_LANGS = ['en', 'zh']
+  if (savedLang && VALID_LANGS.includes(savedLang) && savedLang !== currentLang) {
     if (savedLang === 'zh' && !isZhPath) {
       window.location.replace('/zh' + currentPath)
     } else if (savedLang === 'en' && isZhPath) {

@@ -13,9 +13,15 @@ const targetLang = isZh ? 'en' : 'zh'
   href={switchHref}
   class="header-btn text-sm font-medium select-none"
   title="Switch language"
-  aria-label="switch language"
+  aria-label={isZh ? 'Switch to English' : '切换到中文'}
   data-target-lang={targetLang}
-  onclick={`localStorage.setItem('lang', '${targetLang}')`}
 >
   {switchLabel}
 </a>
+
+<script>
+  document.querySelector('#lang-btn')?.addEventListener('click', (e) => {
+    const lang = (e.currentTarget as HTMLElement).dataset.targetLang
+    if (lang) localStorage.setItem('lang', lang)
+  })
+</script>
