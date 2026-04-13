@@ -15,6 +15,8 @@ const blog = defineCollection({
     toc: z.boolean().default(true).nullable(),
     donate: z.boolean().default(true).nullable(),
     comment: z.boolean().default(true).nullable(),
+    lang: z.string().optional(),
+    translationKey: z.string().optional(),
   }),
 });
 
@@ -23,6 +25,7 @@ const feed = defineCollection({
     date: z.date().or(z.string()).optional().nullable(),
     donate: z.boolean().default(true),
     comment: z.boolean().default(true),
+    lang: z.string().optional(),
   })
 })
 
