@@ -1,6 +1,5 @@
 import { en } from './en'
 import { zhCn } from './zhCn'
-import { cs } from './cs'
 import { config } from '../consts'
 
 export type Lang = 'en' | 'zh'
@@ -8,12 +7,13 @@ export type Lang = 'en' | 'zh'
 const ui = {
   en,
   zh: zhCn,
-  cs,
 }
 
+const NON_DEFAULT_LANGS: Lang[] = ['zh']
+
 export function getLangFromUrl(url: URL): Lang {
-  const [, lang] = url.pathname.split('/')
-  if (lang === 'zh') return 'zh'
+  const [, first] = url.pathname.split('/')
+  if ((NON_DEFAULT_LANGS as string[]).includes(first)) return first as Lang
   return 'en'
 }
 
@@ -24,4 +24,5 @@ export function useTranslations(lang: Lang) {
 }
 
 // Backward compat: default uses config.lang mapped to Lang type
-export const t = useTranslations(config.lang === 'zh-cn' ? 'zh' : 'en')
+const configLangMap: Record<string, Lang> = { 'zh-cn': 'zh', 'zh': 'zh', 'en': 'en' }
+export const t = useTranslations(configLangMap[config.lang] ?? 'en')
