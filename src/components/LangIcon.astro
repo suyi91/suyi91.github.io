@@ -1,0 +1,21 @@
+---
+const currentPath = Astro.url.pathname
+const isZh = currentPath.startsWith('/zh')
+const switchHref = isZh
+  ? (currentPath.replace(/^\/zh/, '') || '/')
+  : '/zh' + currentPath
+const switchLabel = isZh ? 'EN' : '中'
+const targetLang = isZh ? 'en' : 'zh'
+---
+
+<a
+  id="lang-btn"
+  href={switchHref}
+  class="header-btn text-sm font-medium select-none"
+  title="Switch language"
+  aria-label="switch language"
+  data-target-lang={targetLang}
+  onclick={`localStorage.setItem('lang', '${targetLang}')`}
+>
+  {switchLabel}
+</a>

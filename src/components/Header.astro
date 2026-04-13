@@ -4,6 +4,7 @@ import getUniqueTags from "../utils/getUniqueTags";
 import getCountByCategory from "../utils/getCountByCategory";
 import HeaderLink from './HeaderLink.astro';
 import ThemeIcon from './ThemeIcon.astro'
+import LangIcon from './LangIcon.astro'
 import MenuIcon from './MenuIcon.astro'
 import {site, categories, infoLinks} from '../consts';
 import AsideIcon from "./SidebarIcon.astro";
@@ -32,6 +33,7 @@ let tagCount = getCountByTagName(blogs);
         </div>
       </div>
       <ThemeIcon></ThemeIcon>
+      <LangIcon></LangIcon>
       <div class="block xl:hidden">
         <AsideIcon></AsideIcon>
       </div>
