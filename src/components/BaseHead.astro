@@ -4,6 +4,9 @@ import {site, config} from "../consts";
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const {mathjax = false, mermaid = false, title = site.title} = Astro.props
+const isZh = Astro.url.pathname.startsWith('/zh')
+const enPath = isZh ? (Astro.url.pathname.replace(/^\/zh/, '') || '/') : Astro.url.pathname
+const zhPath = isZh ? Astro.url.pathname : '/zh' + Astro.url.pathname
 ---
 <head>
   <!-- Global Metadata -->
@@ -13,6 +16,10 @@ const {mathjax = false, mermaid = false, title = site.title} = Astro.props
   <meta name="generator" content={Astro.generator}/>
   <!-- Canonical URL -->
   <link rel="canonical" href={canonicalURL}/>
+  <!-- Hreflang alternates -->
+  <link rel="alternate" hreflang="en" href={new URL(enPath, Astro.site)} />
+  <link rel="alternate" hreflang="zh-CN" href={new URL(zhPath, Astro.site)} />
+  <link rel="alternate" hreflang="x-default" href={new URL(enPath, Astro.site)} />
 
   <!-- Primary Meta Tags -->
   <meta name="title" content={site.title}/>
