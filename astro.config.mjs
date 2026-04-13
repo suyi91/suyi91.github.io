@@ -32,6 +32,16 @@ function customRehypeLazyLoadImage() {
 export default defineConfig({
   site: 'https://suyi.xyz',
   output: 'static',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'zh'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+    fallback: {
+      zh: 'en',
+    },
+  },
   integrations: [
     sitemap({
       filter: (page) => page !== 'https://suyi.xyz/friends/' &&
