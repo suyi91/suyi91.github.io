@@ -8,7 +8,9 @@ import LangIcon from './LangIcon.astro'
 import MenuIcon from './MenuIcon.astro'
 import {site, categories, infoLinks} from '../consts';
 import AsideIcon from "./SidebarIcon.astro";
-import {t} from "../i18n/utils";
+import { useTranslations, getLangFromUrl } from '../i18n/utils'
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 import getCountByTagName from "../utils/getCountByTagName";
 const blogs = await getCollectionByName('blog')
 let tagArr = getUniqueTags(blogs);

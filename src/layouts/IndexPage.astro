@@ -7,11 +7,13 @@ import BlogAside from '../components/BlogAside.astro'
 import Comment from '../components/Comment.astro'
 import Donate from '../components/Donate.astro'
 import {donate, comment} from "../consts";
+import { getLangFromUrl, type Lang } from '../i18n/utils'
 
-const {frontmatter = {comment: false, donate: false}} = Astro.props
+const { frontmatter = { comment: false, donate: false }, lang: langProp } = Astro.props
+const lang: Lang = langProp ?? getLangFromUrl(Astro.url)
 ---
 
-<html lang="en">
+<html lang={lang === 'zh' ? 'zh-CN' : 'en'}>
 <BaseHead title={frontmatter.title} />
 
 <body class="bg-skin-secondary relative">

@@ -7,19 +7,21 @@ import Comment from '../components/Comment.astro'
 import Toc from '../components/Toc.astro'
 import {comment, site} from "../consts";
 import ScrollToTop from '../components/ScrollToTop.astro'
-import {t}from '../i18n/utils'
+import { useTranslations, getLangFromUrl, type Lang } from '../i18n/utils'
 
-const {frontmatter = {
+const { frontmatter = {
   comment: false,
   donate: false,
   toc: false,
   mathjax: false,
   mermaid: false,
   title: site.title,
-}} = Astro.props
+}, lang: langProp } = Astro.props
+const lang: Lang = langProp ?? getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
-<html lang="en">
+<html lang={lang === 'zh' ? 'zh-CN' : 'en'}>
 <BaseHead title={frontmatter.title} mathjax={frontmatter.mathjax} mermaid={frontmatter.mermaid} />
 
 <body class="bg-skin-secondary">

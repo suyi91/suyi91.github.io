@@ -1,6 +1,8 @@
 ---
 import {site, config} from "../consts";
-import {t} from '../i18n/utils'
+import { useTranslations, getLangFromUrl } from '../i18n/utils'
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <div class="footer container p-4">
