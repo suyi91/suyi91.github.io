@@ -6,7 +6,7 @@ description: Vue2.7 jsx使用bug不断...
 mermaid: true
 mathjax: true
 tags: ['vue']
-category: ['前端']
+category: ['frontend']
 translationKey: vue-2.7-jsx-bugs
 ---
 

@@ -6,7 +6,7 @@ description: 如何使用dayjs便捷地操作日期呢？
 mermaid: true
 mathjax: true
 tags: []
-category: ['前端']
+category: ['frontend']
 translationKey: use-dayjs-instead-date
 ---
 

@@ -6,7 +6,7 @@ description: 2025年再次遇到node-sass的安装报错，如何快速解决？
 mermaid: true
 mathjax: true
 tags: ['css', 'sass', 'node-sass']
-category: ['前端']
+category: ['frontend']
 translationKey: fix-node-sass-install-error
 ---
 

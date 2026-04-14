@@ -6,7 +6,7 @@ description: 如何用astro & github快速、免费搭一个blog呢？
 mermaid: true
 mathjax: true
 tags: ['astro']
-category: ['前端']
+category: ['frontend']
 translationKey: github-pages-deploy-astro
 ---
 

@@ -43,4 +43,6 @@ export const zhCn = {
   'search.placeholder': '输入标题或摘要关键字',
   'feed.previous': '上一条动态',
   'feed.next': '下一条动态',
+  'category.frontend': '前端',
+  'post.dateFormat': 'YYYY/MM/DD',
 }
