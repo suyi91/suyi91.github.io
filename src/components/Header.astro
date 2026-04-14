@@ -9,6 +9,7 @@ import MenuIcon from './MenuIcon.astro'
 import {site, categories, infoLinks} from '../consts';
 import AsideIcon from "./SidebarIcon.astro";
 import { useTranslations, getLangFromUrl, type Lang } from '../i18n/utils'
+import getCountByTagName from "../utils/getCountByTagName";
 
 interface Props { lang?: Lang }
 const { lang: langProp } = Astro.props
@@ -16,7 +17,6 @@ const lang: Lang = langProp ?? getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 const prefix = lang === 'zh' ? '/zh' : ''
 
-import getCountByTagName from "../utils/getCountByTagName";
 const blogs = await getCollectionByName('blog')
 let tagArr = getUniqueTags(blogs);
 let categoryCount = getCountByCategory(blogs);
@@ -34,7 +34,7 @@ let tagCount = getCountByTagName(blogs);
         <div class="flex items-center space-x-5 pr-4">
           {
             categories.map(category => (
-              <HeaderLink href={category.href} icon={category.iconClass} target={category.target ? category.target : '_self'} children={category.children ? category.children : []}>{category.name}</HeaderLink>
+              <HeaderLink href={prefix + category.href} icon={category.iconClass} target={category.target ? category.target : '_self'} children={category.children ? category.children : []}>{category.name}</HeaderLink>
             ))
           }
         </div>
@@ -50,7 +50,7 @@ let tagCount = getCountByTagName(blogs);
     {
       categories.map((category) => (
         <div class="py-2">
-          <a class=" hover:text-skin-active" href={category.href}>
+          <a class=" hover:text-skin-active" href={prefix + category.href}>
             <i class={category.iconClass}/>
             <span>{category.name}</span>
           </a>
@@ -62,7 +62,7 @@ let tagCount = getCountByTagName(blogs);
             {
               category.children && category.children.map(sub =>
                 (
-                  <a class="block hover:text-skin-active" href={sub.href}>
+                  <a class="block hover:text-skin-active" href={prefix + sub.href}>
                     <i class={sub.iconClass}/>
                     <span>{sub.name}</span>
                   </a>
