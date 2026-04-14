@@ -12,10 +12,10 @@ export const getCollectionByName = async (name: string, lang?: Lang) => {
   if (lang) {
     // slug format is "zh/post-name" or "en/post-name"
     const langPosts = posts.filter((p) => p.slug.startsWith(lang + '/'))
-    // if no content for this lang, fall back to 'en'
-    return langPosts.length > 0
-      ? langPosts
-      : posts.filter((p) => p.slug.startsWith('en/'))
+    if (langPosts.length > 0) return langPosts
+    // if no content for requested lang, fall back to the other lang
+    const fallbackLang = lang === 'en' ? 'zh' : 'en'
+    return posts.filter((p) => p.slug.startsWith(fallbackLang + '/'))
   }
 
   return posts
