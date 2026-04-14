@@ -42,7 +42,7 @@ const cleanSlug = entry.slug.replace(/^zh\//, '')
 ---
 <BlogPost frontmatter={entry.data} lang="zh">
   <div>
-    <PostTitle slug={`/zh/blog/${cleanSlug}`} {...entry.data} lastModified={lastModified} readingTime={readingTime}></PostTitle>
+    <PostTitle slug={`/zh/blog/${cleanSlug}`} {...entry.data} lastModified={lastModified} readingTime={readingTime} lang="zh"></PostTitle>
     <div class="divider-horizontal"></div>
     <article class="markdown-body">
       <Content/>

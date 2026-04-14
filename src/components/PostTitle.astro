@@ -1,8 +1,16 @@
 ---
 import {formatDate} from "../utils/formatDate";
 import {dealLabel} from "../utils/dealLabel";
-import {t} from '../i18n/utils'
-const {title, date, category, tags, lastModified = '', draft = false, readingTime = {}} = Astro.props
+import {useTranslations, type Lang} from '../i18n/utils'
+const {title, date, category, tags, lastModified = '', draft = false, readingTime = {}, lang = 'en'} = Astro.props
+const t = useTranslations(lang as Lang)
+const prefix = lang === 'zh' ? '/zh' : ''
+
+function displayCategory(categoryName: string): string {
+  const key = 'category.' + categoryName
+  const translated = t(key)
+  return translated !== key ? translated : categoryName
+}
 ---
 
 <div class="border-b-1">
@@ -15,7 +23,7 @@ const {title, date, category, tags, lastModified = '', draft = false, readingTim
       date && (
         <span class="flex items-center gap-1">
           <i class="ri-calendar-2-fill"/>
-          {formatDate(date)}
+          {formatDate(date, lang as Lang)}
         </span>
       )
     }
@@ -47,14 +55,14 @@ const {title, date, category, tags, lastModified = '', draft = false, readingTim
   <div class="flex flex-wrap gap-1 mb-3">
     {
       category && dealLabel(category).filter(item => item !== 'uncategorized').map((categoryName) => (
-        <a href={"/category/" + categoryName} class="meta-pill hover:text-skin-active">
-          <i class="ri-folder-3-line mr-1"/>{categoryName}
+        <a href={prefix + "/category/" + categoryName} class="meta-pill hover:text-skin-active">
+          <i class="ri-folder-3-line mr-1"/>{displayCategory(categoryName)}
         </a>
       ))
     }
     {
       tags && dealLabel(tags).map((tagName) => (
-        <a href={"/tags/" + tagName} class="meta-pill hover:text-skin-active">
+        <a href={prefix + "/tags/" + tagName} class="meta-pill hover:text-skin-active">
           <i class="ri-price-tag-3-line mr-1"/>{tagName}
         </a>
       ))
