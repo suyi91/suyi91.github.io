@@ -2,9 +2,14 @@
 const {href, icon: iconClass, children, target, ...props} = Astro.props;
 
 const {pathname} = Astro.url;
-let hrefMath = href.split('/')
-let pathnameMatch = pathname.split('/')
-const isActive = hrefMath[1] === pathnameMatch[1]
+
+function getSection(path: string): string {
+  const parts = path.split('/').filter(Boolean)
+  const first = parts[0]
+  return (first === 'zh' || first === 'en') ? (parts[1] ?? '') : first
+}
+
+const isActive = getSection(href) === getSection(pathname)
 ---
 <div class="box relative h-10 w-auto flex items-center">
   <a href={href} target={target} class:list={[isActive ? 'header-link-active' : 'nav-link', 'px-3 py-1 rounded-md transition-colors']} {...props}>
