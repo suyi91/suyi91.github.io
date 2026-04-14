@@ -1,0 +1,16 @@
+---
+import IndexPage from "../../../layouts/IndexPage.astro";
+import {comment} from "../../../consts";
+import { useTranslations } from '../../../i18n/utils'
+
+const t = useTranslations('zh')
+---
+
+<IndexPage frontmatter={{comment: comment.enable, donate: false}} lang="zh">
+  <div class="flex text-xl underline-offset-4 font-bold">
+    {t('message.welcome')}
+  </div>
+  <div>
+    {t('message.welcomeTips')}
+  </div>
+</IndexPage>
