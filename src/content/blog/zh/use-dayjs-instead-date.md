@@ -7,6 +7,7 @@ mermaid: true
 mathjax: true
 tags: []
 category: ['前端']
+translationKey: use-dayjs-instead-date
 ---
 
 ## 两段代码对比

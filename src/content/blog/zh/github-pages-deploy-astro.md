@@ -7,6 +7,7 @@ mermaid: true
 mathjax: true
 tags: ['astro']
 category: ['前端']
+translationKey: github-pages-deploy-astro
 ---
 
 > ^_^本站就是笔者用下面的方式摸索搭建出来的，可以多多点击查看astro的效果。

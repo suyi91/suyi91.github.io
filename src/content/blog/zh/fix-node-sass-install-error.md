@@ -7,6 +7,7 @@ mermaid: true
 mathjax: true
 tags: ['css', 'sass', 'node-sass']
 category: ['前端']
+translationKey: fix-node-sass-install-error
 ---
 
 ## 常见安装报错问题列举
