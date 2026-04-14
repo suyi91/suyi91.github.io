@@ -17,10 +17,16 @@ const lang: Lang = langProp ?? getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 const prefix = lang === 'zh' ? '/zh' : ''
 
-const blogs = await getCollectionByName('blog')
+const blogs = await getCollectionByName('blog', lang)
 let tagArr = getUniqueTags(blogs);
 let categoryCount = getCountByCategory(blogs);
 let tagCount = getCountByTagName(blogs);
+
+function displayCategory(categoryName: string): string {
+  const key = 'category.' + categoryName
+  const translated = t(key)
+  return translated !== key ? translated : categoryName
+}
 ---
 
 <header class="fixed top-0 w-full bg-skin-fill text-skin-base z-10 border-b border-black/10 shadow-sm dark:border-white/10">
@@ -98,11 +104,10 @@ let tagCount = getCountByTagName(blogs);
       {
         Object.keys(categoryCount).map((category) => (
           <div class="my-2 break-all truncate">
-            <a class="hover:text-skin-active" title={category + " (" + categoryCount[category] + ")"} href={prefix + "/category/" + category}>
-              {category + " (" + categoryCount[category] + ")"}
+            <a class="hover:text-skin-active" title={displayCategory(category) + " (" + categoryCount[category] + ")"} href={prefix + "/category/" + category}>
+              {(category === 'uncategorized' ? t('sidebar.uncategorized') : displayCategory(category)) + " (" + categoryCount[category] + ")"}
             </a>
           </div>
-
         ))
       }
       {

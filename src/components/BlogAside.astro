@@ -6,8 +6,20 @@ import getUniqueTags from "../utils/getUniqueTags";
 import getCountByCategory from "../utils/getCountByCategory";
 import {sortPostsByDate} from "../utils/sortPostsByDate";
 import {site} from '../consts'
-import {t} from '../i18n/utils'
-const blogs = await getCollectionByName('blog')
+import {useTranslations, type Lang} from '../i18n/utils'
+
+interface Props { lang?: Lang }
+const { lang = 'en' } = Astro.props
+const t = useTranslations(lang)
+const prefix = lang === 'zh' ? '/zh' : ''
+
+function displayCategory(categoryName: string): string {
+  const key = 'category.' + categoryName
+  const translated = t(key)
+  return translated !== key ? translated : categoryName
+}
+
+const blogs = await getCollectionByName('blog', lang)
 let tagArr = getUniqueTags(blogs);
 let categoryCount = getCountByCategory(blogs);
 let sortPosts = await sortPostsByDate(blogs);
@@ -26,10 +38,10 @@ let resultPosts = sortPosts.splice(0, site.recentBlogSize);
     Object.keys(categoryCount).map((category) => (
       <a
         class="my-1 truncate block hover:text-skin-active"
-        title={category + " (" + categoryCount[category] + ")"}
-        href={"/category/" + category}
+        title={displayCategory(category) + " (" + categoryCount[category] + ")"}
+        href={prefix + "/category/" + category}
       >
-        {(category === 'uncategorized' ? t('sidebar.uncategorized') : category) + " (" + categoryCount[category] + ")"}
+        {(category === 'uncategorized' ? t('sidebar.uncategorized') : displayCategory(category)) + " (" + categoryCount[category] + ")"}
       </a>
     ))
   }
@@ -47,7 +59,7 @@ let resultPosts = sortPosts.splice(0, site.recentBlogSize);
     {
       tagArr &&
       tagArr.map((tag) =>
-        <a class="inline-block truncate m-1 border p-1 text-sm rounded hover:text-skin-active" title={tag} href={"/tags/" + tag}>{tag}</a>
+        <a class="inline-block truncate m-1 border p-1 text-sm rounded hover:text-skin-active" title={tag} href={prefix + "/tags/" + tag}>{tag}</a>
       )
     }
   </div>
@@ -61,8 +73,8 @@ let resultPosts = sortPosts.splice(0, site.recentBlogSize);
     {
       resultPosts.map((post) => (
         <a
-          href={"/blog/" + post.slug}
-          class="truncate cursor-pointr mt-1 hover:text-skin-active"
+          href={prefix + "/blog/" + post.slug.replace(/^(en|zh)\//, '')}
+          class="truncate cursor-pointer mt-1 hover:text-skin-active"
           title={post.data.title}
         >
           {post.data.title}

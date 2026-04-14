@@ -34,7 +34,7 @@ const lang: Lang = langProp ?? getLangFromUrl(Astro.url)
     <div>
       <div class="hidden xl:block space-y-6">
         <Profile></Profile>
-        <BlogAside></BlogAside>
+        <BlogAside lang={lang}></BlogAside>
       </div>
     </div>
   </div>
