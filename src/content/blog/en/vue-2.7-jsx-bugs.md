@@ -38,7 +38,7 @@ Assign the ref manually using a function:
 ```jsx
 const customRef = ref()
 
-<SwitchSettingCommonModal ref={el => { customRef.value = el }} />
+<SwitchSettingCommonModal ref={el => { customRef.value = el } />
 ```
 
 ----
