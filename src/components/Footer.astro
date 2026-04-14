@@ -1,7 +1,10 @@
 ---
 import {site, config} from "../consts";
-import { useTranslations, getLangFromUrl } from '../i18n/utils'
-const lang = getLangFromUrl(Astro.url)
+import { useTranslations, getLangFromUrl, type Lang } from '../i18n/utils'
+
+interface Props { lang?: Lang }
+const { lang: langProp } = Astro.props
+const lang: Lang = langProp ?? getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 ---
 

@@ -8,9 +8,14 @@ import LangIcon from './LangIcon.astro'
 import MenuIcon from './MenuIcon.astro'
 import {site, categories, infoLinks} from '../consts';
 import AsideIcon from "./SidebarIcon.astro";
-import { useTranslations, getLangFromUrl } from '../i18n/utils'
-const lang = getLangFromUrl(Astro.url)
+import { useTranslations, getLangFromUrl, type Lang } from '../i18n/utils'
+
+interface Props { lang?: Lang }
+const { lang: langProp } = Astro.props
+const lang: Lang = langProp ?? getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
+const prefix = lang === 'zh' ? '/zh' : ''
+
 import getCountByTagName from "../utils/getCountByTagName";
 const blogs = await getCollectionByName('blog')
 let tagArr = getUniqueTags(blogs);
@@ -23,7 +28,7 @@ let tagCount = getCountByTagName(blogs);
     <div class="block xl:hidden">
       <MenuIcon></MenuIcon>
     </div>
-    <a class="text-2xl p-4" href="/">{site.title}</a>
+    <a class="text-2xl p-4" href={lang === 'zh' ? '/zh' : '/'}>{site.title}</a>
     <div class="flex items-center">
       <div class="hidden xl:block">
         <div class="flex items-center space-x-5 pr-4">
@@ -93,7 +98,7 @@ let tagCount = getCountByTagName(blogs);
       {
         Object.keys(categoryCount).map((category) => (
           <div class="my-2 break-all truncate">
-            <a class="hover:text-skin-active" title={category + " (" + categoryCount[category] + ")"} href={"/category/" + category}>
+            <a class="hover:text-skin-active" title={category + " (" + categoryCount[category] + ")"} href={prefix + "/category/" + category}>
               {category + " (" + categoryCount[category] + ")"}
             </a>
           </div>
@@ -113,7 +118,7 @@ let tagCount = getCountByTagName(blogs);
         tagArr &&
         tagArr.map((tag) => (
           <div class="my-2 break-all truncate">
-            <a class="hover:text-skin-active my-2" title={tag} href={"/tags/" + tag}>{tag + " (" + tagCount[tag] + ")"}</a>
+            <a class="hover:text-skin-active my-2" title={tag} href={prefix + "/tags/" + tag}>{tag + " (" + tagCount[tag] + ")"}</a>
           </div>
         ))
       }
