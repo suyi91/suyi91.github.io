@@ -1,6 +1,6 @@
 import {defineConfig} from 'astro/config';
 import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
+// import sitemap from '@astrojs/sitemap'; // removed: manual sitemap with hreflang
 import tailwind from '@astrojs/tailwind';
 import solid from '@astrojs/solid-js';
 import {remarkModifiedTime} from "./src/remarkPlugin/remark-modified-time.mjs";
@@ -43,10 +43,7 @@ export default defineConfig({
     },
   },
   integrations: [
-    sitemap({
-      filter: (page) => page !== 'https://suyi.xyz/friends/' &&
-        page !== 'https://suyi.xyz/message/',
-    }),
+
     tailwind(),
     solid(),
     expressiveCode({

@@ -34,13 +34,13 @@ function displayCategory(categoryName: string): string {
     <div class="block xl:hidden">
       <MenuIcon></MenuIcon>
     </div>
-    <a class="text-2xl p-4" href={lang === 'zh' ? '/zh' : '/'}>{site.title}</a>
+    <a class="text-2xl p-4" href={lang === 'zh' ? '/zh' : '/'}>{t('site.title')}</a>
     <div class="flex items-center">
       <div class="hidden xl:block">
         <div class="flex items-center space-x-5 pr-4">
           {
             categories.map(category => (
-              <HeaderLink href={prefix + category.href} icon={category.iconClass} target={category.target ? category.target : '_self'} children={category.children ? category.children : []}>{category.name}</HeaderLink>
+              <HeaderLink href={prefix + category.href} icon={category.iconClass} target={category.target ? category.target : '_self'} children={category.children ? category.children : []}>{t('nav.' + category.name)}</HeaderLink>
             ))
           }
         </div>
@@ -58,7 +58,7 @@ function displayCategory(categoryName: string): string {
         <div class="py-2">
           <a class=" hover:text-skin-active" href={prefix + category.href}>
             <i class={category.iconClass}/>
-            <span>{category.name}</span>
+            <span>{t('nav.' + category.name)}</span>
           </a>
           {
             category.children && category.children.length > 0 &&
@@ -70,7 +70,7 @@ function displayCategory(categoryName: string): string {
                 (
                   <a class="block hover:text-skin-active" href={prefix + sub.href}>
                     <i class={sub.iconClass}/>
-                    <span>{sub.name}</span>
+                    <span>{t('nav.' + sub.name)}</span>
                   </a>
                 )
               )

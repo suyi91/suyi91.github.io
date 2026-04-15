@@ -43,5 +43,11 @@ export  const en = {
   'sidebar.uncategorized': 'uncategorized',
   'title.draft': 'draft',
   'title.minutes':' Minutes',
-  'title.words':' Words'
+  'title.words':' Words',
+  'nav.Blog': 'Blog',
+  'nav.Feed': 'Feed',
+  'nav.Archive': 'Archive',
+  'nav.Search': 'Search',
+  'nav.About': 'About',
+  'site.title': "Sean's Blog"
 }

@@ -45,4 +45,10 @@ export const zhCn = {
   'feed.next': '下一条动态',
   'category.frontend': '前端',
   'post.dateFormat': 'YYYY/MM/DD',
+  'nav.Blog': '博客',
+  'nav.Feed': '动态',
+  'nav.Archive': '归档',
+  'nav.Search': '搜索',
+  'nav.About': '关于',
+  'site.title': 'Sean的小站',
 }

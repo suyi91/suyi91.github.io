@@ -1,7 +1,7 @@
 ---
 import IndexPage from "../../../layouts/IndexPage.astro";
-let posts = await Astro.glob("../../about/about.md");
-let {Content, frontmatter} = posts[0];
+const posts = import.meta.glob("../../about/about.md", { eager: true });
+const { Content, frontmatter } = posts["../../about/about.md"];
 ---
 
 <IndexPage frontmatter={frontmatter} lang="zh">
