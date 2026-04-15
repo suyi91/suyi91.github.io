@@ -1,10 +1,15 @@
 ---
+import dayjs from "dayjs";
 import {formatDate} from "../utils/formatDate";
 import {dealLabel} from "../utils/dealLabel";
 import {useTranslations, type Lang} from '../i18n/utils'
 const {title, date, category, tags, lastModified = '', draft = false, readingTime = {}, lang = 'en'} = Astro.props
 const t = useTranslations(lang as Lang)
 const prefix = lang === 'zh' ? '/zh' : ''
+
+function isValidDateString(dateStr: string): boolean {
+  return dayjs(dateStr).isValid()
+}
 
 function displayCategory(categoryName: string): string {
   const key = 'category.' + categoryName
@@ -28,7 +33,7 @@ function displayCategory(categoryName: string): string {
       )
     }
     {
-      lastModified && (
+      lastModified && isValidDateString(lastModified) && (
         <span class="flex items-center gap-1">
           <i class="ri-calendar-check-fill"/>
           {t('post.lastUpdated')}：{formatDate(lastModified, lang as Lang)}

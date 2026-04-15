@@ -1,11 +1,7 @@
 import {h as _h, s as _s} from "hastscript";
 import {remove} from "unist-util-remove";
 import {visit} from "unist-util-visit";
-import {useTranslations} from '../i18n/utils.ts';
-
-function getLangFromPath(filePath) {
-  return filePath.includes('/zh/') ? 'zh' : 'en'
-}
+import {t} from '../i18n/utils.ts';
 
 /** Hacky function that generates an mdast HTML tree ready for conversion to HTML by rehype. */
 function h(el, attrs = {}, children = []) {
@@ -19,13 +15,11 @@ function h(el, attrs = {}, children = []) {
 
 export function remarkCollapse(options) {
   options = {
-    label: null,
+    label: t('remark.open') || "Open",
     ...options,
   };
 
-  const transformer = (tree, file) => {
-    const lang = getLangFromPath(file.history[0] ?? '')
-    const t = useTranslations(lang)
+  const transformer = (tree) => {
     visit(tree, (node, index, parent) => {
       if (node.type !== "containerDirective" && node.type !== "leafDirective") {
         return;
@@ -37,11 +31,11 @@ export function remarkCollapse(options) {
         return;
       }
 
-      // remark-directive converts a container's "label" to a paragraph in
+      // remark-directive converts a container’s “label” to a paragraph in
       // its children, but we want to pass it as the title prop to <Aside>, so
       // we iterate over the children, find a directive label, store it for the
       // title prop, and remove the paragraph from children.
-      let title = options.label ?? t('remark.open') ?? "Open";
+      let title = options.label;
 
       remove(node, (child)=> {
         if (child.data && "directiveLabel" in child.data && child.data.directiveLabel) {
