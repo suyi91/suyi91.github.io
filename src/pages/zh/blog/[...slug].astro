@@ -76,7 +76,7 @@ const cleanSlug = entry.slug.replace(/^zh\//, '')
         )
       }
     </div>
-    <BlogFooter title={entry.data.title} url={'zh/blog/' + cleanSlug} date={entry.data.date}></BlogFooter>
+    <BlogFooter title={entry.data.title} url={'zh/blog/' + cleanSlug} date={entry.data.date} lang="zh"></BlogFooter>
     {
       donate.enable && entry.data.donate &&
       <Donate></Donate>

@@ -31,7 +31,7 @@ function displayCategory(categoryName: string): string {
       lastModified && (
         <span class="flex items-center gap-1">
           <i class="ri-calendar-check-fill"/>
-          {t('post.lastUpdated')}：{lastModified}
+          {t('post.lastUpdated')}：{formatDate(lastModified, lang as Lang)}
         </span>
       )
     }

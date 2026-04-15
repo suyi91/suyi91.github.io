@@ -1,23 +1,12 @@
 import {h as _h, s as _s} from "hastscript";
 import {remove} from "unist-util-remove";
 import {visit} from "unist-util-visit";
-import {t} from '../i18n/utils.ts';
-const variants = new Set(["note", "tip", "caution", "danger"]);
+import {useTranslations} from '../i18n/utils.ts';
 
-function defaultLabel(v) {
-  switch (v) {
-    case "note":
-      return  t('aside.note') || 'Note';
-    case "tip":
-      return t('aside.tip') || 'Tip';
-    case "caution":
-      return t('aside.caution') || 'Caution';
-    case "danger":
-      return t('aside.danger') || 'Danger';
-    default:
-      return "";
-  }
+function getLangFromPath(filePath) {
+  return filePath.includes('/zh/') ? 'zh' : 'en'
 }
+const variants = new Set(["note", "tip", "caution", "danger"]);
 
 /** Hacky function that generates an mdast HTML tree ready for conversion to HTML by rehype. */
 function h(el, attrs = {}, children = []) {
@@ -65,7 +54,7 @@ function s(el, attrs = {}, children = []) {
  */
 export function remarkAsides(options) {
   options = {
-    label: defaultLabel,
+    label: null,
     ...options,
   };
   const isAsideVariant = (s) => variants.has(s);
@@ -102,7 +91,18 @@ export function remarkAsides(options) {
     ],
   };
 
-  const transformer = (tree) => {
+  const transformer = (tree, file) => {
+    const lang = getLangFromPath(file.history[0] ?? '')
+    const t = useTranslations(lang)
+    function localLabel(v) {
+      switch (v) {
+        case "note":    return t('aside.note') || 'Note'
+        case "tip":     return t('aside.tip') || 'Tip'
+        case "caution": return t('aside.caution') || 'Caution'
+        case "danger":  return t('aside.danger') || 'Danger'
+        default:        return ""
+      }
+    }
     visit(tree, (node, index, parent) => {
       if (!parent || index === undefined || node.type !== "containerDirective") {
         return;
@@ -110,11 +110,7 @@ export function remarkAsides(options) {
       const variant = node.name;
       if (!isAsideVariant(variant)) return;
 
-      // remark-directive converts a container’s “label” to a paragraph in
-      // its children, but we want to pass it as the title prop to <Aside>, so
-      // we iterate over the children, find a directive label, store it for the
-      // title prop, and remove the paragraph from children.
-      let title = options.label?.(variant);
+      let title = options.label ? options.label(variant) : localLabel(variant);
 
       remove(node, (child)=> {
         if (child.data && "directiveLabel" in child.data && child.data.directiveLabel) {
