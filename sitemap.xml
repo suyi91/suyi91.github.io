@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://suyi.xyz/blog/github-pages-deploy-astro/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/github-pages-deploy-astro/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/github-pages-deploy-astro/" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/zh/blog/github-pages-deploy-astro/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/github-pages-deploy-astro/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/github-pages-deploy-astro/" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/blog/fix-node-sass-install-error/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/fix-node-sass-install-error/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/fix-node-sass-install-error/" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/zh/blog/fix-node-sass-install-error/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/fix-node-sass-install-error/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/fix-node-sass-install-error/" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/blog/new-features-test/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/new-features-test/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/new-features-test/" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/zh/blog/new-features-test/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/new-features-test/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/new-features-test/" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/blog/use-dayjs-instead-date/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/use-dayjs-instead-date/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/use-dayjs-instead-date/" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/zh/blog/use-dayjs-instead-date/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/use-dayjs-instead-date/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/use-dayjs-instead-date/" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/blog/vue-27-jsx-bugs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/vue-27-jsx-bugs/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/vue-27-jsx-bugs/" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/zh/blog/vue-27-jsx-bugs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/vue-27-jsx-bugs/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/vue-27-jsx-bugs/" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/zh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/about" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/about" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/zh/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/about" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/about" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/search</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/search" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/search" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/zh/search</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/search" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/search" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/archive/1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/archive/1" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/archive/1" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/zh/archive/1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/archive/1" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/archive/1" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/feed/1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/feed/1" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/feed/1" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/zh/feed/1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/feed/1" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/feed/1" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/tags</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/tags" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/tags" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/zh/tags</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/tags" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/tags" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/category/frontend</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/category/frontend" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/category/frontend" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/zh/category/frontend</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/category/frontend" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/category/frontend" />
+  </url>
+</urlset>
