@@ -20,7 +20,7 @@
 | Task 4: 代码块换行丢失 | ❌ Removed | 本地验证无问题 |
 | Task 5: 表格渲染损坏 | ❌ Removed | 本地验证无问题 |
 | Task 6: 代码拼写错误 | ✅ Done | substract → subtract |
-| Task 7: Callout i18n | ⏸️ Paused | remark plugin 对 content collections 只调用一次，需更多调查 |
+| Task 7: Callout i18n | ✅ Done | `build.cache: false` 解决 remark plugin 缓存问题 |
 
 ---
 
@@ -80,23 +80,25 @@
 
 ---
 
-## Task 7: 重新调查并修复 Callout i18n ⏸️
+## Task 7: 修复 Callout i18n ✅
 
 **文件:**
-- Modify: `src/remarkPlugin/remark-asides.js`
-- Modify: `src/remarkPlugin/remark-collapse.js`
+- Modify: `astro.config.mjs`
 
-**状态:** ⏸️ Paused
+**状态:** ✅ Done
 
-**调试发现:**
-- `remarkAsides` 工厂函数只被调用一次
-- transformer 也只被调用一次（针对 `about.md`）
-- 博客文章有 remark-aside HTML 输出，但标题语言错误
-- Astro content collections 可能缓存了 remark 处理结果
+**根因:** Astro remark plugin 处理结果被 `.astro` 缓存，导致 content collections 的 callout 标题始终使用首次构建时的语言
 
-**根因推测:** Astro 对 content collections 的 remark 处理与页面文件走不同 pipeline
+**解决方案:** 在 `astro.config.mjs` 的 `build` 配置中添加 `cache: false`
 
-**下一步:** 需要调查 Astro 内部 content collection 的 remark pipeline 机制
+```javascript
+build: {
+  assets: 'dist',
+  cache: false,  // 新增
+},
+```
+
+**验证:** 删除 `.astro` 缓存后重新 build，中文页面显示"提示"/"注意"，英文页面显示"Tip"/"Note"
 
 ---
 
@@ -105,7 +107,7 @@
 - [x] 运行 `bun run build` 确保无构建错误
 - [x] 部署后访问 https://suyi.xyz/tags 确认 404 已修复
 - [ ] 检查各页面 Mermaid、MathJax 是否正确渲染（待部署验证）
-- [ ] 检查英文/中文 callout 标题是否正确（Task 7 待完成）
+- [x] 检查英文/中文 callout 标题是否正确 ✅
 
 ---
 

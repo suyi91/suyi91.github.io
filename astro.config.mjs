@@ -64,6 +64,7 @@ export default defineConfig({
     ],
   },
   build: {
-    assets: 'dist'
+    assets: 'dist',
+    cache: false,
   },
 });
