@@ -12,6 +12,16 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/github-pages-deploy-astro/" />
   </url>
   <url>
+    <loc>https://suyi.xyz/blog/vue-27-jsx-bugs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/vue-27-jsx-bugs/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/vue-27-jsx-bugs/" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/zh/blog/vue-27-jsx-bugs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/vue-27-jsx-bugs/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/vue-27-jsx-bugs/" />
+  </url>
+  <url>
     <loc>https://suyi.xyz/blog/fix-node-sass-install-error/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/fix-node-sass-install-error/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/fix-node-sass-install-error/" />
@@ -40,16 +50,6 @@
     <loc>https://suyi.xyz/zh/blog/use-dayjs-instead-date/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/use-dayjs-instead-date/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/use-dayjs-instead-date/" />
-  </url>
-  <url>
-    <loc>https://suyi.xyz/blog/vue-27-jsx-bugs/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/vue-27-jsx-bugs/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/vue-27-jsx-bugs/" />
-  </url>
-  <url>
-    <loc>https://suyi.xyz/zh/blog/vue-27-jsx-bugs/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/vue-27-jsx-bugs/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/vue-27-jsx-bugs/" />
   </url>
   <url>
     <loc>https://suyi.xyz/</loc>
