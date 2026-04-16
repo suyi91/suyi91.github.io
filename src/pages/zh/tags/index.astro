@@ -1,0 +1,24 @@
+---
+import IndexPage from "src/layouts/IndexPage.astro";
+import getUniqueTags from "src/utils/getUniqueTags";
+import SearchTitle from "src/components/SearchTitle.astro";
+import {getCollectionByName} from "../../../utils/getCollectionByName";
+
+const posts = await getCollectionByName("blog", 'zh');
+const tags = getUniqueTags(posts).filter((tag) => tag);
+---
+<IndexPage lang="zh">
+  <SearchTitle label="所有标签"/>
+  <div class="flex flex-wrap gap-2">
+    {
+      tags.map((tag) => (
+        <a
+          href={`/zh/tags/${tag}`}
+          class="px-3 py-1 text-sm rounded-full bg-skin-secondary text-skin-base hover:bg-skin-active hover:text-skin-base"
+        >
+          {tag}
+        </a>
+      ))
+    }
+  </div>
+</IndexPage>
