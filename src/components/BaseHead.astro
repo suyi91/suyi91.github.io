@@ -55,8 +55,7 @@ const zhPath = isZh ? Astro.url.pathname : '/zh' + Astro.url.pathname
 
   {
     mermaid &&
-    <script async type="text/javascript" src="/libs/mermaid_10.9.0_mermaid.min.js"></script>
-
+    <script type="text/javascript" src="/libs/mermaid_10.9.0_mermaid.min.js"></script>
   }
   {
     config.busuanzi && <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
