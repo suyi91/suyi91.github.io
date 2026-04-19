@@ -26,4 +26,7 @@ pnpm-debug.log*
 
 # local AI config
 /.claude
-/AGENTS.md
+/CLAUDE.md
+
+/docs/
+

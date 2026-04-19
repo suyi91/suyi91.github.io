@@ -16,10 +16,10 @@
  * beian {string} Chinese policy
  */
 export const site = {
-  title: 'Suyi的小站', // required
+  title: "Sean's Blog", // required
   favicon: '/favicon.png', // required
   description: '记录自己的成长历程',
-  author: "Suyi", // required
+  author: "Sean", // required
   avatar: '/avatar.jpg', // required
   url: 'https://suyi.xyz', // required
   motto: '路漫漫其修远兮。',
