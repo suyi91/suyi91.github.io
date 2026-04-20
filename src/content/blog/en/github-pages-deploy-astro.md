@@ -8,6 +8,7 @@ mathjax: true
 tags: ['astro']
 category: ['frontend']
 translationKey: github-pages-deploy-astro
+audio: true
 ---
 
 > ^_^ This site itself was built using the method described below — feel free to click around and see Astro in action.

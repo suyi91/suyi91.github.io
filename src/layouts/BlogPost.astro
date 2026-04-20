@@ -7,6 +7,7 @@ import Comment from '../components/Comment.astro'
 import Toc from '../components/Toc.astro'
 import {comment, site} from "../consts";
 import ScrollToTop from '../components/ScrollToTop.astro'
+import AudioPlayer from '../components/AudioPlayer.astro';
 import { useTranslations, getLangFromUrl, type Lang } from '../i18n/utils'
 
 const { frontmatter = {
@@ -49,6 +50,14 @@ const t = useTranslations(lang)
     <ScrollToTop></ScrollToTop>
   </div>
   <Footer lang={lang}/>
+  {
+    frontmatter.audio && (
+      <AudioPlayer
+        src={`/audio/${lang}/${Astro.url.pathname.split('/').filter(Boolean).pop()}.mp3`}
+        title={frontmatter.title}
+      />
+    )
+  }
 </main>
 </body>
 </html>

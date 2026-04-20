@@ -49,5 +49,7 @@ export  const en = {
   'nav.Archive': 'Archive',
   'nav.Search': 'Search',
   'nav.About': 'About',
-  'site.title': "Sean's Blog"
+  'site.title': "Sean's Blog",
+  'audio.play': 'Play audio',
+  'audio.pause': 'Pause',
 }

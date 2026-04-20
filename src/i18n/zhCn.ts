@@ -51,4 +51,6 @@ export const zhCn = {
   'nav.Search': '搜索',
   'nav.About': '关于',
   'site.title': 'Sean的小站',
+  'audio.play': '播放',
+  'audio.pause': '暂停',
 }

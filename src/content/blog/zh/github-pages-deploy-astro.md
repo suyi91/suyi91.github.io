@@ -8,6 +8,7 @@ mathjax: true
 tags: ['astro']
 category: ['frontend']
 translationKey: github-pages-deploy-astro
+audio: true
 ---
 
 > ^_^本站就是笔者用下面的方式摸索搭建出来的，可以多多点击查看astro的效果。

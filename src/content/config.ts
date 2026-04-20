@@ -17,6 +17,7 @@ const blog = defineCollection({
     comment: z.boolean().default(true).nullable(),
     lang: z.string().optional(),
     translationKey: z.string().optional(),
+    audio: z.boolean().default(false).nullable(),
   }),
 });
 

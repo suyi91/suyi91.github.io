@@ -40,6 +40,8 @@
   },
   "devDependencies": {
     "dotenv": "^16.4.5",
+    "glob": "^13.0.6",
+    "gray-matter": "^4.0.3",
     "sass": "^1.72.0"
   }
 }
