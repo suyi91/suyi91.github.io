@@ -8,6 +8,7 @@ mathjax: true
 tags: ['vue']
 category: ['frontend']
 translationKey: vue-2.7-jsx-bugs
+audio: true
 ---
 
 While maintaining a legacy project I recently introduced Vue 2.7 and the official JSX plugin `jsx-vue2`. Things were going fine until I started hitting one pitfall after another...

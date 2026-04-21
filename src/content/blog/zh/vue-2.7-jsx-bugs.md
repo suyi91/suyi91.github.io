@@ -8,6 +8,7 @@ mathjax: true
 tags: ['vue']
 category: ['frontend']
 translationKey: vue-2.7-jsx-bugs
+audio: true
 ---
 
 最近维护老项目引入了vue2.7和官方提供的jsx方案`jsx-vue2`，写着写着发现了几个坑......

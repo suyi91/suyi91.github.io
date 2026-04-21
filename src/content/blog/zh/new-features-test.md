@@ -8,6 +8,7 @@ mathjax: true
 tags: []
 category: []
 translationKey: new-features-test
+audio: true
 ---
 
 ### Support collapse

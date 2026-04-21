@@ -8,6 +8,7 @@ mathjax: true
 tags: ['css', 'sass', 'node-sass']
 category: ['frontend']
 translationKey: fix-node-sass-install-error
+audio: true
 ---
 
 ## 常见安装报错问题列举
