@@ -2,11 +2,12 @@ import {createSignal} from "solid-js";
 import _ from 'lodash'
 import {dealLabel} from "../utils/dealLabel.ts"
 import {formatDate} from "../utils/formatDate.ts";
-import {t} from '../i18n/utils.ts'
+import {useTranslations} from '../i18n/utils.ts'
 
 export function Search(props) {
   const [inputVal, setInputVal] = createSignal('')
   const [resultPosts, setResultPosts] = createSignal([])
+  const t = useTranslations(props.lang ?? 'en')
 
   const handleChange = (e) => {
     setInputVal(e.target.value)
