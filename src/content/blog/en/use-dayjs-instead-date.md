@@ -8,6 +8,7 @@ mathjax: true
 tags: []
 category: ['frontend']
 translationKey: use-dayjs-instead-date
+audio: true
 ---
 
 ## Two Code Snippets Compared

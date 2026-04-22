@@ -53,11 +53,13 @@ const t = useTranslations(lang);
 
 <style>
   .audio-player {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 1000;
     font-family: system-ui, sans-serif;
+    animation: slideUp 0.4s ease-out forwards;
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .audio-mini {

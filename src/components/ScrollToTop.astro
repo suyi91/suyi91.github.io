@@ -2,28 +2,66 @@
 
 ---
 
-<button type="button" id="scrollToTopBtn" class="header-btn fixed bottom-4 right-2 hidden" title="scroll to top">
+<button type="button" id="scrollToTopBtn" class="scroll-btn hidden" title="scroll to top">
   <i class="ri-arrow-up-line"></i>
 </button>
+
+<style>
+  .scroll-btn {
+    @apply cursor-pointer border rounded py-1 px-2 bg-skin-fill hover:text-skin-active transition-all duration-200 z-10 shadow-md hover:shadow-lg;
+  }
+
+  .scroll-btn.visible {
+    animation: fadeSlideIn 0.3s ease-out forwards;
+  }
+
+  .scroll-btn.hidden-anim {
+    animation: fadeSlideOut 0.3s ease-out forwards;
+  }
+
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeSlideOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(10px); }
+  }
+</style>
 
 <script>
   let scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-  // 监听窗口滚动事件
+  function showBtn() {
+    scrollToTopBtn?.classList.remove('hidden', 'hidden-anim');
+    scrollToTopBtn?.classList.add('visible');
+  }
+
+  function hideBtn() {
+    scrollToTopBtn?.classList.remove('visible');
+    scrollToTopBtn?.classList.add('hidden-anim');
+    setTimeout(() => {
+      scrollToTopBtn?.classList.add('hidden');
+      scrollToTopBtn?.classList.remove('hidden-anim');
+    }, 300);
+  }
+
   window.onscroll = function () {
-    // 显示/隐藏按钮根据滚动位置
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      scrollToTopBtn.classList.add('block')
-      scrollToTopBtn.classList.remove('hidden')
+      if (scrollToTopBtn?.classList.contains('hidden') && !scrollToTopBtn?.classList.contains('hidden-anim')) {
+        showBtn();
+      }
     } else {
-      scrollToTopBtn.classList.add('hidden')
-      scrollToTopBtn.classList.remove('block')
+      if (!scrollToTopBtn?.classList.contains('hidden') && !scrollToTopBtn?.classList.contains('hidden-anim')) {
+        hideBtn();
+      }
     }
   };
-  // 获取按钮的引用
-  scrollToTopBtn.addEventListener("click", () => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  })
+
+  scrollToTopBtn?.addEventListener("click", () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
 </script>
 

@@ -8,10 +8,10 @@ const lang: Lang = langProp ?? getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 ---
 
-<div class="footer container p-4">
+<div class="footer container p-4 h-full flex flex-col justify-end pb-0">
   {
     config.busuanzi && (
-      <div class="flex items-center justify-center text-skin-base">
+      <div class="flex items-center justify-center text-sm">
     <span id="busuanzi_container_site_pv">
       {t('footer.busuanziSitePV')}<span id="busuanzi_value_site_pv"></span>{t('footer.busuanziSitePVUnit')}
     </span>
@@ -22,7 +22,7 @@ const t = useTranslations(lang)
       </div>
     )
   }
-  <div class="flex items-center flex-wrap justify-center mb-4 text-skin-base">
+  <div class="flex items-center flex-wrap justify-center mb-4 text-sm">
     <div>
       <span class="cursor-default">Copyright</span>
       <i class="ri-copyright-line align-middle"></i>
