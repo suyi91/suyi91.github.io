@@ -3,6 +3,10 @@
 (function () {
   const savedLang = localStorage.getItem('lang')
   const currentPath = window.location.pathname
+
+  // Skip redirect for /demos/ paths
+  if (currentPath.startsWith('/demos/')) return
+
   const isZhPath = currentPath.startsWith('/zh')
   const currentLang = isZhPath ? 'zh' : 'en'
 
