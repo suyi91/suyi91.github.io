@@ -56,11 +56,11 @@ export const categories = [
     iconClass: "ri-draft-line",
     href: "/blog/1",
   },
-  {
-    name: "Feed",
-    iconClass: "ri-lightbulb-flash-line",
-    href: "/feed/1",
-  },
+  // {
+  //   name: "Feed",
+  //   iconClass: "ri-lightbulb-flash-line",
+  //   href: "/feed/1",
+  // },
   {
     name: "Archive",
     iconClass: "ri-archive-line",
