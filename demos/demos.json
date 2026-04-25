@@ -1,0 +1,8 @@
+{
+  "demos": [
+    {
+      "name": "float-particles",
+      "build": false
+    }
+  ]
+}
