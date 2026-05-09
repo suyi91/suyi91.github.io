@@ -52,6 +52,16 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/use-dayjs-instead-date/" />
   </url>
   <url>
+    <loc>https://suyi.xyz/blog/typescript-enum/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/typescript-enum/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/typescript-enum/" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/zh/blog/typescript-enum/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/typescript-enum/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/typescript-enum/" />
+  </url>
+  <url>
     <loc>https://suyi.xyz/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh" />
