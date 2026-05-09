@@ -6,7 +6,7 @@ description: 深入解析 TypeScript 枚举类型的用法、原理与最佳实�
 mermaid: false
 mathjax: false
 tags: ['TypeScript']
-category: ['前端']
+category: ['frontend']
 audio: true
 ---
 

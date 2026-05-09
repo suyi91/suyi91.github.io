@@ -6,7 +6,7 @@ description: A deep dive into TypeScript enum types, how they work, and best pra
 mermaid: false
 mathjax: false
 tags: ['TypeScript']
-category: ['Frontend']
+category: ['frontend']
 audio: true
 ---
 
