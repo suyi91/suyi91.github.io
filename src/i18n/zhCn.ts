@@ -44,6 +44,7 @@ export const zhCn = {
   'feed.previous': '上一条动态',
   'feed.next': '下一条动态',
   'category.frontend': '前端',
+  'category.tech': '技术',
   'post.dateFormat': 'YYYY/MM/DD',
   'nav.Blog': '博客',
   'nav.Feed': '动态',
