@@ -62,6 +62,16 @@
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/typescript-enum/" />
   </url>
   <url>
+    <loc>https://suyi.xyz/blog/git-notes/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/git-notes/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/git-notes/" />
+  </url>
+  <url>
+    <loc>https://suyi.xyz/zh/blog/git-notes/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/blog/git-notes/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh/blog/git-notes/" />
+  </url>
+  <url>
     <loc>https://suyi.xyz/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://suyi.xyz/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://suyi.xyz/zh" />
